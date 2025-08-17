@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TJMUN - Blast Off: Space Race, 1967</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link href="../../assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body, p, h1, h2, h3, h4, h5, h6, a, span, li {
+      font-family: 'EB Garamond', serif !important;
+    }
+    
+    .navbar ul li a {
+      font-family: 'EB Garamond', serif !important;
+    }
+    
+    .container {
+      font-family: 'EB Garamond', serif !important;
+    }
+
+    .team .member {
+      display: flex;
+      align-items: stretch; /* Ensures both elements stretch to the same height */
+      justify-content: start;
+      padding: 0px 0;
+    }
+
+  .team .member .member-img {
+    flex: 0 0 40%; /* Image takes up 40% width */
+    max-width: 40%;
+    display: flex;
+  }
+
+  .team .member .member-img img {
+    width: 100%;
+    height: 100%; /* Ensures it matches the height of the text box */
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 0; /* Keeps image rectangular */
+  }
+
+
+  .team .member .member-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff; /* Keeps text inside a white box */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0; /* Removes rounding */
+    height: auto; /* Matches the image height dynamically */
+  }
+
+  .team .member .member-info h4 {
+    font-size: 1.8rem;
+    color: #0044cc;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .team .member .member-info span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #555;
+  }
+
+  .team .member .member-info p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  .member-info p {
+    margin: 2px 0;
+  }
+
+  .member-info p,
+  .member-info span,
+  .member-info h4 {
+    font-style: normal !important;
+  }
+
+  @media (max-width: 768px) {
+    .member-info p {
+      display: none;
+    }
+
+    .topic-heading {
+       margin-left: 10%;
+       margin-right: 10%;
+    }
+
+    .background-guide-button {
+      width: 60%; /* Adjust as needed */
+    }
+  }
+    
+  </style>
+
+</head>
+
+<body>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="../../index.html" class="logo d-flex align-items-center">
+        <img src="../../assets/img/logo5.png" alt="" >
+        <h1>TJMUN</h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="../../index.html" class="active">HOME</a></li>
+          <li><a href="../../pages/about/leadership.html">LEADERSHIP</a></li>
+          <li><a href="../../pages/events/calendar.html">CALENDAR</a></li>
+          <li class="dropdown"><a href="../../conferences/techmun/index.html"><span>TECHMUN</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li class="invitation-link"><a href="../../conferences/techmun/invitation.html">Invitation</a></li>
+              <li><a href="../../conferences/techmun/registration.html">Registration</a></li>
+              <li><a href="../../conferences/techmun/directors.html">Directors</a></li>
+              <li class="dropdown"><a href="../../conferences/techmun/committees.html"><span>Committees</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="../../conferences/techmun/committees.html">All Committees</a></li>
+                  <li class="dropdown"><a href="#"><span>Middle School</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul class="sub-menu">
+                      <li class="dropdown"><a href="#"><span>General Assemblies (GAs)</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul class="sub-menu">
+                          <li><a href="UNHCR.html">United Nations High Commissioner for Refugees (UNHCR)</a></li>
+                          <li><a href="WHO.html">World Health Organization (WHO)</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a href="#"><span>Specialized/Regional/ECOFINs</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul class="sub-menu">
+                          <li><a href="Titanic.html">Titanic: The Sinking of the Unsinkable</a></li>
+                          <li><a href="Oh.html">Oh, Despicable Me!: Gru’s Grand Scheme</a></li>
+                          <li><a href="To.html">To Melt or Merge: Ben and Jerry's Transition Board, 2007</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a href="#"><span>Crisis Committees</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul class="sub-menu">
+                          <li><a href="Blast.html">Blast Off: Space Race, 1967</a></li>
+                          <li><a href="Lightning.html">Lightning Strikes Twice: Flash’s Foes</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="#"><span>High School</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul class="sub-menu">
+                      <li class="dropdown"><a href="#"><span>General Assemblies (GAs)</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul class="sub-menu">
+                          <li><a href="DISEC.html">Disarmament and International Security Committee (DISEC)</a></li>
+                          <li><a href="UNICEF.html">United Nations International Children's Emergency Fund (UNICEF)</a></li>
+                          <li><a href="ECOFIN.html">Economic and Financial Affairs Council (ECOFIN)</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a href="#"><span>Specialized/Regional/ECOFINs</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul class="sub-menu">
+                          <li><a href="Run.html">Run It Back, Turbo: The Creation of NASCAR, 1947</a></li>
+                          <li><a href="Return.html">Return of the Dynasty: Commanders, 2028</a></li>
+                          <li><a href="Quantum.html">Quantum Leap: NVIDIA’s Semiconductor Revolution</a></li>
+                          <li><a href="The.html">The Scranton Summit: Dunder Mifflin's Demise</a></li>
+                          <li><a href="Operation.html">Operation Infra: INTERPOL’s Global Manhunt (Double-Del)</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a href="#"><span>Crisis Committees</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul class="sub-menu">
+                          <li><a href="Fractured.html">Fractured Allegiance: The Sokovia Accords</a></li>
+                          <li><a href="XOXO.html">XOXO: Gossip Girl</a></li>
+                          <li><a href="JCC_Cali.html">JCC Battle of the Cartels, 1990: Cali</a></li>
+                          <li><a href="JCC_Medellin.html">JCC Battle of the Cartels, 1990: Medellin</a></li>
+                          <li><a href="ByteBlood.html">ByteBlood: The DNA Privacy and Biotech Scandal (Double-Del)</a></li>
+                          <li><a href="Ad-Hoc.html">Ad-Hoc Crisis Committee of the Secretary General</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="../../conferences/techmun/schedule.html">Schedule</a></li>
+              <li><a href="../../conferences/techmun/position-papers.html">Position Papers</a></li>
+              <li><a href="../../conferences/techmun/conference-policies.html">Conference Policies</a></li>
+              <li><a href="../../conferences/techmun/guest-speakers.html">Guest Speakers</a></li>
+            </ul>
+          </li>
+          <li><a href="../../pages/events/forms.html">FORMS</a></li>
+          <li><a href="../../pages/about/awards.html">AWARDS</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="position: relative; overflow: hidden;">
+        <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%);">
+          <source src="../../assets/img/TJ Model UN Video.mp4" type="video/mp4">
+        </video>
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8 text-center">
+              <h2>Blast Off: Space Race, 1967</h2>
+            </div>
+          </div>
+        </div>
+      </div>      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="../../index.html">Home</a></li>
+            <li>Blast Off: Space Race, 1967</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <h2 class = "topic-heading" style="color: rgb(11, 11, 89); font-size: 1.5rem; margin-top: 25px; margin-bottom: 10px; text-align: center; font-weight: bold">Topic A: Managing the Standoff Between the U.S. and the USSR    </h2>
+    <h2 class = "topic-heading" style="color: rgb(11, 11, 89); font-size: 1.5rem; text-align: center; margin-bottom: 0px; font-weight: bold">Topic B: Preventing Satellite Espionage in Space</h2>
+  </div>
+
+  <div style="margin-top: 20px; margin-bottom: -30px; text-align: center;">
+    <a href="guides/Blast Off_ Space Race, 1967 - Background Guide.pdf" target="_blank" 
+       style="display: inline-block; background-color: rgb(11, 11, 89); color: white; font-size: 1.2rem; 
+              font-weight: bold; padding: 12px 20px; text-decoration: none; border-radius: 8px">
+        Background Guide
+    </a>
+  </div>
+
+  <section id="team" class="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="member">
+            <div class="member-img">
+              <img src="../../assets/img/arjun.png" class="img-fluid" alt="">
+            </div>
+            <div class="member-info">
+              <h4>Arjun Garg</h4>
+              <span>Director</span>
+              <p>What’s up everyone! My name is Arjun, a sophomore at TJ and your crisis director for this committee. This is my third year doing MUN and my second TechMUN, and I couldn’t be more excited to direct this committee and learn more about all of you! I’ve come to love TechMUN for its energy, passionate delegates, and the way it pushes everyone to think bigger. When I’m not doing MUN, you can find me running, listening to Drake, cooking, eating, and watching thriller movies.
+              </p>
+              <p>
+                MUN has been a wild ride for me—from nervously fumbling through my first resolution to now directing a committee about one of humanity’s most thrilling eras. The Space Race is one of my favorite historical moments because it’s not just about science or politics—it’s about humanity’s relentless drive to explore, innovate, and dream bigger than ever before. In this committee, I want you to channel that same boldness. Take risks, think big, and don’t be afraid to launch ideas that seem out of this world.
+              </p>
+              <p>
+                As your director, I’m here to make sure this committee is both challenging and fun. I’ll be looking for delegates who can balance strategy with creativity, diplomacy with determination, and who aren’t afraid to push the boundaries of what’s possible. Remember, this is your chance to craft creative, thoughtful arcs—so think big! And whether you’re a seasoned delegate or a first-timer, my goal is for you to walk away feeling like you’ve grown—not just as a delegate, but as a thinker and a leader.
+              </p>
+              <p>
+                If you have any questions about the committee, MUN, or my experiences, don’t hesitate to send an email to blastofftechmun2025@gmail.com or arjungarghd@gmail.com. I’m looking forward to meeting all of you in April!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row 1 -->
+      <div class="row">
+        <div class="col-12">
+          <div class="member">
+            <div class="member-img">
+              <img src="../../assets/img/ishya.png" class="img-fluid" alt="">
+            </div>
+            <div class="member-info">
+              <h4>Ishya Anbuselvan</h4>
+              <span>Chair</span>
+              <p>Hello, space racers!
+
+                My name is Ishya Anbuselvan, and I am honored to serve, with my best friend Minati Divakar, as your chair for TechMUN 2025! 
+              </p>
+              <p>
+                MUN has been one of the most transformative experiences of my high school journey–from being at my first WMHSMUN, downing bags of Nerds’ Gummy Clusters for dinner at 2 am, to powering through ILMUNC ‘25 with a fever, I’ve almost seen and done it all. And the one thing I haven’t taken part in yet is facilitating a committee session–being on the other side of the competition and transitioning from a mentee to a mentor as I guide you all on April 12th-13th.
+              </p>
+              <p>
+                At TechMUN, I want to see you all be yourselves. That means walking up to speak in moderated caucuses with your most authentic hook (I do like a good integration of props) and building relationships with your fellow delegates past unmoderated caucuses and resolution papers. I know that opening up to people you don’t know sounds scary–it is, at first. However, that is exactly how I came to find so many of my closest friends in MUN, people that I can always rely on to rant about my committee and find a source of comfort in. I would absolutely love to see you make an effort in committee, regardless of if you are experienced or just starting out as a delegate. Step out of your comfort zone, and you might surprise yourself. Keep in mind that, while you express yourself, diplomacy is extremely important. I look forward to seeing a strong balance of being assertive and making space for other people.
+              </p>
+              <p>
+                Outside of MUN, you can find me composing music at my piano, writing creatively, or watching Cobra Kai! If you have any of these things in common with me or simply have other hobbies & passions you want to chat about, don’t hesitate to email me at ishkut9@gmail.com. I am always open for a conversation!
+              </p>
+              <p>
+                If you have any questions about your TechMUN committee, reach out to blastofftechmun2025@gmail.com. My best friend and I are so excited to see you all shine like stars (in space)!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Row 2 -->
+      <div class="row">
+        <div class="col-12">
+          <div class="member">
+            <div class="member-img">
+              <img src="../../assets/img/minati.png" class="img-fluid" alt="">
+            </div>
+            <div class="member-info">
+              <h4>Minati Divakar</h4>
+              <span>Chair</span>
+              <p>
+                Hello delegates, I am Minati Divakar, a 10th grader who’s done Model UN for the past two years. From sharing a bag of sour skittles with 80 delegations to deciding the sponsors list with a dance battle (ask me for the video in committee and I will GLADLY pull it up), I’ve found my favorite memories through this club. Thus, my best friend Ishya Anbuselvan and I are thrilled to be your chairs at TechMUN XXXII! Whether this is your first or your last conference, we are honored to make your TechMUN experience the best it can be. 
+              </p>
+              <p>
+                 When I’m not working on Model UN, I write poetry, draw comics, and scroll every social media platform to exist (so if you start a speech with a brain-rotted hook, there is a 99% chance I will get the reference). In this committee, I want to see a lot of out-of-the-box thinking. This is a historical crisis, meaning we are giving you the power to rewrite history! Take the opportunity and reach for unthinkable heights. Additionally, despite maintaining a base level of formality, I’d like to see original, brave, and outlandish speeches that have everyone on the edge of their seats. Lastly, diplomacy is a must. I’m chairing this committee with my best friend, so I’d hope for you guys to meet your future best friends here as well. 
+              </p>
+              <p>
+                For TechMUN purposes you can reach out to blastofftechmun2025@gmail.com. If you ever need to reach me on a personal level, to request help or simply to chat, shoot an email to minatidivakar@gmail.com. Good luck, delegates. We can’t wait to see you!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </main>
+
+    <footer id="footer" class="footer">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="../../index.html" class="logo d-flex align-items-center">
+              <span>TJMUN</span>
+            </a>
+            <div class="social-links d-flex mt-4">
+              <a href="https://www.facebook.com/tjhsstmun" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/tjhsstmun/" class="instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../../pages/about/leadership.html">Leadership</a></li>
+              <li><a href="../../pages/events/calendar.html">Calendar</a></li>
+              <li><a href="../../conferences/techmun/index.html">TECHMUN</a></li>
+              <li><a href="../../pages/events/forms.html">Forms</a></li>
+              <li><a href="../../pages/about/awards.html">Awards</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              6560 Braddock Rd <br>
+              Alexandria, VA 22312<br>
+              United States <br><br>
+              <strong>Email:</strong> tjmodelun@gmail.com<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>TJMUN</span></strong>. All Rights Reserved.
+        </div>
+        <div class="credits">
+        </div>
+      </div>
+
+    </footer>
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
