@@ -2,20 +2,20 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>TJMUN - Home</title>
+
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!--<link href="assets/img/favicon.png" rel="icon">-->
+  <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -25,87 +25,48 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link rel="icon" href="assets/img/logo5.png"type="image/x-icon">
 
+
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <script>
-    function incrementViews() {
-      let views = parseInt(localStorage.getItem('views')) || 0;
-      views++;
-      localStorage.setItem('views', views);
-      document.getElementById('viewCount').textContent = views;
-    }
-  
-    window.onload = function() {
-      incrementViews();
-    }
-  </script>
   <style>
     body, p, h1, h2, h3, h4, h5, h6, a, span, li {
       font-family: 'EB Garamond', serif !important;
     }
-    
+
     .navbar ul li a {
       font-family: 'EB Garamond', serif !important;
     }
-    
+
     .container {
       font-family: 'EB Garamond', serif !important;
     }
-    
-    .text_by_image {
-        display: flex;
-      align-items: center;
-      gap: 100px;
-      padding: 20px;
+
+    .team .member .member-info {
+    margin-top: 0 !important;
+    padding-top: 5px !important;
     }
-    
-    .text_by_image img{
-        max-width:500px;
-        height:auto;
+
+    .team .member .member-img {
+      margin-bottom: 0 !important;
     }
-    
-    .text_by_image text{
-        padding:100px;
+
+    /* If the above doesn't work, this will target any spacing between img and h4 */
+    .team .member .member-info h4 {
+      margin-top: -15px !important;
+    }
+
+    /* This ensures no extra padding in the container */
+    .team .member {
+      padding-bottom: 15px !important;
     }
   </style>
-
 </head>
 
-<body class="index-page">
-
-  <div class="breadcrumbs">
-        <div class="page-header d-flex align-items-center" style="position: relative; overflow: hidden;">
-          <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%);">
-            <source src="assets/img/TJ Model UN Video.mp4" type="video/mp4">
-          </video>
-          <div class="container position-relative">
-            <div class="row d-flex justify-content-center">
-              <div class="col-lg-6 text-center">
-                <h2>TJMUN</h2>
-              </div>
-            </div>
-          </div>
-        </div>      <nav>
-          <div class="container">
-            <ol>
-              <li><a href="index.html">Home</a></li>
-              <li>TJMUN</li>
-            </ol>
-          </div>
-        </nav>
-        
-      </div>
+<body>
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="announcement-banner">
-      <p>We are excited to host our TJMUN Summer Boot camp from August 11th to August 15th! Register <a 
-      href="https://docs.google.com/forms/d/e/1FAIpQLScTCeSbRSYkw3r3YxWPuC8UuhRtXnOoCHPo-hIQ5eQanFhs0w/viewform" target="_blank">
-          <u>here</u></a>.
-        <!--<a href="https://forms.gle/cnNndKsqskdnzGjE8" target="_blank" class="read-more-btn">Register here.</a>-->
-      </p>
-    </div>
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      
+
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo5.png" alt="" >
         <h1>TJMUN</h1>
@@ -191,237 +152,283 @@
           <li><a href="Forms.html">FORMS</a></li>
           <li><a href="Awards.html">AWARDS</a></li>
         </ul>
+
       </nav>
 
     </div>
   </header>
 
-  <br>
-  <br>
+  <main id="main">
 
-  <main id="main"> 
-    
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Number Counter Widget</title>
-      <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-                    <h1 class="text-center" style="color: rgb(11, 11, 89); margin-top: 0px;">Announcements:</h1>
-            <h2 class="text-center" style="color: rgb(11, 11, 89); margin-top: 0px;">TJMUN Summer Boot Camp</h2>
-        <div class="text_by_image">
-            <h4 class="text" style="color: rgb(11, 11, 89); margin-top: 0px; margin-left:200px; text-align:center;">We are excited to host our first ever 
-            summer boot camp! This FREE camp is for incoming novices who have any degree of experience with Model UN, and
-            will be held on August 11th, 13th, and 15th, with the last day being a mock conference. <br>Note that participation is 
-            REQUIRED for incoming novices who wish to attend McMUNC. Register <a 
-      href="https://docs.google.com/forms/d/e/1FAIpQLScTCeSbRSYkw3r3YxWPuC8UuhRtXnOoCHPo-hIQ5eQanFhs0w/viewform" target="_blank">
-          <u>here</u></a>. 
-          <br>
-          <br> We can't wait to see you there!
-            </h4>
-            <img style="margin-right:200px;"src="assets/img/mun-flyer.png" alt="Placeholder Image">
-        </div>
-      <div class="counter-container">
-        <div class="counter">
-          <span class="icon"><img src="assets/img/people_icon.jpg"></span>
-          <h6><span >&nbsp;</span></h6>
-          <h2><span class="count" data-target="1200">0</span>+<br> Delegates at TECHMUN</h2>
-        </div>
-        <div class="counter">
-          <span class="icon"><img src="assets/img/gavel.png"></span>
-          <h6><span >&nbsp;</span></h6>
-          <h2><span class="count" data-target="100">0</span>+<br> Gavels in past 3 years</h2>
-        </div>
-        <div class="counter">
-          <span class="icon"><img src="assets/img/clock.png"></span>
-          <h6><span >&nbsp;</span></h6>
-
-          <h2><span class="count" data-target="30">0</span>+<br> Years since founded</h2>
-        </div>
-      </div>
-    
-      <script src="script.js"></script>
-    </body>
-    
-                 
-    <br>
-    <h1 class="text-center" style="color: rgb(11, 11, 89); margin-top: 0px;">About Model UN</h1>
-
-    <div class="container">
-        <p class="lead" style="margin-bottom: 5px;">Model United Nations encompasses a simulation of the UN whereby students engage in political debate to tackle current global issues on the agenda. Based on their committees, students are assigned a delegate and are tasked with preparing draft resolutions, negotiating with others, and resolving conflicts while following proper parliamentary procedure.</p>
-    </div>
-    </div>
-            
-    </section>
-    <section id="featured-services" class="featured-services" style="text-align: center;">
-      <div class="container">
-        <div class="row gy-4" style="justify-content: center;">
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up">
-            <div>
-              <h4 class="title">Leadership</h4>
-              <p class="description">Our delegates possess leadership skills that enable them to command and lead blocs in committee while maintaining successful relations with others.</p>
-            </div>   
-          </div>
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div>
-              <h4 class="title">Diplomacy</h4>
-              <p class="description">Delegates manage international relations through negotiations and handle affairs effectively without arousing hostility.</p>
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="position: relative; overflow: hidden;">
+        <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%);">
+          <source src="assets/img/TJ Model UN Video.mp4" type="video/mp4">
+        </video>
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>TJMUN</h2>
             </div>
           </div>
         </div>
-        <div class="row gy-4" style="justify-content: center;">
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div>
-              <h4 class="title">Public Policy</h4>
-              <p class="description">Delegates inquire about specific public polities and implement various others to directly resolve issues in their committee's agenda.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="900">
-            <div>
-              <h4 class="title">Research</h4>
-              <p class="description">Students research respective topics for their committee to develop a strong background and foundation leading to success.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-      
-    <section id="testimonials" class="testimonials">
-      <div class="container">
-
-        <div class="slides-1 swiper" data-aos="fade-up">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/akshaya.png" class="testimonial-img" alt="" style="width: 200px; height: 200px;">
-                <h3>Akshaya Lohia</h3>
-                <h4>Secretary-General</h4>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                    Quote coming soon!
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/aditi.png" class="testimonial-img" alt="" style="width: 200px; height: 200px;">
-                <h3>Aditi Kodukula</h3>
-                <h4>Under Secretary-General</h4>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                    Hi everyone! My name is Aditi Kodukula and I am serving as the 2025-2026 Undersecretary 
-                    General for TJMUN. I’m so excited to continue growing our club while making TechMUN XXXIII 
-                    the best we ever had!
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/raghav.jpeg" class="testimonial-img" alt=""style="width: 200px; height: 200px;">
-                <h3>Raghav Kasi</h3>
-                <h4>Senator</h4>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Hey everybody! My name is Raghav Kasi and I am so happy to be the 2025-2026 TJMUN Senator. 
-                  I’m excited to guide the members of TJMUN and make TechMUN XXXIII the best yet!
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/mohan-home-officer.png" class="testimonial-img" alt="" style="width: 200px; height: 200px;">
-                <h3>Mohan Parthasarathy</h3>
-                <h4>Arbitrator</h4>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Hey everybody! My name is Mohan Parthasarathy and I'll be your arbitrator this year and Director-General 
-                  for TechMUN XXXIII. I am so excited to make TJMUN the best its ever been!
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer id="footer" class="footer">
-
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span>TJMUN</span>
-          </a>
-          <div class="social-links d-flex mt-4">
-            <a href="https://www.facebook.com/tjhsstmun" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/tjhsstmun/" class="instagram"><i class="bi bi-instagram"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
+      </div>      <nav>
+        <div class="container">
+          <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="Leadership.html">Leadership</a></li>
-            <li><a href="Calendar.html">Calendar</a></li>
-            <li><a href="TECHMUN.html">TECHMUN</a></li>
-            <li><a href="Forms.html">Forms</a></li>
-            <li><a href="Awards.html">Awards</a></li>
-          </ul>
+            <li>TJMUN</li>
+          </ol>
         </div>
+      </nav>
 
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>
-            6560 Braddock Rd <br>
-            Alexandria, VA 22312<br>
-            United States <br><br>
-            <strong>Email:</strong> tjmodelun@gmail.com<br>
-          </p>
+  </div>
+    <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Number Counter Widget</title>
+     <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
 
-        </div>
 
-      </div>
-    </div>
+     <div class="counter-container">
+       <div class="counter">
+         <span class="icon"><img src="assets/img/people_icon.jpg"></span>
+         <h6><span >&nbsp;</span></h6>
+         <h2><span class="count" data-target="1200">0</span>+<br> Delegates at TECHMUN</h2>
+       </div>
+       <div class="counter">
+         <span class="icon"><img src="assets/img/gavel.png"></span>
+         <h6><span >&nbsp;</span></h6>
+         <h2><span class="count" data-target="100">0</span>+<br> Gavels in past 3 years</h2>
+       </div>
+       <div class="counter">
+         <span class="icon"><img src="assets/img/clock.png"></span>
+         <h6><span >&nbsp;</span></h6>
 
-    <div class="container mt-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>TJMUN</span></strong>. All Rights Reserved.
-      </div>
-      <div class="credits">
-      </div>
-    </div>
 
-  </footer>
+         <h2><span class="count" data-target="30">0</span>+<br> Years since founded</h2>
+       </div>
+     </div>
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <div id="preloader"></div>
+     <script src="script.js"></script>
+   </body>
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <script src="assets/js/main.js"></script>
+
+
+   <br>
+   <h1 class="text-center" style="color: rgb(11, 11, 89); margin-top: 0px;">About Model UN</h1>
+
+
+   <div class="container">
+       <p class="lead" style="margin-bottom: 5px;">Model United Nations encompasses a simulation of the UN whereby students engage in political debate to tackle current global issues on the agenda. Based on their committees, students are assigned a delegate and are tasked with preparing draft resolutions, negotiating with others, and resolving conflicts while following proper parliamentary procedure.</p>
+   </div>
+   </div>
+
+
+   </section>
+   <section id="featured-services" class="featured-services" style="text-align: center;">
+     <div class="container">
+       <div class="row gy-4" style="justify-content: center;">
+         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up">
+           <div>
+             <h4 class="title">Leadership</h4>
+             <p class="description">Our delegates possess leadership skills that enable them to command and lead blocs in committee while maintaining successful relations with others.</p>
+           </div>
+         </div>
+         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+           <div>
+             <h4 class="title">Diplomacy</h4>
+             <p class="description">Delegates manage international relations through negotiations and handle affairs effectively without arousing hostility.</p>
+           </div>
+         </div>
+       </div>
+       <div class="row gy-4" style="justify-content: center;">
+         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+           <div>
+             <h4 class="title">Public Policy</h4>
+             <p class="description">Delegates inquire about specific public polities and implement various others to directly resolve issues in their committee's agenda.</p>
+           </div>
+         </div>
+         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="900">
+           <div>
+             <h4 class="title">Research</h4>
+             <p class="description">Students research respective topics for their committee to develop a strong background and foundation leading to success.</p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+
+   <section id="testimonials" class="testimonials">
+     <div class="container">
+
+
+       <div class="slides-1 swiper" data-aos="fade-up">
+         <div class="swiper-wrapper">
+
+
+           <div class="swiper-slide">
+             <div class="testimonial-item">
+               <img src="assets/img/akshaya.png" class="testimonial-img" alt="" style="width: 200px; height: 200px;">
+               <h3>Akshaya Lohia</h3>
+               <h4>Secretary-General</h4>
+               <p>
+                 <i class="bi bi-quote quote-icon-left"></i>
+                   Quote coming soon!
+                 <i class="bi bi-quote quote-icon-right"></i>
+               </p>
+             </div>
+           </div>
+
+
+           <div class="swiper-slide">
+             <div class="testimonial-item">
+               <img src="assets/img/aditi.png" class="testimonial-img" alt="" style="width: 200px; height: 200px;">
+               <h3>Aditi Kodukula</h3>
+               <h4>Under Secretary-General</h4>
+               <p>
+                 <i class="bi bi-quote quote-icon-left"></i>
+                   Hi everyone! My name is Aditi Kodukula and I am serving as the 2025-2026 Undersecretary
+                   General for TJMUN. I’m so excited to continue growing our club while making TechMUN XXXIII
+                   the best we ever had!
+                 <i class="bi bi-quote quote-icon-right"></i>
+               </p>
+             </div>
+           </div>
+
+
+           <div class="swiper-slide">
+             <div class="testimonial-item">
+               <img src="assets/img/raghav.jpeg" class="testimonial-img" alt=""style="width: 200px; height: 200px;">
+               <h3>Raghav Kasi</h3>
+               <h4>Senator</h4>
+               <p>
+                 <i class="bi bi-quote quote-icon-left"></i>
+                 Hey everybody! My name is Raghav Kasi and I am so happy to be the 2025-2026 TJMUN Senator.
+                 I’m excited to guide the members of TJMUN and make TechMUN XXXIII the best yet!
+                 <i class="bi bi-quote quote-icon-right"></i>
+               </p>
+             </div>
+           </div>
+
+
+           <div class="swiper-slide">
+             <div class="testimonial-item">
+               <img src="assets/img/mohan-home-officer.png" class="testimonial-img" alt="" style="width: 200px; height: 200px;">
+               <h3>Mohan Parthasarathy</h3>
+               <h4>Arbitrator</h4>
+               <p>
+                 <i class="bi bi-quote quote-icon-left"></i>
+                 Hey everybody! My name is Mohan Parthasarathy and I'll be your arbitrator this year and Director-General
+                 for TechMUN XXXIII. I am so excited to make TJMUN the best its ever been!
+                 <i class="bi bi-quote quote-icon-right"></i>
+               </p>
+             </div>
+           </div>
+
+
+         </div>
+         <div class="swiper-pagination"></div>
+       </div>
+
+
+
+
+     </div>
+   </section>
+
+
+ </main>
+
+
+ <footer id="footer" class="footer">
+
+
+   <div class="container">
+     <div class="row gy-4">
+       <div class="col-lg-5 col-md-12 footer-info">
+         <a href="index.html" class="logo d-flex align-items-center">
+           <span>TJMUN</span>
+         </a>
+         <div class="social-links d-flex mt-4">
+           <a href="https://www.facebook.com/tjhsstmun" class="facebook"><i class="bi bi-facebook"></i></a>
+           <a href="https://www.instagram.com/tjhsstmun/" class="instagram"><i class="bi bi-instagram"></i></a>
+         </div>
+       </div>
+
+
+       <div class="col-lg-2 col-6 footer-links">
+         <h4>Useful Links</h4>
+         <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="Leadership.html">Leadership</a></li>
+           <li><a href="Calendar.html">Calendar</a></li>
+           <li><a href="TECHMUN.html">TECHMUN</a></li>
+           <li><a href="Forms.html">Forms</a></li>
+           <li><a href="Awards.html">Awards</a></li>
+         </ul>
+       </div>
+
+
+       <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+         <h4>Contact Us</h4>
+         <p>
+           6560 Braddock Rd <br>
+           Alexandria, VA 22312<br>
+           United States <br><br>
+           <strong>Email:</strong> tjmodelun@gmail.com<br>
+         </p>
+
+
+       </div>
+
+
+     </div>
+   </div>
+
+
+   <div class="container mt-4">
+     <div class="copyright">
+       &copy; Copyright <strong><span>TJMUN</span></strong>. All Rights Reserved.
+     </div>
+     <div class="credits">
+     </div>
+   </div>
+
+
+ </footer>
+
+
+ <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+ <div id="preloader"></div>
+
+
+ <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+ <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+ <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+ <script src="assets/vendor/aos/aos.js"></script>
+ <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+ <script src="assets/js/main.js"></script>
+
 
 </body>
 
-</html> 
+
+</html>
+
+
+
+
+
+
+
+
