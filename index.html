@@ -59,10 +59,76 @@
     .team .member {
       padding-bottom: 15px !important;
     }
+
+    /* Announcement banner styling */
+    .announcement-banner {
+      background-color: #ffd700;
+      color: black;
+      text-align: center;
+      padding: 10px 30px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: 1001;
+      width: 100%;
+    }
+
+    .announcement-banner:first-of-type {
+      top: 0;
+    }
+
+    .announcement-banner:nth-of-type(2) {
+      top: 40px;
+    }
+
+    .announcement-banner p {
+      margin: 0;
+      font-size: 17px;
+    }
+
+    .announcement-banner a {
+      color: #000000;
+      text-decoration: underline;
+    }
+
+    .announcement-banner a:hover {
+      color: #0000ff;
+    }
+
+    /* Adjust header to sit below announcement banners */
+    #header.header {
+      top: 80px !important;
+      z-index: 1000;
+    }
+
+    /* Adjust main content to account for both banners and header */
+    #main {
+      margin-top: 80px;
+    }
+
+    /* Adjust breadcrumbs/page header if needed */
+    .breadcrumbs {
+      margin-top: 80px;
+    }
   </style>
 </head>
 
 <body>
+
+  <div class="announcement-banner">
+    <p>We are excited to host our TJMUN Fall Mock on Thursday, October 16th from 4-8pm! Signups and more information can be found <a
+    href="https://www.facebook.com/groups/211265742287271/posts/24726382233682281" target="_blank">
+        <u>here</u></a>. Good luck!
+    </p>
+  </div>
+
+  <div class="announcement-banner">
+    <p> Want some amazing TJMUN drip? Make sure to order some  <a
+    href="https://www.facebook.com/groups/211265742287271/posts/24661311776855994/" target="_blank">
+        <u>here</u></a>!
+    </p>
+  </div>
+
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -85,64 +151,6 @@
               <li><a href="pages/conferences/techmun/registration.html">Registration</a></li>
               <li><a href="pages/conferences/techmun/directors.html">Directors</a></li>
               <li><a href="pages/conferences/techmun/committees.html">Committees</a></li>
-              <!--<li class="dropdown"><a href="pages/conferences/techmun/committees.html"><span>Committees</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--  <ul class="sub-menu">-->
-              <!--    <li><a href="pages/conferences/techmun/committees.html">All Committees</a></li>-->
-              <!--    <li class="dropdown"><a href="#"><span>Middle School</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--      <ul class="sub-menu">-->
-              <!--        <li class="dropdown"><a href="#"><span>General Assemblies (GAs)</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="UNHCR.html">United Nations High Commissioner for Refugees (UNHCR)</a></li>-->
-              <!--            <li><a href="WHO.html">World Health Organization (WHO)</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--        <li class="dropdown"><a href="#"><span>Specialized/Regional/ECOFINs</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="Titanic.html">Titanic: The Sinking of the Unsinkable</a></li>-->
-              <!--            <li><a href="Oh.html">Oh, Despicable Me!: Gru’s Grand Scheme</a></li>-->
-              <!--            <li><a href="To.html">To Melt or Merge: Ben and Jerry's Transition Board, 2007</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--        <li class="dropdown"><a href="#"><span>Crisis Committees</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="Blast.html">Blast Off: Space Race, 1967</a></li>-->
-              <!--            <li><a href="Lightning.html">Lightning Strikes Twice: Flash’s Foes</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--      </ul>-->
-              <!--    </li>-->
-              <!--    <li class="dropdown"><a href="#"><span>High School</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--      <ul class="sub-menu">-->
-              <!--        <li class="dropdown"><a href="#"><span>General Assemblies (GAs)</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="DISEC.html">Disarmament and International Security Committee (DISEC)</a></li>-->
-              <!--            <li><a href="UNICEF.html">United Nations International Children's Emergency Fund (UNICEF)</a></li>-->
-              <!--            <li><a href="ECOFIN.html">Economic and Financial Affairs Council (ECOFIN)</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--        <li class="dropdown"><a href="#"><span>Specialized/Regional/ECOFINs</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="Run.html">Run It Back, Turbo: The Creation of NASCAR, 1947</a></li>-->
-              <!--            <li><a href="Return.html">Return of the Dynasty: Commanders, 2028</a></li>-->
-              <!--            <li><a href="Quantum.html">Quantum Leap: NVIDIA’s Semiconductor Revolution</a></li>-->
-              <!--            <li><a href="The.html">The Scranton Summit: Dunder Mifflin's Demise</a></li>-->
-              <!--            <li><a href="Operation.html">Operation Infra: INTERPOL’s Global Manhunt (Double-Del)</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--        <li class="dropdown"><a href="#"><span>Crisis Committees</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="Fractured.html">Fractured Allegiance: The Sokovia Accords</a></li>-->
-              <!--            <li><a href="XOXO.html">XOXO: Gossip Girl</a></li>-->
-              <!--            <li><a href="JCC_Cali.html">JCC Battle of the Cartels, 1990: Cali</a></li>-->
-              <!--            <li><a href="JCC_Medellin.html">JCC Battle of the Cartels, 1990: Medellin</a></li>-->
-              <!--            <li><a href="ByteBlood.html">ByteBlood: The DNA Privacy and Biotech Scandal (Double-Del)</a></li>-->
-              <!--            <li><a href="Ad-Hoc.html">Ad-Hoc Crisis Committee of the Secretary General</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--      </ul>-->
-              <!--    </li>-->
-              <!--  </ul>-->
-              <!--</li>-->
               <li><a href="pages/conferences/techmun/schedule.html">Schedule</a></li>
               <li><a href="pages/conferences/techmun/position-papers.html">Position Papers</a></li>
               <li><a href="pages/conferences/techmun/conference-policies.html">Conference Policies</a></li>
@@ -286,7 +294,7 @@
                <p>
                  <i class="bi bi-quote quote-icon-left"></i>
                    Hi everyone! My name is Aditi Kodukula and I am serving as the 2025-2026 Undersecretary
-                   General for TJMUN. I’m so excited to continue growing our club while making TechMUN XXXIII
+                   General for TJMUN. I'm so excited to continue growing our club while making TechMUN XXXIII
                    the best we've ever had!
                  <i class="bi bi-quote quote-icon-right"></i>
                </p>
@@ -302,7 +310,7 @@
                <p>
                  <i class="bi bi-quote quote-icon-left"></i>
                  Hey everybody! My name is Raghav Kasi and I am so happy to be the 2025-2026 TJMUN Senator.
-                 I’m excited to guide the members of TJMUN and make TechMUN XXXIII the best yet!
+                 I'm excited to guide the members of TJMUN and make TechMUN XXXIII the best yet!
                  <i class="bi bi-quote quote-icon-right"></i>
                </p>
              </div>
@@ -417,11 +425,3 @@
 
 
 </html>
-
-
-
-
-
-
-
-
