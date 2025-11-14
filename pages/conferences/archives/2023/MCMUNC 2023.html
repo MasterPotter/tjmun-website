@@ -216,60 +216,14 @@
 
   </main>
 
-    <footer id="footer" class="footer">
-
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="../../../../index.html" class="logo d-flex align-items-center">
-              <span>TJMUN</span>
-            </a>
-            <div class="social-links d-flex mt-4">
-              <a href="https://www.facebook.com/tjhsstmun" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/tjhsstmun/" class="instagram"><i class="bi bi-instagram"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="../../../../index.html">Home</a></li>
-              <li><a href="../../../../pages/about/leadership.html">Leadership</a></li>
-              <li><a href="../../../../pages/events/calendar.html">Calendar</a></li>
-              <li><a href="../../../../index.html">TECHMUN</a></li>
-              <li><a href="../../../../pages/events/forms.html">Forms</a></li>
-              <li><a href="../../../../pages/about/awards.html">Awards</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>
-              6560 Braddock Rd <br>
-              Alexandria, VA 22312<br>
-              United States <br><br>
-              <strong>Email:</strong> tjmodelun@gmail.com<br>
-            </p>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div class="container mt-4">
-        <div class="copyright">
-          &copy; Copyright <strong><span>TJMUN</span></strong>. All Rights Reserved.
-          <br>
-       <em>Please be aware that this website is the site of TJMUN, a recognized student organization at TJHSST. However, this site is not maintained
-       or controlled by Fairfax County Public Schools or TJHSST. FCPS and TJHSST do not endorse the content, views, or opinions expressed herein. TJMUN
-       is solely responsible for the content of this website.</em>
-        </div>
-        <div class="credits">
-        </div>
-      </div>
-
-    </footer>
-
+    <div id="footer-container"></div>
+<script>
+  fetch('/templates/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    });
+</script>
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
