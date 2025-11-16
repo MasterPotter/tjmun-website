@@ -65,86 +65,14 @@
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="../../../index.html">HOME</a></li>
-          <li><a href="../../about/leadership.html">LEADERSHIP</a></li>
-          <li><a href="../../events/calendar.html">CALENDAR</a></li>
-          <li class="dropdown"><a href="invitation.html" class="active"><span>TECHMUN - Position Papers</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li class="invitation-link"><a href="invitation.html">Invitation</a></li>
-              <li><a href="registration.html">Registration</a></li>
-              <li><a href="directors.html">Directors</a></li>
-              <li><a href="committees.html">Committees</a></li>
-              <!--<li class="dropdown"><a href="committees.html"><span>Committees</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--  <ul class="sub-menu">-->
-              <!--    <li><a href="committees.html">All Committees</a></li>-->
-              <!--    <li class="dropdown"><a href="#"><span>Middle School</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--      <ul class="sub-menu">-->
-              <!--        <li class="dropdown"><a href="#"><span>General Assemblies (GAs)</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="UNHCR.html">United Nations High Commissioner for Refugees (UNHCR)</a></li>-->
-              <!--            <li><a href="WHO.html">World Health Organization (WHO)</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--        <li class="dropdown"><a href="#"><span>Specialized/Regional/ECOFINs</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="Titanic.html">Titanic: The Sinking of the Unsinkable</a></li>-->
-              <!--            <li><a href="Oh.html">Oh, Despicable Me!: Gru’s Grand Scheme</a></li>-->
-              <!--            <li><a href="To.html">To Melt or Merge: Ben and Jerry's Transition Board, 2007</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--        <li class="dropdown"><a href="#"><span>Crisis Committees</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="Blast.html">Blast Off: Space Race, 1967</a></li>-->
-              <!--            <li><a href="Lightning.html">Lightning Strikes Twice: Flash’s Foes</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--      </ul>-->
-              <!--    </li>-->
-              <!--    <li class="dropdown"><a href="#"><span>High School</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--      <ul class="sub-menu">-->
-              <!--        <li class="dropdown"><a href="#"><span>General Assemblies (GAs)</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="DISEC.html">Disarmament and International Security Committee (DISEC)</a></li>-->
-              <!--            <li><a href="UNICEF.html">United Nations International Children's Emergency Fund (UNICEF)</a></li>-->
-              <!--            <li><a href="ECOFIN.html">Economic and Financial Affairs Council (ECOFIN)</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--        <li class="dropdown"><a href="#"><span>Specialized/Regional/ECOFINs</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="Run.html">Run It Back, Turbo: The Creation of NASCAR, 1947</a></li>-->
-              <!--            <li><a href="Return.html">Return of the Dynasty: Commanders, 2028</a></li>-->
-              <!--            <li><a href="Quantum.html">Quantum Leap: NVIDIA’s Semiconductor Revolution</a></li>-->
-              <!--            <li><a href="The.html">The Scranton Summit: Dunder Mifflin's Demise</a></li>-->
-              <!--            <li><a href="Operation.html">Operation Infra: INTERPOL’s Global Manhunt (Double-Del)</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--        <li class="dropdown"><a href="#"><span>Crisis Committees</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
-              <!--          <ul class="sub-menu">-->
-              <!--            <li><a href="Fractured.html">Fractured Allegiance: The Sokovia Accords</a></li>-->
-              <!--            <li><a href="XOXO.html">XOXO: Gossip Girl</a></li>-->
-              <!--            <li><a href="JCC_Cali.html">JCC Battle of the Cartels, 1990: Cali</a></li>-->
-              <!--            <li><a href="JCC_Medellin.html">JCC Battle of the Cartels, 1990: Medellin</a></li>-->
-              <!--            <li><a href="ByteBlood.html">ByteBlood: The DNA Privacy and Biotech Scandal (Double-Del)</a></li>-->
-              <!--            <li><a href="Ad-Hoc.html">Ad-Hoc Crisis Committee of the Secretary General</a></li>-->
-              <!--          </ul>-->
-              <!--        </li>-->
-              <!--      </ul>-->
-              <!--    </li>-->
-              <!--  </ul>-->
-              <!--</li>-->
-              <li><a href="schedule.html">Schedule</a></li>
-              <li><a href="position-papers.html">Position Papers</a></li>
-              <li><a href="conference-policies.html">Conference Policies</a></li>
-              <li><a href="guest-speakers.html">Guest Speakers</a></li>
-            </ul>
-          </li>
-          <li><a href="../../events/forms.html">FORMS</a></li>
-          <li><a href="../../about/awards.html">AWARDS</a></li>
-        </ul>
-      </nav>
-
+<div id="navbar-container"></div>
+<script>
+  fetch('/templates/navigation.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('navbar-container').innerHTML = html;
+    });
+</script>
     </div>
   </header>
 
