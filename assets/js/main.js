@@ -5,13 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
    * Preloader
    */
   const preloader = document.querySelector('#preloader');
-  preloader.remove();
-//   if (preloader) {
-//     window.addEventListener('load', () => {
-//       console.log("HIII")
-//       preloader.remove();
-//     });
-//   }
+  if (preloader) {
+    window.addEventListener('load', () => {
+      preloader.remove();
+    });
+  }
 
   /**
    * Sticky header on scroll
@@ -28,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const scrollTop = document.querySelector('.scroll-top');
   if (scrollTop) {
-    const togglescrollTop = function() {
+    const togglescrollTop = function () {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
     window.addEventListener('load', togglescrollTop);
@@ -48,13 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       event.preventDefault();
-      mobileNavToogle();
+      mobileNavToggle();
     })
   });
 
-  function mobileNavToogle() {
+  function mobileNavToggle() {
     document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavShow.classList.toggle('d-none');
     mobileNavHide.classList.toggle('d-none');
@@ -72,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navbarlink.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
+        mobileNavToggle();
       }
     });
 
@@ -84,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
 
   navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       if (document.querySelector('.mobile-nav-active')) {
         event.preventDefault();
         this.classList.toggle('active');
@@ -145,11 +143,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     aos_init();
   });
-  
-  el.addEventListener('click', function(event) {
+
+  el.addEventListener('click', function (event) {
     if (document.querySelector('body').classList.contains('mobile-nav-active')) {
       event.preventDefault();
-      
+
       // Toggle active class for dropdown menu
       let dropdownMenu = this.nextElementSibling;
       if (dropdownMenu) {
