@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -132,39 +133,38 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Animation on scroll function and init
    */
+  /**
+   * Animation on scroll function and init
+   */
   function aos_init() {
     AOS.init({
-      duration: 1000,
+      duration: 600,
       easing: 'ease-in-out',
       once: true,
-      mirror: false
+      mirror: false,
+      offset: 50,
+      delay: 0
     });
   }
   window.addEventListener('load', () => {
     aos_init();
   });
 
-  el.addEventListener('click', function (event) {
-    if (document.querySelector('body').classList.contains('mobile-nav-active')) {
-      event.preventDefault();
+  /**
+   * Adjust Header Position for Announcement Banner
+   */
+  function adjustHeaderPosition() {
+    const banner = document.querySelector('.announcement-banner');
+    const header = document.querySelector('#header');
 
-      // Toggle active class for dropdown menu
-      let dropdownMenu = this.nextElementSibling;
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('dropdown-active');
-      }
-
-      // Toggle active class for link itself
-      this.classList.toggle('active');
-
-      // Toggle dropdown indicator icon (if present)
-      let dropDownIndicator = this.querySelector('.dropdown-indicator');
-      if (dropDownIndicator) {
-        dropDownIndicator.classList.toggle('bi-chevron-up');
-        dropDownIndicator.classList.toggle('bi-chevron-down');
-      }
+    if (banner && header) {
+      const bannerHeight = banner.offsetHeight;
+      header.style.top = `${bannerHeight}px`;
     }
-  });
+  }
+
+  window.addEventListener('load', adjustHeaderPosition);
+  window.addEventListener('resize', adjustHeaderPosition);
 
 });
 

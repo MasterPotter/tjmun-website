@@ -285,6 +285,17 @@ section {
   padding: 30px 0;
 }
 
+@media (max-width: 1279px) {
+  .header .container-fluid {
+    justify-content: flex-start !important;
+  }
+
+  .mobile-nav-toggle {
+    order: -1;
+    margin-right: 15px;
+  }
+}
+
 .header.sticked {
   background: rgba(14, 29, 52, 0.9);
   padding: 15px 0;
