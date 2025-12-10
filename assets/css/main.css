@@ -104,6 +104,13 @@ section {
   z-index: 2;
 }
 
+.nav-inner{
+  max-width: 800px;     /* Choose 1100, 1000, etc. */
+  margin: 0 auto;
+  width: 50%;
+  padding: 0 20px;       /* Keeps nav links away from screen edges */
+}
+
 @media (max-width: 640px) {
   .section-header h2 {
     font-size: 28px;
