@@ -35,16 +35,43 @@
   <!-- Landing Page Specific CSS -->
   <link href="assets/css/landing-new.css" rel="stylesheet">
 
+  <!-- Styles to match Leadership Page Format -->
+  <style>
+    body, p, h1, h2, h3, h4, h5, h6, a, span, li {
+      font-family: 'EB Garamond', serif !important;
+    }
+
+    .navbar ul li a {
+      font-family: 'EB Garamond', serif !important;
+    }
+
+    .container {
+      font-family: 'EB Garamond', serif !important;
+    }
+
+    /* Override AOS pointer-events to enable hover during animation
+       (Applied generally to ensure consistency if these classes are used) */
+    .member-premium[data-aos][data-aos],
+    .member-premium[data-aos][data-aos].aos-animate {
+      pointer-events: auto !important;
+    }
+
+    .member-premium[data-aos][data-aos]:hover {
+      transform: scale(1.05) translateY(-15px) !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25) !important;
+      border-bottom-color: #0d42ff !important;
+    }
+  </style>
+
 </head>
 
 <body>
 
   <!-- Announcement Banner -->
-  <!-- Announcement Banner -->
   <div class="announcement-banner">
     <p>We are proud to be hosting TechMUN XXXIII, on March 13-14, 2026!
       Registration can be found <a href="https://forms.gle/yXyfiz43wWspk1Cs6" target="_blank"
-        rel="noopener noreferrer">here</a>. Priority registration ends on 12/17/2025.</p>
+        rel="noopener noreferrer">here</a>. Regular registration ends on 2/1/2026.</p>
   </div>
 
   <!-- Header -->
@@ -190,10 +217,10 @@
               <div class="testimonial-item">
                 <img src="assets/img/raghav.jpeg" class="testimonial-img" alt="">
                 <h3>Raghav Kasi</h3>
-                <h4>Senator</h4>
+                <h4>Chief of Staff</h4>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Hey everybody! My name is Raghav Kasi and I am so happy to be the 2025-2026 TJMUN Senator. I'm excited
+                  Hey everybody! My name is Raghav Kasi and I am so happy to be the 2025-2026 TJMUN Chief of Staff. I'm excited
                   to guide the members of TJMUN and make TechMUN XXXIII the best yet!
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
@@ -250,8 +277,6 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- Initialize Counters Manually if needed, but main.js likely handles it. 
-       Adding a small script to ensure PureCounter works with the new structure if main.js relies on specific classes -->
   <script>
     // Re-init AOS to catch new elements
     window.addEventListener('load', () => {

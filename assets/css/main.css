@@ -105,9 +105,9 @@ section {
 }
 
 .nav-inner{
-  max-width: 800px;     /* Choose 1100, 1000, etc. */
+  max-width: 625px;     /* Choose 1100, 1000, etc. */
   margin: 0 auto;
-  width: 50%;
+  width: 85%; /* changes how much of the navbar is on screen by shifting it more left the higher the num is
   padding: 0 20px;       /* Keeps nav links away from screen edges */
 }
 
@@ -431,7 +431,7 @@ section {
 
   .navbar .dropdown .dropdown ul {
     top: 0;
-    left: calc(100% - 30px);
+    left: 100%;
     visibility: hidden;
   }
 
@@ -2290,38 +2290,34 @@ body.index-page {
 /* Add this CSS to your main.css file or in a style tag in the head of your HTML */
 
 /* Style for dropdown menus to appear on the left side instead of right for deeper levels */
-.navbar .dropdown .dropdown:has(.sub-menu .sub-menu) ul {
-  right: 100%;
-  left: auto;
-}
-
-/* Ensure submenus don't overflow screen */
-.navbar .dropdown .dropdown ul.sub-menu ul.sub-menu {
-  left: auto;
-  right: 100%;
-}
-
-/* Make sure all menus are visible on screen */
-@media (min-width: 1024px) {
-  .navbar .dropdown ul {
-    display: block;
-    position: absolute;
-    left: 14px;
-    top: calc(100% + 30px);
-    margin: 0;
-    padding: 10px 0;
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-    background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-    transition: 0.3s;
-    border-radius: 4px;
+@media (min-width: 1280px) {
+  /* Level 3: Committees (Opens Right) */
+  .navbar .dropdown ul ul {
+    left: 100% !important;
+    right: auto !important;
   }
 
-  /* Position third-level and deeper dropdowns to open left */
-  .navbar .dropdown .dropdown ul.sub-menu ul.sub-menu {
-    left: auto;
-    right: 100%;
+  /* 2. Flip Level 3 AND Level 4 to open to the LEFT */
+  /* This targets: Middle School/High School AND General Assemblies/Specialized Agencies */
+  .navbar .dropdown ul ul ul,
+  .navbar .dropdown ul ul ul ul {
+    left: auto !important;
+    right: 100% !important;
+    /* This pushes the menu to the left of its parent instead of the right */
+    border-radius: 4px 0 0 4px;
+  }
+
+  /* 3. Fix for the "calc" logic in your original CSS that causes overlapping */
+  .navbar .dropdown .dropdown ul {
+    top: 0 !important;
+  }
+
+  /* 4. Ensure the hover state respects the flip */
+  .navbar .dropdown ul ul li:hover > ul,
+  .navbar .dropdown ul ul ul li:hover > ul {
+    left: auto !important;
+    right: 100% !important;
+    opacity: 1;
+    visibility: visible;
   }
 }
