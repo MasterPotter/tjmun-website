@@ -12,7 +12,7 @@ import time
 def test_awards_links():
     """Test all conference links from the awards page"""
     base_url = "http://localhost:8000/"
-    awards_url = urljoin(base_url, "pages/about/awards.html")
+    awards_url = urljoin(base_url, "pages/about/closings.html")
     
     print("🔍 TJMUN Awards Page Link Validator")
     print("=" * 50)

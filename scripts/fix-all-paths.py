@@ -41,7 +41,7 @@ def get_navigation_links(depth):
         'href="Leadership.html"': f'href="{prefix}pages/about/leadership.html"',
         'href="Calendar.html"': f'href="{prefix}pages/events/calendar.html"',
         'href="Forms.html"': f'href="{prefix}pages/events/forms.html"',
-        'href="Awards.html"': f'href="{prefix}pages/about/awards.html"',
+        'href="Awards.html"': f'href="{prefix}pages/about/closings.html"',
         'href="Invitation.html"': f'href="{prefix}pages/conferences/techmun/invitation.html"',
         'href="Registration.html"': f'href="{prefix}pages/conferences/techmun/registration.html"',
         'href="Directors.html"': f'href="{prefix}pages/conferences/techmun/directors.html"',
