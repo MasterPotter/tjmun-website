@@ -1,0 +1,14 @@
+assets/vendor/
+assets/img/
+guides/
+pages/events/*.pdf
+
+*.map
+*.min.css
+*.min.js
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.JPG
+*.mp4

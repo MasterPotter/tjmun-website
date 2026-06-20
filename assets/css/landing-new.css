@@ -6,8 +6,8 @@
   --color-white: #ffffff;
   --color-glass: rgba(255, 255, 255, 0.1);
   --color-glass-border: rgba(255, 255, 255, 0.2);
-  --font-heading: 'EB Garamond', serif;
-  --font-body: 'EB Garamond', serif;
+  --font-heading: "EB Garamond", serif;
+  --font-body: "EB Garamond", serif;
 }
 
 /* Reset & Base */
@@ -17,7 +17,12 @@ body {
   background-color: #f8f9fa;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
 }
@@ -234,7 +239,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
-.quote-icon-left, .quote-icon-right {
+.quote-icon-left,
+.quote-icon-right {
   color: var(--color-gold);
   font-size: 1.5rem;
   opacity: 0.5;
@@ -257,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero-content h1 {
     font-size: 2.5rem;
   }
-  
+
   .counter-card {
     margin-bottom: 20px;
   }

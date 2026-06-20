@@ -1,211 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>tjmun test page :)</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>tjmun test page :)</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <link href="../../assets/img/favicon.png" rel="icon" />
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <link href="../../assets/img/favicon.png" rel="icon">
-  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link rel="icon" href="../../assets/img/logo5.png" type="image/x-icon" />
 
-  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link rel="icon" href="../../assets/img/logo5.png"type="image/x-icon">
+    <link href="../../assets/css/main.css" rel="stylesheet" />
 
-  <link href="../../assets/css/main.css" rel="stylesheet">
+    <style>
+      body,
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      a,
+      span,
+      li {
+        font-family: "EB Garamond", serif !important;
+      }
 
-  <style>
-    body, p, h1, h2, h3, h4, h5, h6, a, span, li {
-      font-family: 'EB Garamond', serif !important;
-    }
+      .navbar ul li a {
+        font-family: "EB Garamond", serif !important;
+      }
 
-    .navbar ul li a {
-      font-family: 'EB Garamond', serif !important;
-    }
+      .container {
+        font-family: "EB Garamond", serif !important;
+      }
 
-    .container {
-      font-family: 'EB Garamond', serif !important;
-    }
+      /* Background video */
+      .bg-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
 
-    /* Background video */
-    .bg-video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
+      /* Fullscreen splash background */
+      #logo-splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        animation: splashFade 3.5s linear forwards; /* background fades out */
+      }
 
-/* Fullscreen splash background */
-#logo-splash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  animation: splashFade 3.5s linear forwards; /* background fades out */
-}
+      /* Logo inside the splash - remove max-width/max-height */
+      #logo-splash img {
+        width: 60vw; /* start 3-4x bigger */
+        height: auto;
+        animation: logoUpShrink 3.5s linear forwards;
+        will-change: width, height, transform, opacity;
+      }
 
-/* Logo inside the splash - remove max-width/max-height */
-#logo-splash img {
-  width: 60vw;  /* start 3-4x bigger */
-  height: auto;
-  animation: logoUpShrink 3.5s linear forwards;
-  will-change: width, height, transform, opacity;
-}
+      /* Fade out the background */
+      @keyframes splashFade {
+        0%,
+        57% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
 
-/* Fade out the background */
-@keyframes splashFade {
-  0%, 57% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+      /* Move the logo straight up while shrinking */
+      @keyframes logoUpShrink {
+        0%,
+        57% {
+          width: 60vw;
+          height: auto;
+          transform: translateY(0);
+          opacity: 1;
+        }
+        100% {
+          width: 0;
+          height: 0;
+          transform: translateY(-100vh); /* move up off screen */
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
 
-/* Move the logo straight up while shrinking */
-@keyframes logoUpShrink {
-  0%, 57% {
-    width: 60vw;
-    height: auto;
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    width: 0;
-    height: 0;
-    transform: translateY(-100vh); /* move up off screen */
-    opacity: 0;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-  </style>
-
-
-</head>
-
-<body>
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="../../index.html" class="logo d-flex align-items-center">
-          <img src="../../assets/img/logo5.png" alt="" >
+  <body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="../../index.html" class="logo d-flex align-items-center">
+          <img src="../../assets/img/logo5.png" alt="" />
           <h1>TJMUN</h1>
         </a>
 
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-<div id="navbar-container"></div>
-<script>
-  fetch('/templates/navigation.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('navbar-container').innerHTML = html;
-    });
-</script>
-    </div>
-  </header>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        <div id="navbar-container"></div>
+        <script>
+          fetch("/templates/navigation.html")
+            .then((res) => res.text())
+            .then((html) => {
+              document.getElementById("navbar-container").innerHTML = html;
+            });
+        </script>
+      </div>
+    </header>
 
-  <main id="main">
+    <main id="main">
+      <div class="breadcrumbs">
+        <div
+          class="page-header d-flex align-items-center"
+          style="position: relative; overflow: hidden"
+        >
+          <!-- Fullscreen logo splash -->
+          <div id="logo-splash">
+            <img src="../../assets/img/logo5.png" alt="TJMUN Logo" />
+          </div>
 
-    <div class="breadcrumbs">
-      <div class="page-header d-flex align-items-center" style="position: relative; overflow: hidden;">
+          <!-- Background video -->
+          <img
+            src="../../assets/img/top_bar.png"
+            alt="Hero Image"
+            class="bg-video"
+            style="object-fit: cover"
+          />
 
-        <!-- Fullscreen logo splash -->
-        <div id="logo-splash">
-          <img src="../../assets/img/logo5.png" alt="TJMUN Logo">
-        </div>
-
-        <!-- Background video -->
-        <img src="../../assets/img/top_bar.png" alt="Hero Image" class="bg-video" style="object-fit: cover;">
-
-        <div class="container position-relative">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h2>tjmun test page :)</h2>
+          <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2>tjmun test page :)</h2>
+              </div>
             </div>
           </div>
         </div>
+
+        <nav>
+          <div class="container">
+            <ol>
+              <li><a href="../../index.html">Home</a></li>
+              <li>CALENDAR</li>
+            </ol>
+          </div>
+        </nav>
       </div>
 
-      <nav>
-        <div class="container">
-          <ol>
-            <li><a href="../../index.html">Home</a></li>
-            <li>CALENDAR</li>
-          </ol>
-        </div>
-      </nav>
-    </div>
+      <div
+        id="google-calendar"
+        class="container mt-5"
+        style="background-color: #f8f9fa; border-radius: 10px; padding: 20px"
+      ></div>
+    </main>
+    <div id="footer-container"></div>
+    <script>
+      fetch("/templates/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        });
+    </script>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-    <div id="google-calendar" class="container mt-5" style="background-color: #f8f9fa; border-radius: 10px; padding: 20px;"></div>
+    <div id="preloader"></div>
 
-  </main>
-  <div id="footer-container"></div>
-  <script>
-  fetch('/templates/footer.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('footer-container').innerHTML = html;
-    });
-  </script>
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../assets/vendor/aos/aos.js"></script>
 
-  <div id="preloader"></div>
+    <script src="../../assets/js/main.js"></script>
 
-  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../../assets/vendor/aos/aos.js"></script>
-  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarContainer = document.getElementById("google-calendar");
+        var calendarEmbedCode =
+          "<iframe src='https://calendar.google.com/calendar/embed?src=d93ca2ce7a45ca69eb1f681412b3bdaa56f6d448439dba9cc973a1d4483d8a64%40group.calendar.google.com&ctz=America%2FNew_York' style='border: 0' width='100%' height='600' frameborder='0' scrolling='no'></iframe>";
 
-  <script src="../../assets/js/main.js"></script>
-
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarContainer = document.getElementById('google-calendar');
-      var calendarEmbedCode = "<iframe src='https://calendar.google.com/calendar/embed?src=d93ca2ce7a45ca69eb1f681412b3bdaa56f6d448439dba9cc973a1d4483d8a64%40group.calendar.google.com&ctz=America%2FNew_York' style='border: 0' width='100%' height='600' frameborder='0' scrolling='no'></iframe>";
-
-      if (calendarContainer) {
-        calendarContainer.innerHTML = calendarEmbedCode;
-      }
-    });
-  </script>
-
-</body>
-
+        if (calendarContainer) {
+          calendarContainer.innerHTML = calendarEmbedCode;
+        }
+      });
+    </script>
+  </body>
 </html>

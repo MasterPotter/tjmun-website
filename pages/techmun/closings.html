@@ -1,218 +1,274 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <title>TJMUN - TechMUN XXXIII Awards</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-    <link href="../../../assets/img/favicon.png" rel="icon">
-    <link href="../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../../../assets/img/favicon.png" rel="icon" />
+    <link href="../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="../../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="../../../assets/vendor/aos/aos.css" rel="stylesheet">
-    <link rel="icon" href="../../../assets/img/logo5.png" type="image/x-icon">
+    <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="../../../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link rel="icon" href="../../../assets/img/logo5.png" type="image/x-icon" />
 
-    <link href="../../../assets/css/main.css" rel="stylesheet">
+    <link href="../../../assets/css/main.css" rel="stylesheet" />
 
     <style>
-        body, p, h1, h2, h3, h4, h5, h6, a, span, li {
-          font-family: 'EB Garamond', serif !important;
-        }
+      body,
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      a,
+      span,
+      li {
+        font-family: "EB Garamond", serif !important;
+      }
 
-        .navbar ul li a {
-          font-family: 'EB Garamond', serif !important;
+      .navbar ul li a {
+        font-family: "EB Garamond", serif !important;
+      }
+
+      .container {
+        font-family: "EB Garamond", serif !important;
+      }
+      @media (max-width: 768px) {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        li,
+        span {
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          white-space: normal;
         }
 
         .container {
-          font-family: 'EB Garamond', serif !important;
+          max-width: 95%;
+          padding: 10px;
         }
-        @media (max-width: 768px) {
-          h1, h2, h3, h4, h5, h6, p, li, span {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            white-space: normal;
-          }
 
-          .container {
-            max-width: 95%;
-            padding: 10px;
-          }
-
-          .navbar ul {
-            flex-wrap: wrap;
-          }
-
-          .navbar ul li {
-            text-align: center;
-            width: 100%;
-          }
-
-          .breadcrumbs .container {
-            max-width: 100%;
-            padding: 0 10px;
-          }
-
-          .page-header {
-            text-align: center;
-          }
-
-          .page-header h2 {
-            font-size: 1.8rem;
-          }
-
-          .container > div {
-            display: block;
-            width: 100%;
-          }
-
-          .container > div ul {
-            padding-left: 10px;
-          }
-
-          .container > div ul li {
-            font-size: 1.2rem;
-          }
-
-          .container > div h3 {
-            font-size: 1.5rem;
-          }
+        .navbar ul {
+          flex-wrap: wrap;
         }
+
+        .navbar ul li {
+          text-align: center;
+          width: 100%;
+        }
+
+        .breadcrumbs .container {
+          max-width: 100%;
+          padding: 0 10px;
+        }
+
+        .page-header {
+          text-align: center;
+        }
+
+        .page-header h2 {
+          font-size: 1.8rem;
+        }
+
+        .container > div {
+          display: block;
+          width: 100%;
+        }
+
+        .container > div ul {
+          padding-left: 10px;
+        }
+
+        .container > div ul li {
+          font-size: 1.2rem;
+        }
+
+        .container > div h3 {
+          font-size: 1.5rem;
+        }
+      }
+      .media-row {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .media-item {
+        flex: 1;
+      }
+
+      .media-item iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+      }
+
+      /* Mobile fix */
+      @media (max-width: 768px) {
         .media-row {
-  display: flex;
-  gap: 20px;
-  margin-top: 30px;
-}
+          flex-direction: column;
+        }
 
-.media-item {
-  flex: 1;
-}
-
-.media-item iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-}
-
-/* Mobile fix */
-@media (max-width: 768px) {
-  .media-row {
-    flex-direction: column;
-  }
-
-  .media-item iframe {
-    height: 250px;
-  }
-}
+        .media-item iframe {
+          height: 250px;
+        }
+      }
     </style>
+  </head>
 
-</head>
-
-<body>
-
-<header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
+  <body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="../../../index.html" class="logo d-flex align-items-center">
-            <img src="../../../assets/img/logo5.png" alt="">
-            <h1>TJMUN</h1>
+          <img src="../../../assets/img/logo5.png" alt="" />
+          <h1>TJMUN</h1>
         </a>
 
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <div id="navbar-container"></div>
         <script>
-            fetch('/templates/navigation.html')
-              .then(res => res.text())
-              .then(html => {
-                document.getElementById('navbar-container').innerHTML = html;
-              });
+          fetch("/templates/navigation.html")
+            .then((res) => res.text())
+            .then((html) => {
+              document.getElementById("navbar-container").innerHTML = html;
+            });
         </script>
-    </div>
-</header>
+      </div>
+    </header>
 
-<main id="main">
-
-    <div class="breadcrumbs">
-        <div class="page-header d-flex align-items-center" style="position: relative; overflow: hidden;">
-            <img src="../../assets/img/top_bar.png" alt="Hero Image"
-                 style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%);; object-fit: cover;">
-            <div class="container position-relative">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <h2>TECHMUN XXXIII AWARDS</h2>
-
-                    </div>
-                </div>
+    <main id="main">
+      <div class="breadcrumbs">
+        <div
+          class="page-header d-flex align-items-center"
+          style="position: relative; overflow: hidden"
+        >
+          <img
+            src="../../assets/img/top_bar.png"
+            alt="Hero Image"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              min-width: 100%;
+              min-height: 100%;
+              width: auto;
+              height: auto;
+              transform: translate(-50%, -50%);
+              object-fit: cover;
+            "
+          />
+          <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2>TECHMUN XXXIII AWARDS</h2>
+              </div>
             </div>
+          </div>
         </div>
         <nav>
-            <div class="container">
-                <ol>
-                    <li><a href="../../../index.html">Home</a></li>
-                    <li>TECHMUN AWARDS</li>
-                </ol>
-            </div>
+          <div class="container">
+            <ol>
+              <li><a href="../../../index.html">Home</a></li>
+              <li>TECHMUN AWARDS</li>
+            </ol>
+          </div>
         </nav>
-    </div>
-    <div class="container"
-         style="font-family: 'Poppins', sans-serif; color: #333; line-height: 1.6; max-width: 1200px; margin: auto;">
-        <h2 style="color: rgb(11, 11, 89); font-size: 2rem; font-weight: bold; text-align: center; margin-top: 15px; margin-bottom: 20px;">
-            TechMUN XXXIII Awards</h2>
-        <center><h5>Thanks for coming to TechMUN XXXIII, and we hope to see you next year!</h5></center>
+      </div>
+      <div
+        class="container"
+        style="
+          font-family: &quot;Poppins&quot;, sans-serif;
+          color: #333;
+          line-height: 1.6;
+          max-width: 1200px;
+          margin: auto;
+        "
+      >
+        <h2
+          style="
+            color: rgb(11, 11, 89);
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 20px;
+          "
+        >
+          TechMUN XXXIII Awards
+        </h2>
+        <center>
+          <h5>Thanks for coming to TechMUN XXXIII, and we hope to see you next year!</h5>
+        </center>
         <div class="media-row">
+          <!-- YouTube Video -->
+          <div class="media-item">
+            <iframe
+              src="https://drive.google.com/file/d/1sNkcnUTJLcQ2kMrxSevUjpDsSKfhyo9Z/preview"
+              title="YouTube video"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
 
-                            <!-- YouTube Video -->
-                            <div class="media-item">
-                                <iframe
-                                        src="https://drive.google.com/file/d/1sNkcnUTJLcQ2kMrxSevUjpDsSKfhyo9Z/preview"
-                                        title="YouTube video"
-                                        allowfullscreen>
-                                </iframe>
-                            </div>
+          <!-- Google Slides -->
+          <div class="media-item">
+            <iframe
+              src="https://docs.google.com/presentation/d/e/2PACX-1vRY02IyT1dsDA4IH9WlAlVXV_NpCz39P2rGilizzu_Xb63o5SyIjA6M6eNE40YimiVyy48lGzbvEN9E/pubembed?start=false&loop=false&delayms=3000"
+              frameborder="0"
+              width="960"
+              height="569"
+              allowfullscreen="true"
+              mozallowfullscreen="true"
+              webkitallowfullscreen="true"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
 
-                            <!-- Google Slides -->
-                            <div class="media-item">
-                                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRY02IyT1dsDA4IH9WlAlVXV_NpCz39P2rGilizzu_Xb63o5SyIjA6M6eNE40YimiVyy48lGzbvEN9E/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                            </div>
+    <div id="footer-container"></div>
+    <script>
+      fetch("/templates/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        });
+    </script>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-                        </div>
-    </div>
-</main>
+    <div id="preloader"></div>
 
-<div id="footer-container"></div>
-<script>
-    fetch('/templates/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-container').innerHTML = html;
-      });
-</script>
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../../assets/vendor/aos/aos.js"></script>
 
-<div id="preloader"></div>
-
-<script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="../../../assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="../../../assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="../../../assets/vendor/aos/aos.js"></script>
-<script src="../../../assets/vendor/php-email-form/validate.js"></script>
-
-<script src="../../../assets/js/main.js"></script>
-
-</body>
-
+    <script src="../../../assets/js/main.js"></script>
+  </body>
 </html>

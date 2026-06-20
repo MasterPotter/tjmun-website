@@ -1,3 +1,4 @@
+"use strict";
 const signUpForm = document.getElementById("sign-up-form");
 const emailInput = document.getElementById("email");
 const gradeInput = document.getElementById("grade");
