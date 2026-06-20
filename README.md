@@ -42,7 +42,7 @@ tjmun-website/
 │       └── mcmunc.pdf             # Event PDF resource
 ├── 🎨 assets/                      # Static assets
 │   ├── css/                       # Stylesheets
-│   ├── js/                        # JavaScript files
+│   ├── js/                        # JavaScript + TypeScript sources
 │   ├── img/                       # Images and media
 │   └── vendor/                    # Third-party libraries
 ├── 🔧 templates/                   # Template system (for future development)
@@ -53,7 +53,7 @@ tjmun-website/
 ├── 📚 guides/                      # Background guides (PDF resources)
 └── 🛠️ scripts/                    # Utility scripts
     ├── fix-all-paths.py          # Path correction script
-    ├── template-generator.js     # Template processing
+    ├── template-generator.ts     # Template processing source
     └── validate-awards-links.py  # Link validation
 ```
 
@@ -91,7 +91,7 @@ tjmun-website/
 
 - **HTML5**: Semantic markup and structure
 - **CSS3**: Modern styling with Bootstrap framework
-- **JavaScript**: Interactive functionality and animations
+- **TypeScript**: First-party scripts (compiled for browser/runtime use)
 - **Bootstrap 5**: Responsive grid system and components
 - **AOS (Animate On Scroll)**: Scroll-triggered animations
 - **Swiper**: Touch-enabled sliders and carousels
@@ -108,6 +108,7 @@ tjmun-website/
 
 - **Python Scripts**: Automated path fixing and validation
 - **Template System**: Modular HTML components
+- **npm + TypeScript Compiler**: Type checking and JS build output
 - **Git**: Version control and deployment
 
 ## 📁 File Organization
@@ -141,10 +142,20 @@ python3 -m http.server 8000
 npx serve .
 ```
 
+### **TypeScript Workflow**
+
+```bash
+npm install
+npm run typecheck
+npm run build
+```
+
+Edit first-party `.ts` files in `assets/js/` and `scripts/`, then run `npm run build` to refresh committed `.js` runtime output for static hosting.
+
 ### **Formatting**
 
 ```bash
-npx prettier@3 --write "**/*.{html,css,js,md}"
+npx prettier@3 --write "**/*.{html,css,js,ts,md}"
 ```
 
 Formatting intentionally skips `assets/vendor/`, binary media, PDFs, minified files, and source maps.
@@ -161,7 +172,7 @@ The website uses relative paths that automatically adjust based on directory dep
 
 Templates are available in the `templates/` directory for future development:
 
-- Use `scripts/template-generator.js` for processing
+- Use `scripts/template-generator.js` (built from `scripts/template-generator.ts`) for processing
 - Base template provides consistent structure
 - Modular components for header, navigation, footer
 
