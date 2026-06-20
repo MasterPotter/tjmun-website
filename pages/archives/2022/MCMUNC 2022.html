@@ -1,160 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>TJMUN - MCMUNC 2022</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>TJMUN - MCMUNC 2022</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <link href="../../../../assets/img/favicon.png" rel="icon" />
+    <link href="../../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <link href="../../../../assets/img/favicon.png" rel="icon">
-  <link href="../../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="../../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../../../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../../../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="../../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="../../../../assets/vendor/aos/aos.css" rel="stylesheet" />
 
-  <link href="../../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../../../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../../../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="../../../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="../../../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../../../../assets/css/main.css" rel="stylesheet" />
 
-  <link href="../../../../assets/css/main.css" rel="stylesheet">
+    <style>
+      body,
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      a,
+      span,
+      li {
+        font-family: "EB Garamond", serif !important;
+      }
 
-  <style>
-    body, p, h1, h2, h3, h4, h5, h6, a, span, li {
-      font-family: 'EB Garamond', serif !important;
-    }
-    
-    .navbar ul li a {
-      font-family: 'EB Garamond', serif !important;
-    }
-    
-    .container {
-      font-family: 'EB Garamond', serif !important;
-    }
-  </style>
+      .navbar ul li a {
+        font-family: "EB Garamond", serif !important;
+      }
 
-</head>
+      .container {
+        font-family: "EB Garamond", serif !important;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="../../../../index.html" class="logo d-flex align-items-center">
+          <img src="../../../../assets/img/logo5.png" alt="" />
+          <h1>TJMUN</h1>
+        </a>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        <div id="navbar-container"></div>
+        <script>
+          fetch("/templates/navigation.html")
+            .then((res) => res.text())
+            .then((html) => {
+              document.getElementById("navbar-container").innerHTML = html;
+            });
+        </script>
+      </div>
+    </header>
 
-      <a href="../../../../index.html" class="logo d-flex align-items-center">
-        <img src="../../../../assets/img/logo5.png" alt="" >
-        <h1>TJMUN</h1>
-      </a>
-
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-<div id="navbar-container"></div>
-<script>
-  fetch('/templates/navigation.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('navbar-container').innerHTML = html;
-    });
-</script>
-    </div>
-  </header>
-
-  <main id="main">
-
-    <div class="breadcrumbs">
-      <div class="page-header d-flex align-items-center" style="position: relative; overflow: hidden;">
-        <img src="../../../assets/img/top_bar.png" alt="Hero Image" style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%);; object-fit: cover;">
-        <div class="container position-relative">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h2>MCMUNC 2022</h2>
+    <main id="main">
+      <div class="breadcrumbs">
+        <div
+          class="page-header d-flex align-items-center"
+          style="position: relative; overflow: hidden"
+        >
+          <img
+            src="../../../assets/img/top_bar.png"
+            alt="Hero Image"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              min-width: 100%;
+              min-height: 100%;
+              width: auto;
+              height: auto;
+              transform: translate(-50%, -50%);
+              object-fit: cover;
+            "
+          />
+          <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2>MCMUNC 2022</h2>
+              </div>
             </div>
           </div>
         </div>
-      </div>      <nav>
-        <div class="container">
-          <ol>
-            <li><a href="../../../../index.html">Home</a></li>
-            <li>MCMUNC 2022</li>
-          </ol>
-        </div>
-      </nav>
-    </div>
+        <nav>
+          <div class="container">
+            <ol>
+              <li><a href="../../../../index.html">Home</a></li>
+              <li>MCMUNC 2022</li>
+            </ol>
+          </div>
+        </nav>
+      </div>
 
-    <section class="container">
-      <h3>MCMUNC Awards</h3>
-      <p><strong>Delegation Award - Best Large!!!</strong></p>
-      <p><strong>United Nations Office on Outer Space Affairs (UNOOSA)</strong><br>
-        Japneet Kaur & Samhitha Maramreddy - Honorable Mention<br>
-        Arnav Bandam & Siya Bulusu - Honorable Mention<br>
-        Ashritha Gandhari & Neha Chandran - Outstanding Delegation
-      </p>
-      <p><strong>United Nations Environment Programme</strong><br>
-        Aastha Doshi & Nithia Senthilnathan - Verbal Commendation<br>
-        Poorna Prakash & Tanmayee Maddineni - Outstanding Delegation<br>
-        Jia Mody & Nishita Parachuri - Best Delegation <i class="fas fa-gavel"></i>
-      </p>
-      <p><strong>United Nations Office for the Coordination of Humanitarian Affairs</strong><br>
-        Adithiya Balaguru & Rohith Yelisetty - Verbal Commendation<br>
-        Anmol Karan & Lalit Boyapati - Honorable Mention<br>
-        Dilnaaz Talwar & Asmita Kodityala - Outstanding Delegation
-      </p>
-      <p><strong>British House of Commons</strong><br>
-        Sahithi Atluri - Honorable Mention
-      </p>
-      <p><strong>USA Gymnastics Executive Leadership Team</strong><br>
-        Vaishnavi Kuriti - Verbal Commendation<br>
-        Mantra Iyer - Best Delegate <i class="fas fa-gavel"></i>
-      </p>
-      <p><strong>Medieval European Kingdoms</strong><br>
-        Jordan Hadjimichael - Outstanding Delegate
-      </p>
-      <p><strong>Lost City of Atlantis</strong><br>
-        Suraj Vaddi - Best Delegate <i class="fas fa-gavel"></i>
-      </p>
-      <p><strong>Death Note</strong><br>
-        Sachin Satishkumar - Best Delegate <i class="fas fa-gavel"></i>
-      </p>
-      <p><strong>JCC East vs. West Coast Hip Hop: West Coast</strong><br>
-        Aria Merrill - Best Delegate <i class="fas fa-gavel"></i>
-      </p>
-      <p><strong>JCC East vs. West Coast Hip Hop: East Coast</strong><br>
-        Zac Baker - Honorable Mention<br>
-        Naisha Patel - Best Delegate <i class="fas fa-gavel"></i>
-      </p>
-      <p><strong>Ad-Hoc Committee of the Secretary General</strong><br>
-        Tanish Jain - Best Delegate <i class="fas fa-gavel"></i>
-      </p>
-    </section>
-    
-  </main>
+      <section class="container">
+        <h3>MCMUNC Awards</h3>
+        <p><strong>Delegation Award - Best Large!!!</strong></p>
+        <p>
+          <strong>United Nations Office on Outer Space Affairs (UNOOSA)</strong><br />
+          Japneet Kaur & Samhitha Maramreddy - Honorable Mention<br />
+          Arnav Bandam & Siya Bulusu - Honorable Mention<br />
+          Ashritha Gandhari & Neha Chandran - Outstanding Delegation
+        </p>
+        <p>
+          <strong>United Nations Environment Programme</strong><br />
+          Aastha Doshi & Nithia Senthilnathan - Verbal Commendation<br />
+          Poorna Prakash & Tanmayee Maddineni - Outstanding Delegation<br />
+          Jia Mody & Nishita Parachuri - Best Delegation <i class="fas fa-gavel"></i>
+        </p>
+        <p>
+          <strong>United Nations Office for the Coordination of Humanitarian Affairs</strong><br />
+          Adithiya Balaguru & Rohith Yelisetty - Verbal Commendation<br />
+          Anmol Karan & Lalit Boyapati - Honorable Mention<br />
+          Dilnaaz Talwar & Asmita Kodityala - Outstanding Delegation
+        </p>
+        <p>
+          <strong>British House of Commons</strong><br />
+          Sahithi Atluri - Honorable Mention
+        </p>
+        <p>
+          <strong>USA Gymnastics Executive Leadership Team</strong><br />
+          Vaishnavi Kuriti - Verbal Commendation<br />
+          Mantra Iyer - Best Delegate <i class="fas fa-gavel"></i>
+        </p>
+        <p>
+          <strong>Medieval European Kingdoms</strong><br />
+          Jordan Hadjimichael - Outstanding Delegate
+        </p>
+        <p>
+          <strong>Lost City of Atlantis</strong><br />
+          Suraj Vaddi - Best Delegate <i class="fas fa-gavel"></i>
+        </p>
+        <p>
+          <strong>Death Note</strong><br />
+          Sachin Satishkumar - Best Delegate <i class="fas fa-gavel"></i>
+        </p>
+        <p>
+          <strong>JCC East vs. West Coast Hip Hop: West Coast</strong><br />
+          Aria Merrill - Best Delegate <i class="fas fa-gavel"></i>
+        </p>
+        <p>
+          <strong>JCC East vs. West Coast Hip Hop: East Coast</strong><br />
+          Zac Baker - Honorable Mention<br />
+          Naisha Patel - Best Delegate <i class="fas fa-gavel"></i>
+        </p>
+        <p>
+          <strong>Ad-Hoc Committee of the Secretary General</strong><br />
+          Tanish Jain - Best Delegate <i class="fas fa-gavel"></i>
+        </p>
+      </section>
+    </main>
 
     <div id="footer-container"></div>
-<script>
-  fetch('/templates/footer.html')
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('footer-container').innerHTML = html;
-    });
-</script>
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <script>
+      fetch("/templates/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        });
+    </script>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <div id="preloader"></div>
+    <div id="preloader"></div>
 
-  <script src="../../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../../../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="../../../../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../../../../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../../../../assets/vendor/aos/aos.js"></script>
-  <script src="../../../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../../../assets/vendor/aos/aos.js"></script>
 
-  <script src="../../../../assets/js/main.js"></script>
-
-</body>
-
+    <script src="../../../../assets/js/main.js"></script>
+  </body>
 </html>

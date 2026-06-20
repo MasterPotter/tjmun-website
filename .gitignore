@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.bak
+
+.idea/
+.cursor/
+
+node_modules/
+.cache/
+__pycache__/
+dist/
+build/

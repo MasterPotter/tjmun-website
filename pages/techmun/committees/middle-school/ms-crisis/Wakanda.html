@@ -1,50 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <title>TJMUN - Vibranium Veiled: Rebuilding Wakanda</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-    <link href="/assets/img/favicon.png" rel="icon">
-    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="/assets/img/favicon.png" rel="icon" />
+    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
 
-    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet" />
 
     <style>
-        body, p, h1, h2, h3, h4, h5, h6, a, span, li {
-          font-family: 'EB Garamond', serif !important;
-        }
+      body,
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      a,
+      span,
+      li {
+        font-family: "EB Garamond", serif !important;
+      }
 
-        .navbar ul li a {
-          font-family: 'EB Garamond', serif !important;
-        }
+      .navbar ul li a {
+        font-family: "EB Garamond", serif !important;
+      }
 
-        .container {
-          font-family: 'EB Garamond', serif !important;
-        }
+      .container {
+        font-family: "EB Garamond", serif !important;
+      }
 
-        .team .member {
-          display: flex;
-          align-items: stretch; /* Ensures both elements stretch to the same height */
-          justify-content: start;
-          padding: 0px 0;
-        }
+      .team .member {
+        display: flex;
+        align-items: stretch; /* Ensures both elements stretch to the same height */
+        justify-content: start;
+        padding: 0px 0;
+      }
 
       .team .member .member-img {
         flex: 0 0 40%; /* Image takes up 40% width */
@@ -58,7 +69,6 @@
         object-fit: cover; /* Prevents distortion */
         border-radius: 0; /* Keeps image rectangular */
       }
-
 
       .team .member .member-info {
         flex: 1;
@@ -107,190 +117,230 @@
         }
 
         .topic-heading {
-           margin-left: 10%;
-           margin-right: 10%;
+          margin-left: 10%;
+          margin-right: 10%;
         }
 
         .background-guide-button {
           width: 60%; /* Adjust as needed */
         }
       }
-
     </style>
+  </head>
 
-</head>
-
-<body>
-
-<header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
+  <body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="/index.html" class="logo d-flex align-items-center">
-            <img src="/assets/img/logo5.png" alt="">
-            <h1>TJMUN</h1>
+          <img src="/assets/img/logo5.png" alt="" />
+          <h1>TJMUN</h1>
         </a>
 
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <div id="navbar-container"></div>
         <script>
-            fetch('/templates/navigation.html')
-              .then(res => res.text())
-              .then(html => {
-                document.getElementById('navbar-container').innerHTML = html;
-              });
+          fetch("/templates/navigation.html")
+            .then((res) => res.text())
+            .then((html) => {
+              document.getElementById("navbar-container").innerHTML = html;
+            });
         </script>
-    </div>
-</header>
+      </div>
+    </header>
 
-<main id="main">
-
-    <div class="breadcrumbs">
-        <div class="page-header d-flex align-items-center" style="position: relative; overflow: hidden;">
-            <img src="../../../../../assets/img/top_bar.png" alt="Hero Image"
-                 style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%);; object-fit: cover;">
-            <div class="container position-relative">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2>Vibranium Veiled: Rebuilding Wakanda</h2>
-                    </div>
-                </div>
+    <main id="main">
+      <div class="breadcrumbs">
+        <div
+          class="page-header d-flex align-items-center"
+          style="position: relative; overflow: hidden"
+        >
+          <img
+            src="../../../../../assets/img/top_bar.png"
+            alt="Hero Image"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              min-width: 100%;
+              min-height: 100%;
+              width: auto;
+              height: auto;
+              transform: translate(-50%, -50%);
+              object-fit: cover;
+            "
+          />
+          <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8 text-center">
+                <h2>Vibranium Veiled: Rebuilding Wakanda</h2>
+              </div>
             </div>
+          </div>
         </div>
         <nav>
-            <div class="container">
-                <ol>
-                    <li><a href="/index.html">Home</a></li>
-                    <li>Vibranium Veiled: Rebuilding Wakanda</li>
-                </ol>
-            </div>
+          <div class="container">
+            <ol>
+              <li><a href="/index.html">Home</a></li>
+              <li>Vibranium Veiled: Rebuilding Wakanda</li>
+            </ol>
+          </div>
         </nav>
-    </div>
+      </div>
 
-    <h2 class="topic-heading"
-        style="color: rgb(11, 11, 89); font-size: 1.5rem; margin-top: 25px; margin-bottom: 10px; text-align: center; font-weight: bold">
+      <h2
+        class="topic-heading"
+        style="
+          color: rgb(11, 11, 89);
+          font-size: 1.5rem;
+          margin-top: 25px;
+          margin-bottom: 10px;
+          text-align: center;
+          font-weight: bold;
+        "
+      >
         Topic 1: Regulation and Innovation of Void Steel
-    </h2>
-    <h2 class="topic-heading"
-        style="color: rgb(11, 11, 89); font-size: 1.5rem; text-align: center; margin-bottom: 0px; font-weight: bold">
+      </h2>
+      <h2
+        class="topic-heading"
+        style="
+          color: rgb(11, 11, 89);
+          font-size: 1.5rem;
+          text-align: center;
+          margin-bottom: 0px;
+          font-weight: bold;
+        "
+      >
         Topic 2: Addressing Black-Wakandas Vibranium Trade
-    </h2>
+      </h2>
 
-    <div style="margin-top: 20px; margin-bottom: -30px; text-align: center;">
-        <a href="/guides/Wakanda.pdf" target="_blank" rel="noopener noreferrer"
-           style="display: inline-block; background-color: rgb(11, 11, 89); color: white; font-size: 1.2rem;
-              font-weight: bold; padding: 12px 20px; text-decoration: none; border-radius: 8px">
-            Background Guide
+      <div style="margin-top: 20px; margin-bottom: -30px; text-align: center">
+        <a
+          href="/guides/Wakanda.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="
+            display: inline-block;
+            background-color: rgb(11, 11, 89);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+          "
+        >
+          Background Guide
         </a>
-    </div>
+      </div>
 
-    <section id="team" class="team">
+      <section id="team" class="team">
         <div class="container">
-            <!-- Row 1 -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="/assets/img/anish.JPG" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <h4>Anish Kulkarni</h4>
-                            <span>Chair</span>
-                            Hey everyone. My name is Anish and I’m a sophomore here at TJ. This is my fourth year during
-                            MUN and I am thrilled to be your MAIN chair for this conference (ignore what Sarvajith says). Throughout these last few years
-                            I have gone through a variety of committees from debating about human rights in General
-                            Assemblies to addressing scandals in Specialized committees to finding devious ways to
-                            control everyone in Crisis. Through this club I made some of my closest friends and best
-                            memories. Black Panther is one of my most favorite Marvel movies so I am excited to see the
-                            different actions you take as your character. If you chose to do this committee, you made
-                            the right choice.
-                            <br>
-                            As a chair I am looking for someone who not only has powerful speeches but also creativity
-                            and leadership. I encourage you to step outside of your comfort zone and try to make the
-                            biggest influence you can in committee. Don’t be afraid to disagree with others but please
-                            be diplomatic. However, most importantly make sure to have fun. You can be funny when making
-                            directives. Feel free to email us with any questions at wakandatechmun@gmail.com, and we'll
-                            see you in committee!
-
-                        </div>
-                    </div>
+          <!-- Row 1 -->
+          <div class="row">
+            <div class="col-12">
+              <div class="member">
+                <div class="member-img">
+                  <img src="/assets/img/anish.JPG" class="img-fluid" alt="" />
                 </div>
-            </div>
-
-            <!-- Row 2 -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="/assets/img/sarva.JPG" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <h4>Sarvajith Mahendra</h4>
-                            <span>Chair</span>
-                            Hi everyone, my name is Sarvajith Mahendra and as you could have guessed, I am a sophomore
-                            at TJHSST and am going to be your main chair for this conference, despite what Anish may say to make himself
-                            feel better. Anyways, I’ve been doing MUN
-                            for a little while now and I know all the tips and tricks you youngsters try to pull off.
-                            This might be a stressful experience for some of you but I promise you, your mind always
-                            makes things more serious than it actually is. This should just be a fun event for all of
-                            you to learn and be in one of the best high schools in the country. Personally, I am not a
-                            huge fan of Marvel. DC is better (yeah I said it this isn’t up for debate) but I’ll still
-                            try to make sure that you guys have the best experience you can. Feel free to be funny in
-                            your directives because that makes it fun for us. Good luck and don’t be afraid to use your
-                            creativity in your own ways!
-                        </div>
-                    </div>
+                <div class="member-info">
+                  <h4>Anish Kulkarni</h4>
+                  <span>Chair</span>
+                  Hey everyone. My name is Anish and I’m a sophomore here at TJ. This is my fourth
+                  year during MUN and I am thrilled to be your MAIN chair for this conference
+                  (ignore what Sarvajith says). Throughout these last few years I have gone through
+                  a variety of committees from debating about human rights in General Assemblies to
+                  addressing scandals in Specialized committees to finding devious ways to control
+                  everyone in Crisis. Through this club I made some of my closest friends and best
+                  memories. Black Panther is one of my most favorite Marvel movies so I am excited
+                  to see the different actions you take as your character. If you chose to do this
+                  committee, you made the right choice.
+                  <br />
+                  As a chair I am looking for someone who not only has powerful speeches but also
+                  creativity and leadership. I encourage you to step outside of your comfort zone
+                  and try to make the biggest influence you can in committee. Don’t be afraid to
+                  disagree with others but please be diplomatic. However, most importantly make sure
+                  to have fun. You can be funny when making directives. Feel free to email us with
+                  any questions at wakandatechmun@gmail.com, and we'll see you in committee!
                 </div>
+              </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="/assets/img/pranav.JPG" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                            <h4>Pranav Kethireddy</h4>
-                            <span>Director</span>
-                            Hi guys! My name is Pranav and I am a sophomore. And you guessed it, I'm going to be your
-                            director, or in simple words, I'm going to read all your super cool private directives! I
-                            like watching shows (I'm watching Everybody Hates Chris right now), hanging out with my best
-                            friends, and going out in the beautiful streets of Chantilly.
-                            I have been doing MUN for nearly four years now, and regardless of whether I
-                            like it or not, it has been such a huge part of my life. It has helped me grow in so many
-                            ways, and I hope it does the same for you. As your Director, I am looking for well-written,
-                            thoughtful, intelligent, and purposeful directives, with the goal of increasing your own
-                            power/abilities. I am a huge Marvel fan, so feel free to use any character as you wish, as
-                            long as it is smart. Happy trails!
+          </div>
 
-                        </div>
-                    </div>
+          <!-- Row 2 -->
+          <div class="row">
+            <div class="col-12">
+              <div class="member">
+                <div class="member-img">
+                  <img src="/assets/img/sarva.JPG" class="img-fluid" alt="" />
                 </div>
+                <div class="member-info">
+                  <h4>Sarvajith Mahendra</h4>
+                  <span>Chair</span>
+                  Hi everyone, my name is Sarvajith Mahendra and as you could have guessed, I am a
+                  sophomore at TJHSST and am going to be your main chair for this conference,
+                  despite what Anish may say to make himself feel better. Anyways, I’ve been doing
+                  MUN for a little while now and I know all the tips and tricks you youngsters try
+                  to pull off. This might be a stressful experience for some of you but I promise
+                  you, your mind always makes things more serious than it actually is. This should
+                  just be a fun event for all of you to learn and be in one of the best high schools
+                  in the country. Personally, I am not a huge fan of Marvel. DC is better (yeah I
+                  said it this isn’t up for debate) but I’ll still try to make sure that you guys
+                  have the best experience you can. Feel free to be funny in your directives because
+                  that makes it fun for us. Good luck and don’t be afraid to use your creativity in
+                  your own ways!
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="member">
+                <div class="member-img">
+                  <img src="/assets/img/pranav.JPG" class="img-fluid" alt="" />
+                </div>
+                <div class="member-info">
+                  <h4>Pranav Kethireddy</h4>
+                  <span>Director</span>
+                  Hi guys! My name is Pranav and I am a sophomore. And you guessed it, I'm going to
+                  be your director, or in simple words, I'm going to read all your super cool
+                  private directives! I like watching shows (I'm watching Everybody Hates Chris
+                  right now), hanging out with my best friends, and going out in the beautiful
+                  streets of Chantilly. I have been doing MUN for nearly four years now, and
+                  regardless of whether I like it or not, it has been such a huge part of my life.
+                  It has helped me grow in so many ways, and I hope it does the same for you. As
+                  your Director, I am looking for well-written, thoughtful, intelligent, and
+                  purposeful directives, with the goal of increasing your own power/abilities. I am
+                  a huge Marvel fan, so feel free to use any character as you wish, as long as it is
+                  smart. Happy trails!
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-</main>
+      </section>
+    </main>
 
-<div id="footer-container"></div>
-<script>
-    fetch('/templates/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-container').innerHTML = html;
-      });
-</script>
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="footer-container"></div>
+    <script>
+      fetch("/templates/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        });
+    </script>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-<div id="preloader"></div>
+    <div id="preloader"></div>
 
-<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="/assets/vendor/aos/aos.js"></script>
-<script src="/assets/vendor/php-email-form/validate.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
 
-<script src="/assets/js/main.js"></script>
-
-</body>
-
+    <script src="/assets/js/main.js"></script>
+  </body>
 </html>

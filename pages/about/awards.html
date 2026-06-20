@@ -1,217 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <title>TJMUN - Awards</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-    <link href="../../assets/img/favicon.png" rel="icon">
-    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../../assets/img/favicon.png" rel="icon" />
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
-    <link rel="icon" href="../../assets/img/logo5.png" type="image/x-icon">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link rel="icon" href="../../assets/img/logo5.png" type="image/x-icon" />
 
-    <link href="../../assets/css/main.css" rel="stylesheet">
+    <link href="../../assets/css/main.css" rel="stylesheet" />
 
     <style>
-        body, p, h1, h2, h3, h4, h5, h6, a, span, li {
-          font-family: 'EB Garamond', serif !important;
-        }
+      body,
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      a,
+      span,
+      li {
+        font-family: "EB Garamond", serif !important;
+      }
 
-        .navbar ul li a {
-          font-family: 'EB Garamond', serif !important;
-        }
+      .navbar ul li a {
+        font-family: "EB Garamond", serif !important;
+      }
 
-        .container {
-          font-family: 'EB Garamond', serif !important;
-        }
+      .container {
+        font-family: "EB Garamond", serif !important;
+      }
     </style>
+  </head>
 
-</head>
-
-<body>
-
-<header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
+  <body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="../../index.html" class="logo d-flex align-items-center">
-            <img src="../../assets/img/logo5.png" alt="">
-            <h1>TJMUN</h1>
+          <img src="../../assets/img/logo5.png" alt="" />
+          <h1>TJMUN</h1>
         </a>
 
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <div id="navbar-container"></div>
         <script>
-            fetch('/templates/navigation.html')
-              .then(res => res.text())
-              .then(html => {
-                document.getElementById('navbar-container').innerHTML = html;
-              });
+          fetch("/templates/navigation.html")
+            .then((res) => res.text())
+            .then((html) => {
+              document.getElementById("navbar-container").innerHTML = html;
+            });
         </script>
-    </div>
-</header>
+      </div>
+    </header>
 
-<main id="main">
-
-    <div class="breadcrumbs">
-        <div class="page-header d-flex align-items-center" style="position: relative; overflow: hidden;">
-            <img src="../../assets/img/top_bar.png" alt="Hero Image"
-                 style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%);; object-fit: cover;">
-            <div class="container position-relative">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <h2>AWARDS</h2>
-                    </div>
-                </div>
+    <main id="main">
+      <div class="breadcrumbs">
+        <div
+          class="page-header d-flex align-items-center"
+          style="position: relative; overflow: hidden"
+        >
+          <img
+            src="../../assets/img/top_bar.png"
+            alt="Hero Image"
+            style="
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              min-width: 100%;
+              min-height: 100%;
+              width: auto;
+              height: auto;
+              transform: translate(-50%, -50%);
+              object-fit: cover;
+            "
+          />
+          <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2>AWARDS</h2>
+              </div>
             </div>
+          </div>
         </div>
         <nav>
-            <div class="container">
-                <ol>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li>AWARDS</li>
-                </ol>
-            </div>
+          <div class="container">
+            <ol>
+              <li><a href="../../index.html">Home</a></li>
+              <li>AWARDS</li>
+            </ol>
+          </div>
         </nav>
-    </div>
+      </div>
 
-    <section id="departments" class="departments">
+      <section id="departments" class="departments">
         <div class="container">
-
-            <div class="row gy-4">
-                <div class="col-lg-3">
-                    <ul class="nav nav-tabs flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-5">2025-2026</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#tab-1">2024-2025</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">2023-2024</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">2022-2023</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">2021-2022</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-9">
-                    <div class="tab-content">
-                        <div class="tab-pane active show" id="tab-5">
-                            <div class="row gy-4">
-                                <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>2025-2026</h3>
-                                    <p><a href="/pages/archives/2025/MCMUNC 2025.html">MCMUNC</a></p>
-                                    <p><a href="/pages/archives/2025/WMHSMUN 2025.html">WMHSMUN</a></p>
-                                    <p><a href="/pages/archives/2025/WINMUNC 2025.html">WINMUNC</a></p>
-                                    <p><a href="/pages/archives/2026/CHMUN 2026.html">CHMUN</a></p>
-                                    <p><a href="/pages/archives/2026/ILMUNC 2026.html">ILMUNC</a></p>
-                                    <p><a href="/pages/archives/2026/NAIMUN 2026.html">NAIMUN</a></p>
-                                    <p><a href="/pages/archives/2026/VIMUNC 2026.html">VIMUNC</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="tab-1">
-                            <div class="row gy-4">
-                                <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>2024-2025</h3>
-                                    <p><a href="/pages/archives/2024/MCMUNC 2024.html">MCMUNC</a></p>
-                                    <p><a href="/pages/archives/2024/WMHSMUN 2024.html">WMHSMUN</a></p>
-                                    <p><a href="/pages/archives/2025/ILMUNC 2025.html">ILMUNC</a></p>
-                                    <p><a href="/pages/archives/2025/NAIMUN 2025.html">NAIMUN</a></p>
-                                    <p><a href="/pages/archives/2025/VIMUNC 2025.html">VIMUNC</a></p>
-                                    <p><a href="/pages/archives/2025/CHMUN 2025.html">CHMUN</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="tab-2">
-                            <div class="row gy-4">
-                                <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>2023-2024</h3>
-                                    <p><a href="/pages/archives/2023/MCMUNC 2023.html">MCMUNC</a></p>
-                                    <p><a href="/pages/archives/2023/WMHSMUN 2023.html">WMHSMUN</a></p>
-                                    <p><a href="/pages/archives/2024/CHMUN 2024.html">CHMUN</a></p>
-                                    <p><a href="/pages/archives/2024/ILMUNC 2024.html">ILMUNC</a></p>
-                                    <p><a href="/pages/archives/2024/NAIMUN 2024.html">NAIMUN</a></p>
-                                    <p><a href="/pages/archives/2024/VIMUNC 2024.html">VIMUNC</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="tab-3">
-                            <div class="row gy-4">
-                                <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>2022-2023</h3>
-                                    <p><a href="/pages/archives/2022/MCMUNC 2022.html">MCMUNC</a></p>
-                                    <p><a href="/pages/archives/2022/WMHSMUN 2022.html">WMHSMUN</a></p>
-                                    <p><a href="/pages/archives/2023/CHMUN 2023.html">CHMUN</a></p>
-                                    <p><a href="/pages/archives/2023/ILMUNC 2023.html">ILMUNC</a></p>
-                                    <p><a href="/pages/archives/2023/NAIMUN 2023.html">NAIMUN</a></p>
-                                    <p><a href="/pages/archives/2023/VIMUNC 2023.html">VIMUNC</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="tab-4">
-                            <div class="row gy-4">
-                                <div class="col-lg-8 details order-2 order-lg-1">
-                                    <h3>2021-2022</h3>
-                                    <p><a href="/pages/archives/2021/MCMUNC 2021.html">MCMUNC</a></p>
-                                    <p><a href="/pages/archives/2021/VAMUN 2021.html">VAMUN</a></p>
-                                    <p><a href="/pages/archives/2021/WMHSMUN 2021.html">WMHSMUN</a></p>
-                                    <p><a href="/pages/archives/2022/CHMUN 2022.html">CHMUN</a></p>
-                                    <p><a href="/pages/archives/2022/YMUN 2022.html">YMUN</a></p>
-                                    <p><a href="/pages/archives/2022/VIMUNC 2022.html">VIMUNC</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="row gy-4">
+            <div class="col-lg-3">
+              <ul class="nav nav-tabs flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active show" data-bs-toggle="tab" href="#tab-5">2025-2026</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-1">2024-2025</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-2">2023-2024</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-3">2022-2023</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-4">2021-2022</a>
+                </li>
+              </ul>
             </div>
-
+            <div class="col-lg-9">
+              <div class="tab-content">
+                <div class="tab-pane active show" id="tab-5">
+                  <div class="row gy-4">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>2025-2026</h3>
+                      <p><a href="/pages/archives/2025/MCMUNC 2025.html">MCMUNC</a></p>
+                      <p><a href="/pages/archives/2025/WMHSMUN 2025.html">WMHSMUN</a></p>
+                      <p><a href="/pages/archives/2025/WINMUNC 2025.html">WINMUNC</a></p>
+                      <p><a href="/pages/archives/2026/CHMUN 2026.html">CHMUN</a></p>
+                      <p><a href="/pages/archives/2026/ILMUNC 2026.html">ILMUNC</a></p>
+                      <p><a href="/pages/archives/2026/NAIMUN 2026.html">NAIMUN</a></p>
+                      <p><a href="/pages/archives/2026/VIMUNC 2026.html">VIMUNC</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-1">
+                  <div class="row gy-4">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>2024-2025</h3>
+                      <p><a href="/pages/archives/2024/MCMUNC 2024.html">MCMUNC</a></p>
+                      <p><a href="/pages/archives/2024/WMHSMUN 2024.html">WMHSMUN</a></p>
+                      <p><a href="/pages/archives/2025/ILMUNC 2025.html">ILMUNC</a></p>
+                      <p><a href="/pages/archives/2025/NAIMUN 2025.html">NAIMUN</a></p>
+                      <p><a href="/pages/archives/2025/VIMUNC 2025.html">VIMUNC</a></p>
+                      <p><a href="/pages/archives/2025/CHMUN 2025.html">CHMUN</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                  <div class="row gy-4">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>2023-2024</h3>
+                      <p><a href="/pages/archives/2023/MCMUNC 2023.html">MCMUNC</a></p>
+                      <p><a href="/pages/archives/2023/WMHSMUN 2023.html">WMHSMUN</a></p>
+                      <p><a href="/pages/archives/2024/CHMUN 2024.html">CHMUN</a></p>
+                      <p><a href="/pages/archives/2024/ILMUNC 2024.html">ILMUNC</a></p>
+                      <p><a href="/pages/archives/2024/NAIMUN 2024.html">NAIMUN</a></p>
+                      <p><a href="/pages/archives/2024/VIMUNC 2024.html">VIMUNC</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-3">
+                  <div class="row gy-4">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>2022-2023</h3>
+                      <p><a href="/pages/archives/2022/MCMUNC 2022.html">MCMUNC</a></p>
+                      <p><a href="/pages/archives/2022/WMHSMUN 2022.html">WMHSMUN</a></p>
+                      <p><a href="/pages/archives/2023/CHMUN 2023.html">CHMUN</a></p>
+                      <p><a href="/pages/archives/2023/ILMUNC 2023.html">ILMUNC</a></p>
+                      <p><a href="/pages/archives/2023/NAIMUN 2023.html">NAIMUN</a></p>
+                      <p><a href="/pages/archives/2023/VIMUNC 2023.html">VIMUNC</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-4">
+                  <div class="row gy-4">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>2021-2022</h3>
+                      <p><a href="/pages/archives/2021/MCMUNC 2021.html">MCMUNC</a></p>
+                      <p><a href="/pages/archives/2021/VAMUN 2021.html">VAMUN</a></p>
+                      <p><a href="/pages/archives/2021/WMHSMUN 2021.html">WMHSMUN</a></p>
+                      <p><a href="/pages/archives/2022/CHMUN 2022.html">CHMUN</a></p>
+                      <p><a href="/pages/archives/2022/YMUN 2022.html">YMUN</a></p>
+                      <p><a href="/pages/archives/2022/VIMUNC 2022.html">VIMUNC</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
-</main>
+    <div id="footer-container"></div>
+    <script>
+      fetch("/templates/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        });
+    </script>
 
-<div id="footer-container"></div>
-<script>
-    fetch('/templates/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-container').innerHTML = html;
-      });
-</script>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
 
-<div id="preloader"></div>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../assets/vendor/aos/aos.js"></script>
 
-<script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="../../assets/vendor/aos/aos.js"></script>
-<script src="../../assets/vendor/php-email-form/validate.js"></script>
-
-<script src="../../assets/js/main.js"></script>
-
-</body>
-
+    <script src="../../assets/js/main.js"></script>
+  </body>
 </html>

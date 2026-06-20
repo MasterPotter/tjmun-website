@@ -1,287 +1,307 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>TJMUN - Home</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';"
+    />
 
-  <title>TJMUN - Home</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <!-- Favicons -->
+    <link href="assets/img/logo5.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/logo5.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-    rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <!-- Landing Page Specific CSS -->
+    <link href="assets/css/landing-new.css" rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <!-- Landing Page Specific CSS -->
-  <link href="assets/css/landing-new.css" rel="stylesheet">
+    <!-- Styles to match Leadership Page Format -->
+    <style>
+      body,
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      a,
+      span,
+      li {
+        font-family: "EB Garamond", serif !important;
+      }
 
-  <!-- Styles to match Leadership Page Format -->
-  <style>
-    body, p, h1, h2, h3, h4, h5, h6, a, span, li {
-      font-family: 'EB Garamond', serif !important;
-    }
+      .navbar ul li a {
+        font-family: "EB Garamond", serif !important;
+      }
 
-    .navbar ul li a {
-      font-family: 'EB Garamond', serif !important;
-    }
+      .container {
+        font-family: "EB Garamond", serif !important;
+      }
 
-    .container {
-      font-family: 'EB Garamond', serif !important;
-    }
-
-    /* Override AOS pointer-events to enable hover during animation
+      /* Override AOS pointer-events to enable hover during animation
        (Applied generally to ensure consistency if these classes are used) */
-    .member-premium[data-aos][data-aos],
-    .member-premium[data-aos][data-aos].aos-animate {
-      pointer-events: auto !important;
-    }
+      .member-premium[data-aos][data-aos],
+      .member-premium[data-aos][data-aos].aos-animate {
+        pointer-events: auto !important;
+      }
 
-    .member-premium[data-aos][data-aos]:hover {
-      transform: scale(1.05) translateY(-15px) !important;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25) !important;
-      border-bottom-color: #0d42ff !important;
-    }
-  </style>
+      .member-premium[data-aos][data-aos]:hover {
+        transform: scale(1.05) translateY(-15px) !important;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25) !important;
+        border-bottom-color: #0d42ff !important;
+      }
+    </style>
+  </head>
 
-</head>
-
-<body>
-
-  <!-- Announcement Banner -->
-  <div class="announcement-banner">
-    <p>TechMUN XXXIV will take place on April 2-3, 2027 at TJHSST. Priority Registration will open in early November.</p>
-  </div>
-
-  <!-- Header -->
-  <header id="header" class="header d-flex align-items-center fixed-top" style="top: 40px;">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo5.png" alt="">
-        <h1>TJMUN</h1>
-      </a>
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      <div id="navbar-container"></div>
+  <body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+      <p>
+        TechMUN XXXIV will take place on April 2-3, 2027 at TJHSST. Priority Registration will open in early November.
+      </p>
     </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero-section">
-    <video autoplay loop muted playsinline class="hero-video">
-      <source src="assets/img/tjumun_website_landing.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content" data-aos="fade-up">
-      <h1>Thomas Jefferson<br>Model United Nations</h1>
-      <p>Diplomacy. Leadership. Innovation.</p>
-      <a href="#about" class="btn-premium">Discover More</a>
-    </div>
-  </section>
+    <!-- Header -->
+    <header id="header" class="header d-flex align-items-center fixed-top" style="top: 40px">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo5.png" alt="" />
+          <h1>TJMUN</h1>
+        </a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        <div id="navbar-container"></div>
+      </div>
+    </header>
 
-  <main id="main">
-
-    <!-- Counters Section -->
-    <section id="stats" class="counters-section">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="counter-card" data-aos="fade-up" data-aos-delay="100">
-              <i class="fas fa-users counter-icon"></i>
-              <span class="counter-number">1200</span>
-              <span class="counter-label">Delegates at TechMUN</span>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="counter-card" data-aos="fade-up" data-aos-delay="200">
-              <i class="fas fa-gavel counter-icon"></i>
-              <span class="counter-number">100+</span>
-              <span class="counter-label">Gavels in 3 Years</span>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="counter-card" data-aos="fade-up" data-aos-delay="300">
-              <i class="fas fa-clock counter-icon"></i>
-              <span class="counter-number">30</span>
-              <span class="counter-label">Years of Excellence</span>
-            </div>
-          </div>
-        </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <video autoplay loop muted playsinline class="hero-video">
+        <source src="assets/img/tjumun_website_landing.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content" data-aos="fade-up">
+        <h1>Thomas Jefferson<br />Model United Nations</h1>
+        <p>Diplomacy. Leadership. Innovation.</p>
+        <a href="#about" class="btn-premium">Discover More</a>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="services-section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>About Model UN</h2>
-          <p>Model United Nations encompasses a simulation of the UN whereby students engage in political debate to
-            tackle current global issues on the agenda. Based on their committees, students are assigned a delegate and
-            are tasked with preparing draft resolutions, negotiating with others, and resolving conflicts while
-            following proper parliamentary procedure.</p>
-        </div>
-
-        <div class="row gy-4">
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card">
-              <h3>Leadership</h3>
-              <p>Our delegates possess leadership skills that enable them to command and lead blocs in committee while
-                maintaining successful relations with others.</p>
+    <main id="main">
+      <!-- Counters Section -->
+      <section id="stats" class="counters-section">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="counter-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-users counter-icon"></i>
+                <span class="counter-number">1200</span>
+                <span class="counter-label">Delegates at TechMUN</span>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card">
-              <h3>Diplomacy</h3>
-              <p>Delegates manage international relations through negotiations and handle affairs effectively without
-                arousing hostility.</p>
+            <div class="col-lg-4 col-md-6">
+              <div class="counter-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-gavel counter-icon"></i>
+                <span class="counter-number">100+</span>
+                <span class="counter-label">Gavels in 3 Years</span>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card">
-              <h3>Public Policy</h3>
-              <p>Delegates inquire about specific public polities and implement various others to directly resolve
-                issues in their committee's agenda.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-card">
-              <h3>Research</h3>
-              <p>Students research respective topics for their committee to develop a strong background and foundation
-                leading to success.</p>
+            <div class="col-lg-4 col-md-6">
+              <div class="counter-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-clock counter-icon"></i>
+                <span class="counter-number">30</span>
+                <span class="counter-label">Years of Excellence</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2 style="color: var(--color-white);">Leadership Team</h2>
-        </div>
-        <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/akshaya.png" class="testimonial-img" alt="">
-                <h3>Akshaya Lohia</h3>
-                <h4>Secretary-General</h4>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Hey everyone! My name is Akshaya Lohia and I'm so excited to be your Secretary General for 2025-2026.
-                  I'm so excited to make TechMUN XXXIII the best we've ever had!
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/aditi.png" class="testimonial-img" alt="">
-                <h3>Aditi Kodukula</h3>
-                <h4>Under Secretary-General</h4>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Hi everyone! My name is Aditi Kodukula and I am serving as the 2025-2026 Undersecretary General for
-                  TJMUN. I'm so excited to continue growing our club while making TechMUN XXXIII the best we've ever
-                  had!
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/raghav.jpeg" class="testimonial-img" alt="">
-                <h3>Raghav Kasi</h3>
-                <h4>Chief of Staff</h4>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Hey everybody! My name is Raghav Kasi and I am so happy to be the 2025-2026 TJMUN Chief of Staff. I'm excited
-                  to guide the members of TJMUN and make TechMUN XXXIII the best yet!
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/mohan-home-officer.png" class="testimonial-img" alt="">
-                <h3>Mohan Parthasarathy</h3>
-                <h4>Arbitrator</h4>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  Hey everybody! My name is Mohan Parthasarathy and I'll be your arbitrator this year and
-                  Director-General for TechMUN XXXIII. I am so excited to make TJMUN the best its ever been!
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
+      <!-- About Section -->
+      <section id="about" class="services-section">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>About Model UN</h2>
+            <p>
+              Model United Nations encompasses a simulation of the UN whereby students engage in
+              political debate to tackle current global issues on the agenda. Based on their
+              committees, students are assigned a delegate and are tasked with preparing draft
+              resolutions, negotiating with others, and resolving conflicts while following proper
+              parliamentary procedure.
+            </p>
           </div>
-          <div class="swiper-pagination"></div>
+
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-card">
+                <h3>Leadership</h3>
+                <p>
+                  Our delegates possess leadership skills that enable them to command and lead blocs
+                  in committee while maintaining successful relations with others.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-card">
+                <h3>Diplomacy</h3>
+                <p>
+                  Delegates manage international relations through negotiations and handle affairs
+                  effectively without arousing hostility.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-card">
+                <h3>Public Policy</h3>
+                <p>
+                  Delegates inquire about specific public polities and implement various others to
+                  directly resolve issues in their committee's agenda.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-card">
+                <h3>Research</h3>
+                <p>
+                  Students research respective topics for their committee to develop a strong
+                  background and foundation leading to success.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials-section">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2 style="color: var(--color-white)">Leadership Team</h2>
+          </div>
+          <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="assets/img/akshaya.png" class="testimonial-img" alt="" />
+                  <h3>Akshaya Lohia</h3>
+                  <h4>Secretary-General</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Hey everyone! My name is Akshaya Lohia and I'm so excited to be your Secretary
+                    General for 2025-2026. I'm so excited to make TechMUN XXXIII the best we've ever
+                    had!
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
 
-  <div id="footer-container"></div>
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="assets/img/aditi.png" class="testimonial-img" alt="" />
+                  <h3>Aditi Kodukula</h3>
+                  <h4>Under Secretary-General</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Hi everyone! My name is Aditi Kodukula and I am serving as the 2025-2026
+                    Undersecretary General for TJMUN. I'm so excited to continue growing our club
+                    while making TechMUN XXXIII the best we've ever had!
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
 
-  <!-- Scripts -->
-  <script>
-    fetch('/templates/navigation.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('navbar-container').innerHTML = html;
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="assets/img/raghav.jpeg" class="testimonial-img" alt="" />
+                  <h3>Raghav Kasi</h3>
+                  <h4>Chief of Staff</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Hey everybody! My name is Raghav Kasi and I am so happy to be the 2025-2026
+                    TJMUN Chief of Staff. I'm excited to guide the members of TJMUN and make TechMUN
+                    XXXIII the best yet!
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="assets/img/mohan-home-officer.png" class="testimonial-img" alt="" />
+                  <h3>Mohan Parthasarathy</h3>
+                  <h4>Arbitrator</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Hey everybody! My name is Mohan Parthasarathy and I'll be your arbitrator this
+                    year and Director-General for TechMUN XXXIII. I am so excited to make TJMUN the
+                    best its ever been!
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+    <div id="preloader"></div>
+
+    <!-- Scripts -->
+    <script>
+      fetch("/templates/navigation.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("navbar-container").innerHTML = html;
+        });
+
+      fetch("templates/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        });
+    </script>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      // Re-init AOS to catch new elements
+      window.addEventListener("load", () => {
+        AOS.init();
       });
-
-    fetch('templates/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-container').innerHTML = html;
-      });
-  </script>
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/js/main.js"></script>
-
-  <script>
-    // Re-init AOS to catch new elements
-    window.addEventListener('load', () => {
-      AOS.init();
-    });
-  </script>
-
-</body>
-
+    </script>
+  </body>
 </html>
