@@ -31,7 +31,7 @@ def get_asset_prefix(depth):
     else:
         return "../" * depth
 
-def get_navigation_links(depth):
+def get_navigation_links(depth, file_path):
     """Get navigation link mappings based on directory depth"""
     prefix = get_asset_prefix(depth)
     
@@ -41,20 +41,20 @@ def get_navigation_links(depth):
         'href="Leadership.html"': f'href="{prefix}pages/about/leadership.html"',
         'href="Calendar.html"': f'href="{prefix}pages/events/calendar.html"',
         'href="Forms.html"': f'href="{prefix}pages/events/forms.html"',
-        'href="Awards.html"': f'href="{prefix}pages/about/closings.html"',
-        'href="Invitation.html"': f'href="{prefix}pages/conferences/techmun/invitation.html"',
-        'href="Registration.html"': f'href="{prefix}pages/conferences/techmun/registration.html"',
-        'href="Directors.html"': f'href="{prefix}pages/conferences/techmun/directors.html"',
-        'href="Committees.html"': f'href="{prefix}pages/conferences/techmun/committees.html"',
-        'href="Schedule.html"': f'href="{prefix}pages/conferences/techmun/schedule.html"',
-        'href="Position_Papers.html"': f'href="{prefix}pages/conferences/techmun/position-papers.html"',
-        'href="Conference_Policies.html"': f'href="{prefix}pages/conferences/techmun/conference-policies.html"',
-        'href="Guest_Speakers.html"': f'href="{prefix}pages/conferences/techmun/guest-speakers.html"',
-        'href="TECHMUN.html"': f'href="{prefix}pages/conferences/techmun/index.html"',
+        'href="Awards.html"': f'href="{prefix}pages/about/awards.html"',
+        'href="Invitation.html"': f'href="{prefix}pages/techmun/invitation.html"',
+        'href="Registration.html"': f'href="{prefix}pages/techmun/registration.html"',
+        'href="Directors.html"': f'href="{prefix}pages/techmun/directors.html"',
+        'href="Committees.html"': f'href="{prefix}pages/techmun/committees.html"',
+        'href="Schedule.html"': f'href="{prefix}pages/techmun/schedule.html"',
+        'href="Position_Papers.html"': f'href="{prefix}pages/techmun/position-papers.html"',
+        'href="Conference_Policies.html"': f'href="{prefix}pages/techmun/conference-policies.html"',
+        'href="Guest_Speakers.html"': f'href="{prefix}pages/techmun/guest-speakers.html"',
+        'href="TECHMUN.html"': f'href="{prefix}pages/techmun/invitation.html"',
     }
     
     # Special handling for files within the TECHMUN directory
-    if "pages/conferences/techmun/" in prefix or depth == 3:
+    if file_path.startswith("pages/techmun/"):
         nav_links.update({
             'href="Invitation.html"': 'href="invitation.html"',
             'href="Registration.html"': 'href="registration.html"',
@@ -90,7 +90,7 @@ def fix_file_paths(file_path):
     content = re.sub(r'src="assets/', f'src="{asset_prefix}assets/', content)
     
     # Fix navigation links
-    nav_links = get_navigation_links(depth)
+    nav_links = get_navigation_links(depth, file_path)
     for old_link, new_link in nav_links.items():
         content = content.replace(old_link, new_link)
     

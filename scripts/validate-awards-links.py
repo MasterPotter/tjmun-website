@@ -5,29 +5,34 @@ Tests all conference links from the awards page to ensure they work and have sty
 """
 
 import re
-import requests
-from urllib.parse import urljoin, quote
 import time
+from urllib.error import URLError
+from urllib.parse import urljoin
+from urllib.request import urlopen
+
+
+def fetch_url(url, timeout=10):
+    """Fetch a URL with stdlib tools so the validator has no external dependencies."""
+    with urlopen(url, timeout=timeout) as response:
+        return response.status, response.read().decode("utf-8", errors="replace")
 
 def test_awards_links():
     """Test all conference links from the awards page"""
     base_url = "http://localhost:8000/"
-    awards_url = urljoin(base_url, "pages/about/closings.html")
+    awards_url = urljoin(base_url, "pages/about/awards.html")
     
     print("🔍 TJMUN Awards Page Link Validator")
     print("=" * 50)
     
     try:
         # Get the awards page content
-        response = requests.get(awards_url, timeout=10)
-        if response.status_code != 200:
-            print(f"❌ Could not access awards page: {response.status_code}")
+        status, content = fetch_url(awards_url, timeout=10)
+        if status != 200:
+            print(f"❌ Could not access awards page: {status}")
             return
-        
-        content = response.text
-        
+
         # Extract all archive links
-        archive_pattern = r'href="(\.\.\/conferences\/archives\/[^"]+\.html)"'
+        archive_pattern = r'href="([^"]*pages/archives/[^"]+\.html)"'
         archive_links = re.findall(archive_pattern, content)
         
         if not archive_links:
@@ -42,8 +47,7 @@ def test_awards_links():
         
         for i, link in enumerate(archive_links, 1):
             # Convert relative path to full URL
-            # Remove the "../" prefix and add proper base
-            clean_link = link.replace("../", "pages/")
+            clean_link = link.lstrip("/")
             test_url = urljoin(base_url, clean_link)
             
             # URL encode spaces
@@ -51,15 +55,14 @@ def test_awards_links():
             
             try:
                 # Test the link
-                link_response = requests.get(test_url, timeout=5)
-                status = link_response.status_code
-                
+                status, link_content = fetch_url(test_url, timeout=5)
+
                 if status == 200:
                     success_count += 1
-                    
+
                     # Check if CSS is loading
-                    has_bootstrap = "bootstrap.min.css" in link_response.text
-                    has_font = "EB Garamond" in link_response.text
+                    has_bootstrap = "bootstrap.min.css" in link_content
+                    has_font = "EB Garamond" in link_content
                     
                     if has_bootstrap and has_font:
                         styled_count += 1
@@ -69,7 +72,7 @@ def test_awards_links():
                 else:
                     print(f"❌ {i:2d}. {link.split('/')[-1]:<25} [HTTP {status}]")
                     
-            except requests.RequestException as e:
+            except URLError as e:
                 print(f"❌ {i:2d}. {link.split('/')[-1]:<25} [Error: {str(e)[:30]}...]")
             
             # Small delay to avoid overwhelming the server

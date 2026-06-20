@@ -1,6 +1,9 @@
 /* Fonts */
 :root {
-  --font-default: "Garamond", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default:
+    "Garamond", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
   --font-primary: "Inter", sans-serif;
   --font-secondary: "Garamond", sans-serif;
 }
@@ -104,8 +107,8 @@ section {
   z-index: 2;
 }
 
-.nav-inner{
-  max-width: 625px;     /* Choose 1100, 1000, etc. */
+.nav-inner {
+  max-width: 625px; /* Choose 1100, 1000, etc. */
   margin: 0 auto;
   width: 85%; /* changes how much of the navbar is on screen by shifting it more left the higher the num is
   padding: 0 20px;       /* Keeps nav links away from screen edges */
@@ -176,11 +179,11 @@ section {
   text-decoration: underline;
 }
 
-.breadcrumbs nav ol li+li {
+.breadcrumbs nav ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs nav ol li+li::before {
+.breadcrumbs nav ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #4278cc;
@@ -366,7 +369,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #fff;
   }
 
@@ -419,11 +422,11 @@ section {
 
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover>a {
+  .navbar .dropdown ul li:hover > a {
     color: var(--color-primary);
   }
 
-  .navbar .dropdown:hover>ul {
+  .navbar .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -435,7 +438,7 @@ section {
     visibility: hidden;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -448,13 +451,12 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 
 @media (min-width: 1280px) {
-
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
@@ -511,7 +513,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #fff;
   }
 
@@ -540,8 +542,8 @@ section {
     border: 1px solid #19335c;
   }
 
-  .navbar .dropdown>.dropdown-active,
-  .navbar .dropdown .dropdown>.dropdown-active {
+  .navbar .dropdown > .dropdown-active,
+  .navbar .dropdown .dropdown > .dropdown-active {
     display: block;
   }
 
@@ -847,7 +849,9 @@ section {
 }
 
 .call-to-action {
-  background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url("../img/cta-bg.jpg") center center;
+  background:
+    linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)),
+    url("../img/cta-bg.jpg") center center;
   background-size: cover;
   padding: 100px 0;
 }
@@ -894,12 +898,12 @@ section {
   padding-top: 80px;
 }
 
-.features .features-item+.features-item {
+.features .features-item + .features-item {
   margin-top: 100px;
 }
 
 @media (max-width: 640px) {
-  .features .features-item+.features-item {
+  .features .features-item + .features-item {
     margin-top: 40px;
   }
 }
@@ -1434,126 +1438,10 @@ section {
   background-position: center;
 }
 
-.get-a-quote .php-email-form {
-  background: #f3f6fc;
-  padding: 40px;
-  height: 100%;
-}
-
-@media (max-width: 575px) {
-  .get-a-quote .php-email-form {
-    padding: 20px;
-  }
-}
-
-.get-a-quote .php-email-form h3 {
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.get-a-quote .php-email-form h4 {
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 20px 0 0 0;
-}
-
-.get-a-quote .php-email-form p {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.get-a-quote .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #df1529;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.get-a-quote .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.get-a-quote .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.get-a-quote .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #059652;
-  border-top-color: #fff;
-  animation: animate-loading 1s linear infinite;
-}
-
-.get-a-quote .php-email-form input,
-.get-a-quote .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  border-radius: 0;
-}
-
-.get-a-quote .php-email-form input:focus,
-.get-a-quote .php-email-form textarea:focus {
-  border-color: var(--color-primary);
-}
-
-.get-a-quote .php-email-form input {
-  padding: 12px 15px;
-}
-
-.get-a-quote .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-.get-a-quote .php-email-form button[type=submit] {
-  background: var(--color-primary);
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.get-a-quote .php-email-form button[type=submit]:hover {
-  background: rgba(13, 66, 255, 0.8);
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item+.info-item {
+.contact .info-item + .info-item {
   margin-top: 40px;
 }
 
@@ -1584,94 +1472,6 @@ section {
   margin-bottom: 0;
   font-size: 14px;
   color: rgba(14, 29, 52, 0.8);
-}
-
-.contact .php-email-form {
-  width: 100%;
-  background: #fff;
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #df1529;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #059652;
-  border-top-color: #fff;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 4px;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--color-primary);
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 5px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: rgba(13, 66, 255, 0.8);
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -2002,11 +1802,9 @@ li {
   overflow: hidden;
 }
 
-
 .departments .nav-tabs {
   border: 0;
 }
-
 
 .departments .nav-link {
   border: 0;
@@ -2019,22 +1817,18 @@ li {
   font-size: 15px;
 }
 
-
 .departments .nav-link:hover {
   color: #1977cc;
 }
-
 
 .departments .nav-link.active {
   color: #1977cc;
   border-color: #1977cc;
 }
 
-
 .departments .tab-pane.active {
   animation: fadeIn 0.5s ease-out;
 }
-
 
 .departments .details h3 {
   font-size: 26px;
@@ -2043,16 +1837,13 @@ li {
   color: #2c4964;
 }
 
-
 .departments .details p {
   color: #777777;
 }
 
-
 .departments .details p:last-child {
   margin-bottom: 0;
 }
-
 
 @media (max-width: 992px) {
   .departments .nav-link {
@@ -2060,13 +1851,11 @@ li {
     padding: 15px;
   }
 
-
   .departments .nav-link.active {
     color: #fff;
     background: #1977cc;
   }
 }
-
 
 body {
   font-family: Arial, sans-serif;
