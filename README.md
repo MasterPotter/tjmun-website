@@ -1,236 +1,127 @@
-# 🏛️ TJMUN Website
+# TJMUN Website
 
-> Official website for Thomas Jefferson High School for Science and Technology Model United Nations (TJMUN)
+Official website for Thomas Jefferson High School for Science and Technology Model United Nations.
 
-![TJMUN Logo](assets/img/logo5.png)
+## Project Shape
 
-## 📖 Overview
+This is a static HTML/CSS site with a small TypeScript layer for first-party behavior and tooling.
 
-The TJMUN website serves as the digital hub for Thomas Jefferson High School's Model United Nations program, featuring information about conferences, committees, leadership, and events. The site showcases TECHMUN (the school's annual conference) and provides resources for students, advisors, and participants.
-
-## 🏗️ Project Architecture
-
-### **Organized Directory Structure**
-```
+```text
 tjmun-website/
-├── 🏠 index.html                    # Main homepage
-├── 📁 pages/                        # Organized content structure
-│   ├── 👥 about/                   # About pages and information
-│   │   ├── awards.html             # Awards and achievements
-│   │   └── leadership.html         # Leadership team profiles
-│   ├── 🏛️ committees/              # Committee information by category
-│   │   ├── crisis/                 # Crisis committees
-│   │   │   ├── Blast.html          # Space Race committee
-│   │   │   ├── Fractured.html      # Sokovia Accords committee
-│   │   │   ├── Lightning.html      # Flash's Foes committee
-│   │   │   ├── XOXO.html          # Gossip Girl committee
-│   │   │   ├── JCC_Cali.html      # Drug Cartels: Cali
-│   │   │   └── JCC_Medellin.html  # Drug Cartels: Medellin
-│   │   ├── high-school/           # High school GA committees
-│   │   │   ├── DISEC.html         # Disarmament committee
-│   │   │   ├── ECOFIN.html        # Economic & Financial committee
-│   │   │   └── UNICEF.html        # Children's Fund committee
-│   │   └── middle-school/         # Middle school committees
-│   │       ├── UNHCR.html         # Refugee commission
-│   │       └── WHO.html           # World Health Organization
-│   ├── 🎯 conferences/             # Conference information
-│   │   ├── archives/              # Past conference records (2021-2025)
-│   │   │   ├── 2021/ 2022/ 2023/ 2024/ 2025/
-│   │   ├── external/              # External conference info
-│   │   │   ├── mcmunc/ naimun/ vimunc/
-│   │   └── techmun/              # TECHMUN conference pages
-│   │       ├── index.html         # TECHMUN main page
-│   │       ├── invitation.html    # Conference invitation
-│   │       ├── registration.html  # Registration information
-│   │       ├── directors.html     # Director profiles
-│   │       ├── committees.html    # Committee overview
-│   │       ├── schedule.html      # Conference schedule
-│   │       ├── position-papers.html # Position paper guidelines
-│   │       ├── conference-policies.html # Conference policies
-│   │       └── guest-speakers.html # Guest speaker information
-│   └── 📅 events/                 # Event information
-│       ├── boot-camp.html         # MUN boot camp details
-│       ├── calendar.html          # Event calendar
-│       └── forms.html             # Registration forms
-├── 🎨 assets/                      # Static assets
-│   ├── css/                       # Stylesheets
-│   ├── js/                        # JavaScript files
-│   ├── img/                       # Images and media
-│   └── vendor/                    # Third-party libraries
-├── 🔧 templates/                   # Template system (for future development)
-│   ├── base-template.html         # Main page structure
-│   ├── header.html               # Site header component
-│   ├── navigation.html           # Navigation menu
-│   └── footer.html               # Site footer component
-├── 📋 forms/                       # Server-side forms
-│   ├── contact.php               # Contact form handler
-│   └── quote.php                 # Quote form handler
-├── 📚 guides/                      # Background guides (PDF resources)
-├── 📄 docs/                       # Documentation
-└── 🛠️ scripts/                    # Utility scripts
-    ├── fix-all-paths.py          # Path correction script
-    ├── template-generator.js     # Template processing
-    └── validate-awards-links.py  # Link validation
+├── index.html
+├── pages/                       # Content pages
+├── assets/
+│   ├── css/                     # Site styles
+│   ├── js/                      # First-party TypeScript source and browser JS output
+│   ├── img/                     # Images and video
+│   └── vendor/                  # Third-party browser bundles
+├── templates/                   # Reusable HTML templates
+├── forms/                       # PHP form handlers
+├── guides/                      # Background-guide PDFs
+└── scripts/                     # TypeScript utility scripts
 ```
 
-## 🚀 Key Features
+## Development
 
-### **Conference Management**
-- **TECHMUN**: Complete conference website with registration, schedules, and committee information
-- **Conference Archives**: Historical records of past conferences (2021-2025)
-- **External Conferences**: Information about MCMUNC, NAIMUN, VIMUNC participation
+Install development tooling:
 
-### **Committee Information**
-- **Crisis Committees**: Interactive crisis simulation committees
-- **General Assemblies**: Traditional UN committee simulations
-- **Specialized Committees**: Unique themed committees (Titanic, NASCAR, Nvidia, etc.)
-
-### **Program Resources**
-- **Leadership Profiles**: Director and officer information with photos and biographies
-- **Awards System**: Recognition and achievement tracking
-- **Event Calendar**: Comprehensive event scheduling
-- **Boot Camp**: Training program for new delegates
-
-### **Technical Features**
-- **Responsive Design**: Mobile-friendly Bootstrap-based layout
-- **Video Integration**: Background videos for enhanced visual appeal
-- **Social Media Integration**: Facebook and Instagram links
-- **Form Handling**: PHP-based contact and registration forms
-
-## 🛠️ Technology Stack
-
-### **Frontend**
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Modern styling with Bootstrap framework
-- **JavaScript**: Interactive functionality and animations
-- **Bootstrap 5**: Responsive grid system and components
-- **AOS (Animate On Scroll)**: Scroll-triggered animations
-- **Swiper**: Touch-enabled sliders and carousels
-- **GLightbox**: Responsive lightbox gallery
-
-### **Assets & Libraries**
-- **Bootstrap Icons**: Comprehensive icon library
-- **FontAwesome**: Additional icon sets
-- **Google Fonts**: EB Garamond typography
-- **PureCounter**: Animated counters
-- **PHP**: Server-side form processing
-
-### **Development Tools**
-- **Python Scripts**: Automated path fixing and validation
-- **Template System**: Modular HTML components
-- **Git**: Version control and deployment
-
-## 📁 File Organization
-
-### **Before Restructuring (Legacy)**
-- All pages scattered in root directory
-- Difficult to navigate and maintain
-- No logical grouping of related content
-
-### **After Restructuring (Current)**
-- Logical directory hierarchy by content type
-- Easy navigation and maintenance
-- Clear separation of concerns
-- Template system for consistency
-
-## 🔧 Setup & Development
-
-### **Local Development**
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd tjmun-website
-
-# Serve locally (Python)
-python -m http.server 8000
-
-# Or use any static file server
-npx serve .
+npm install
 ```
 
-### **Asset Path Management**
-The website uses relative paths that automatically adjust based on directory depth:
-- Root level: `assets/`
-- One level deep: `../assets/`
-- Two levels deep: `../../assets/`
+Run TypeScript validation:
 
-### **Template System**
-Templates are available in the `templates/` directory for future development:
-- Use `scripts/template-generator.js` for processing
-- Base template provides consistent structure
-- Modular components for header, navigation, footer
+```bash
+npm run typecheck
+```
 
-## 📝 Content Management
+Build browser/runtime JavaScript from TypeScript:
 
-### **Adding New Pages**
-1. Create HTML file in appropriate `pages/` subdirectory
-2. Use existing pages as templates for consistency
-3. Update navigation links in relevant files
-4. Test all asset paths and links
+```bash
+npm run build
+```
 
-### **Committee Pages**
-- Follow established naming convention
-- Include director/chair profiles with photos
-- Provide committee description and background
-- Link to relevant background guides in `guides/` folder
+Serve locally:
 
-### **Conference Pages**
-- Use consistent layout and styling
-- Include registration information
-- Provide schedule and logistics
-- Link to position paper requirements
+```bash
+python -m http.server 8000
+```
 
-## 🏆 Recent Achievements
+Then open `http://localhost:8000`.
 
-### **Website Restructuring Project (2025)**
-- ✅ Migrated 60+ pages to organized directory structure
-- ✅ Fixed asset paths and navigation links
-- ✅ Created template system for future development
-- ✅ Improved maintainability and scalability
-- ✅ Preserved all original styling and functionality
+## TypeScript Layout
 
-## 🔗 Important Links
+First-party JavaScript has been moved to TypeScript:
 
-- **Website**: [Live TJMUN Website]
-- **Social Media**: 
-  - [Facebook](https://www.facebook.com/tjhsstmun)
-  - [Instagram](https://www.instagram.com/tjhsstmun/)
-- **Contact**: tjmodelun@gmail.com
+- `assets/js/main.ts` controls shared browser behavior.
+- `assets/js/event-signup.ts` handles legacy signup-form behavior.
+- `scripts/template-generator.ts` builds pages from templates.
 
-## 📞 Contact Information
+Compiled `.js` files are runtime output for static hosting. HTML pages should keep loading `.js` files, because browsers do not execute TypeScript directly. Edit `.ts` files, then run `npm run build`.
 
-**Thomas Jefferson High School for Science and Technology**  
+Third-party bundles in `assets/vendor/` stay as vendor JavaScript. Do not rewrite vendored libraries into TypeScript by hand. Replace them only by updating vendor packages or downloaded vendor assets.
+
+## Typing Standards
+
+TypeScript should make code easier to change, not harder to read. Keep typing practical and incremental.
+
+- Prefer clear names and small functions before adding complex types.
+- Use explicit types for shared data shapes, config objects, public class methods, and anything reused across files.
+- Let TypeScript infer obvious local variables.
+- Use DOM generics for queried elements when element-specific properties are needed, such as `document.querySelector<HTMLElement>(".selector")`.
+- Guard nullable DOM lookups before using them.
+- Avoid broad `any` in new code. If legacy code needs `any`, keep it local and add a short comment only when the reason is not obvious.
+- Keep browser globals declared near the top of the file that uses them until a shared declarations file is worth adding.
+- Do not add clever generic abstractions for one-off page behavior.
+- Prefer `const` and pure helper functions where possible.
+- Keep side effects inside named initialization functions, then call those functions from the entrypoint.
+
+## Expansion Rules
+
+When adding new TypeScript:
+
+1. Put shared browser behavior in `assets/js/`.
+2. Put build or maintenance scripts in `scripts/`.
+3. Add narrow interfaces or type aliases when data crosses function or file boundaries.
+4. Keep generated JavaScript out of manual edits.
+5. Run `npm run typecheck` before committing.
+6. Run `npm run build` when browser-loaded scripts changed.
+
+## Template System
+
+Templates live in `templates/`. Use `scripts/template-generator.ts` as the source for template generation logic. If generated pages need shared behavior, put that behavior in a TypeScript file under `assets/js/` and compile it.
+
+## Content Notes
+
+- Main page: `index.html`
+- TECHMUN pages: `pages/techmun/`
+- Event pages: `pages/events/`
+- Leadership and awards: `pages/about/`
+- Background guides: `guides/`
+
+Asset paths vary by page depth. Keep existing relative path style unless moving a page.
+
+## Verification Checklist
+
+Before publishing:
+
+```bash
+npm run typecheck
+npm run build
+python -m http.server 8000
+```
+
+Then spot-check homepage navigation, mobile navigation, counters, scroll animations, and any page touched by the change.
+
+## Contact
+
+Thomas Jefferson High School for Science and Technology  
 6560 Braddock Rd  
 Alexandria, VA 22312  
-United States  
+United States
 
-**Email**: tjmodelun@gmail.com
+Email: tjmodelun@gmail.com
 
-## 📄 License
+## License
 
-© Copyright TJMUN. All Rights Reserved.
-
----
-
-## 🔧 Development Notes
-
-### **Known Issues**
-- Some remaining files may have broken navigation links (e.g., Ad-Hoc.html)
-- Temporary restructure files can be removed after final testing
-
-### **Future Enhancements**
-- Implement dynamic content management system
-- Add search functionality
-- Enhance mobile responsiveness
-- Integrate online registration system
-- Add delegate resource portal
-
-### **Maintenance**
-- Regularly update conference information
-- Keep leadership profiles current
-- Update background guides annually
-- Test all links and forms periodically
-
----
-
-*Last updated: August 2025 - After major website restructuring project*
+Copyright TJMUN. All rights reserved.
