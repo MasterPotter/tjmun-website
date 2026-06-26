@@ -1,260 +1,243 @@
-# 🏛️ TJMUN Website
+# TJMUN Website
 
-> Official website for Thomas Jefferson High School for Science and Technology Model United Nations (TJMUN)
+Official website for Thomas Jefferson High School for Science and Technology Model United Nations (TJMUN).
 
 ![TJMUN Logo](assets/img/logo5.png)
 
-## 📖 Overview
+## Overview
 
-The TJMUN website serves as the digital hub for Thomas Jefferson High School's Model United Nations program, featuring information about conferences, committees, leadership, and events. The site showcases TECHMUN (the school's annual conference) and provides resources for students, advisors, and participants.
+This repository contains the static website for TJMUN. It is the public hub for club information, leadership, awards, events, TechMUN, committee pages, background guides, and conference archives.
 
-## 🏗️ Project Architecture
+The site is currently organized as plain HTML, CSS, JavaScript, images, PDFs, and vendored frontend libraries. There is no package manager config or build step required for normal local development.
 
-### **Organized Directory Structure**
+## Current Structure
 
-```
+```text
 tjmun-website/
-├── 🏠 index.html                    # Main homepage
-├── 📄 404.html                      # Static error page
-├── 📄 CNAME                         # Custom domain configuration
-├── 📄 _headers                      # Static host security headers
-├── 📄 AGENTS.md                     # Agent/contributor workflow notes
-├── 📁 pages/                        # Organized content structure
-│   ├── 👥 about/                   # About pages and information
-│   │   ├── awards.html             # Awards and achievements
-│   │   └── leadership.html         # Leadership team profiles
-│   ├── 📚 archives/               # Past conference records
-│   │   └── 2021/ 2022/ 2023/ 2024/ 2025/ 2026/
-│   ├── 🎯 techmun/                # TECHMUN conference pages
-│   │   ├── invitation.html        # Conference invitation
-│   │   ├── registration.html      # Registration information
-│   │   ├── directors.html         # Director profiles
-│   │   ├── committees.html        # Committee overview
-│   │   ├── committees/            # Committee detail pages by school/category
-│   │   ├── schedule.html          # Conference schedule
-│   │   ├── position-papers.html   # Position paper guidelines
-│   │   ├── conference-policies.html # Conference policies
-│   │   └── guest-speakers.html    # Guest speaker information
-│   └── 📅 events/                 # Event information
-│       ├── boot-camp.html         # MUN boot camp details
-│       ├── calendar.html          # Event calendar
-│       ├── forms.html             # Registration forms
-│       └── mcmunc.pdf             # Event PDF resource
-├── 🎨 assets/                      # Static assets
-│   ├── css/                       # Stylesheets
-│   ├── js/                        # JavaScript + TypeScript sources
-│   ├── img/                       # Images and media
-│   └── vendor/                    # Third-party libraries
-├── 🔧 templates/                   # Template system (for future development)
-│   ├── base-template.html         # Main page structure
-│   ├── header.html               # Site header component
-│   ├── navigation.html           # Navigation menu
-│   └── footer.html               # Site footer component
-├── 📚 guides/                      # Background guides (PDF resources)
-└── 🛠️ scripts/                    # Utility scripts
-    ├── fix-all-paths.py          # Path correction script
-    ├── template-generator.ts     # Template processing source
-    └── validate-awards-links.py  # Link validation
+├── index.html                         # Homepage
+├── 404.html                           # Not-found page
+├── CNAME                              # Custom domain: tjmun.org
+├── _headers                           # Hosting/security headers
+├── assets/
+│   ├── css/                           # Site stylesheets
+│   │   ├── main.css
+│   │   ├── landing-new.css
+│   │   └── landing-future.css
+│   ├── js/                            # Site JavaScript
+│   │   ├── main.js
+│   │   └── event-signup.js
+│   ├── img/                           # Photos, logos, videos, graphics
+│   └── vendor/                        # Vendored frontend libraries
+│       ├── aos/
+│       ├── bootstrap/
+│       ├── bootstrap-icons/
+│       ├── fontawesome-free/
+│       ├── glightbox/
+│       ├── php-email-form/
+│       ├── purecounter/
+│       └── swiper/
+├── pages/
+│   ├── about/
+│   │   ├── awards.html
+│   │   └── leadership.html
+│   ├── archives/                      # External conference archive pages
+│   │   ├── 2021/
+│   │   ├── 2022/
+│   │   ├── 2023/
+│   │   ├── 2024/
+│   │   ├── 2025/
+│   │   └── 2026/
+│   ├── events/
+│   │   ├── boot-camp.html
+│   │   ├── calendar.html
+│   │   ├── forms.html
+│   │   └── mcmunc.pdf
+│   ├── techmun/
+│   │   ├── invitation.html
+│   │   ├── registration.html
+│   │   ├── directors.html
+│   │   ├── committees.html
+│   │   ├── schedule.html
+│   │   ├── position-papers.html
+│   │   ├── conference-policies.html
+│   │   ├── guest-speakers.html
+│   │   ├── closings.html
+│   │   └── committees/
+│   │       ├── high-school/
+│   │       │   ├── hs-ga/
+│   │       │   ├── hs-spec/
+│   │       │   └── hs-crisis/
+│   │       └── middle-school/
+│   │           ├── ms-ga/
+│   │           ├── ms-spec/
+│   │           └── ms-crisis/
+│   ├── committees/                    # Legacy placeholder directory
+│   └── conferences/                   # Legacy placeholder directory
+├── guides/                            # Committee background guides as PDFs
+├── templates/                         # Reusable HTML template fragments
+│   ├── base-template.html
+│   ├── header.html
+│   ├── navigation.html
+│   └── footer.html
+├── scripts/
+│   ├── fix-all-paths.py
+│   ├── template-generator.js
+│   └── validate-awards-links.py
+└── forms/
+    ├── contact.php
+    └── quote.php
 ```
 
-## 🚀 Key Features
+## Main Site Areas
 
-### **Conference Management**
+### Homepage
 
-- **TECHMUN**: Complete conference website with registration, schedules, and committee information
-- **Conference Archives**: Historical records of past conferences (2021-2025)
-- **External Conferences**: Information about MCMUNC, NAIMUN, VIMUNC participation
+[index.html](index.html) is the main landing page. It includes the announcement banner, hero video, club overview, statistics, testimonials, leadership preview, and shared navigation/footer.
 
-### **Committee Information**
+### About
 
-- **Crisis Committees**: Interactive crisis simulation committees
-- **General Assemblies**: Traditional UN committee simulations
-- **Specialized Committees**: Unique themed committees (Titanic, NASCAR, Nvidia, etc.)
+`pages/about/` contains club-facing pages:
 
-### **Program Resources**
+- `leadership.html` for officer and director profiles
+- `awards.html` for awards and achievements
 
-- **Leadership Profiles**: Director and officer information with photos and biographies
-- **Awards System**: Recognition and achievement tracking
-- **Event Calendar**: Comprehensive event scheduling
-- **Boot Camp**: Training program for new delegates
+### Events
 
-### **Technical Features**
+`pages/events/` contains event pages and related resources:
 
-- **Responsive Design**: Mobile-friendly Bootstrap-based layout
-- **Video Integration**: Background videos for enhanced visual appeal
-- **Social Media Integration**: Facebook and Instagram links
-- **Static Forms Page**: Links to external FCPS and conference form resources
+- `boot-camp.html`
+- `calendar.html`
+- `forms.html`
+- `mcmunc.pdf`
 
-## 🛠️ Technology Stack
+### TechMUN
 
-### **Frontend**
+`pages/techmun/` contains the active TechMUN section:
 
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Modern styling with Bootstrap framework
-- **TypeScript**: First-party scripts (compiled for browser/runtime use)
-- **Bootstrap 5**: Responsive grid system and components
-- **AOS (Animate On Scroll)**: Scroll-triggered animations
-- **Swiper**: Touch-enabled sliders and carousels
-- **GLightbox**: Responsive lightbox gallery
+- `invitation.html`
+- `registration.html`
+- `directors.html`
+- `committees.html`
+- `schedule.html`
+- `position-papers.html`
+- `conference-policies.html`
+- `guest-speakers.html`
+- `closings.html`
 
-### **Assets & Libraries**
+Committee pages live under `pages/techmun/committees/`, split by school level and committee type:
 
-- **Bootstrap Icons**: Comprehensive icon library
-- **FontAwesome**: Additional icon sets
-- **Google Fonts**: EB Garamond typography
-- **PureCounter**: Animated counters
+- High school: `hs-ga/`, `hs-spec/`, `hs-crisis/`
+- Middle school: `ms-ga/`, `ms-spec/`, `ms-crisis/`
 
-### **Development Tools**
+### Archives
 
-- **Python Scripts**: Automated path fixing and validation
-- **Template System**: Modular HTML components
-- **npm + TypeScript Compiler**: Type checking and JS build output
-- **Git**: Version control and deployment
+`pages/archives/` stores past external conference pages by year. Current archive folders cover 2021 through 2026.
 
-## 📁 File Organization
+### Guides
 
-### **Before Restructuring (Legacy)**
+`guides/` stores committee background guides as PDFs. Committee pages link into this folder.
 
-- All pages scattered in root directory
-- Difficult to navigate and maintain
-- No logical grouping of related content
+## Technology
 
-### **After Restructuring (Current)**
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+- Bootstrap Icons
+- FontAwesome
+- AOS
+- Swiper
+- GLightbox
+- PureCounter
+- Google Fonts
+- PHP form files kept in `forms/`
 
-- Logical directory hierarchy by content type
-- Easy navigation and maintenance
-- Clear separation of concerns
-- Template system for consistency
+Most dependencies are vendored directly under `assets/vendor/`, so the site can run without installing npm packages.
 
-## 🔧 Setup & Development
+## Local Development
 
-### **Local Development**
+Serve the repository root with any static file server:
 
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd tjmun-website
-
-# Serve locally (Python)
 python3 -m http.server 8000
-
-# Or use any static file server
-npx serve .
 ```
 
-### **TypeScript Workflow**
+Then open:
 
-```bash
-npm install
-npm run typecheck
-npm run build
+```text
+http://localhost:8000
 ```
 
-Edit first-party `.ts` files in `assets/js/` and `scripts/`, then run `npm run build` to refresh committed `.js` runtime output for static hosting.
+There is no build command for normal edits. Change HTML, CSS, JS, images, or PDFs directly, then refresh the browser.
 
-### **Formatting**
+## Path Conventions
 
-```bash
-npx prettier@3 --write "**/*.{html,css,js,ts,md}"
+Use paths that match the page depth:
+
+- Root pages use `assets/...`
+- Files directly under `pages/about/`, `pages/events/`, or `pages/techmun/` commonly use `../../assets/...`
+- Committee pages under `pages/techmun/committees/...` need deeper relative paths, such as `../../../../../assets/...`, or root-relative links
+
+Many current navigation links are root-relative, such as `/pages/techmun/registration.html`. Keep new navigation links consistent with the surrounding file.
+
+## Forms
+
+`assets/js/event-signup.js` posts event signup data to a Google Apps Script endpoint.
+
+`forms/contact.php` and `forms/quote.php` are PHP handlers kept in the repository. Static hosts such as GitHub Pages or Netlify static deploys will not execute PHP files unless a PHP-capable backend is configured.
+
+## Templates And Scripts
+
+`templates/` contains reusable HTML fragments for future template-driven work.
+
+`scripts/` contains utility scripts:
+
+- `template-generator.js` generates pages from templates
+- `fix-all-paths.py` was used for path migration work
+- `validate-awards-links.py` checks awards-page links
+
+Before using generated output, verify links against the current active structure. Active TechMUN pages are under `pages/techmun/`, not `pages/conferences/techmun/`.
+
+## Content Updates
+
+When adding or changing content:
+
+1. Put new pages in the matching `pages/` subdirectory.
+2. Keep TechMUN content under `pages/techmun/`.
+3. Put committee pages under the correct school-level and committee-type folder.
+4. Put background guides in `guides/`.
+5. Put photos, videos, and graphics in `assets/img/`.
+6. Update navigation links in affected pages or templates.
+7. Test changed pages locally and check links from the homepage/navigation.
+
+## Deployment
+
+The custom domain is configured through `CNAME`:
+
+```text
+tjmun.org
 ```
 
-Formatting intentionally skips `assets/vendor/`, binary media, PDFs, minified files, and source maps.
+Because the site is static, deployment should publish the repository root as the web root.
 
-### **Asset Path Management**
+## Important Links
 
-The website uses relative paths that automatically adjust based on directory depth:
+- Website: [tjmun.org](https://tjmun.org)
+- Facebook: [facebook.com/tjhsstmun](https://www.facebook.com/tjhsstmun)
+- Instagram: [instagram.com/tjhsstmun](https://www.instagram.com/tjhsstmun/)
+- Contact: tjmodelun@gmail.com
 
-- Root level: `assets/`
-- One level deep: `../assets/`
-- Two levels deep: `../../assets/`
+## Maintenance Notes
 
-### **Template System**
+- Keep leadership profiles and photos current.
+- Update TechMUN dates, registration links, schedules, committees, and guides each conference cycle.
+- Update archive pages after external conferences.
+- Test mobile navigation after navigation changes.
+- Check form behavior after changing `pages/events/forms.html` or `assets/js/event-signup.js`.
+- Avoid editing vendored files in `assets/vendor/` unless updating a vendored library intentionally.
 
-Templates are available in the `templates/` directory for future development:
+## License
 
-- Use `scripts/template-generator.js` (built from `scripts/template-generator.ts`) for processing
-- Base template provides consistent structure
-- Modular components for header, navigation, footer
+Copyright TJMUN. All rights reserved.
 
-## 📝 Content Management
-
-### **Adding New Pages**
-
-1. Create HTML file in appropriate `pages/` subdirectory
-2. Use existing pages as templates for consistency
-3. Update navigation links in relevant files
-4. Test all asset paths and links
-
-### **Committee Pages**
-
-- Follow established naming convention
-- Include director/chair profiles with photos
-- Provide committee description and background
-- Link to relevant background guides in `guides/` folder
-
-### **Conference Pages**
-
-- Use consistent layout and styling
-- Include registration information
-- Provide schedule and logistics
-- Link to position paper requirements
-
-## 🏆 Recent Achievements
-
-### **Website Restructuring Project (2025)**
-
-- ✅ Migrated 60+ pages to organized directory structure
-- ✅ Fixed asset paths and navigation links
-- ✅ Created template system for future development
-- ✅ Improved maintainability and scalability
-- ✅ Preserved all original styling and functionality
-
-## 🔗 Important Links
-
-- **Website**: [Live TJMUN Website]
-- **Social Media**:
-  - [Facebook](https://www.facebook.com/tjhsstmun)
-  - [Instagram](https://www.instagram.com/tjhsstmun/)
-- **Contact**: tjmodelun@gmail.com
-
-## 📞 Contact Information
-
-**Thomas Jefferson High School for Science and Technology**  
-6560 Braddock Rd  
-Alexandria, VA 22312  
-United States
-
-**Email**: tjmodelun@gmail.com
-
-## 📄 License
-
-© Copyright TJMUN. All Rights Reserved.
-
----
-
-## 🔧 Development Notes
-
-### **Agent Notes**
-
-- See `AGENTS.md` for contributor and agent workflow expectations.
-- Do not commit OS/editor artifacts such as `.DS_Store`, `.idea/`, or `.cursor/`.
-- Keep project-owned assets in `assets/img/`; keep third-party libraries in `assets/vendor/`.
-
-### **Future Enhancements**
-
-- Implement dynamic content management system
-- Add search functionality
-- Enhance mobile responsiveness
-- Integrate online registration system
-- Add delegate resource portal
-
-### **Maintenance**
-
-- Regularly update conference information
-- Keep leadership profiles current
-- Update background guides annually
-- Test all links and forms periodically
-
----
-
-_Last updated: June 2026 - Codebase cleanup and contributor workflow refresh_
+Last updated: June 2026.
