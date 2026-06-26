@@ -57,8 +57,23 @@
         padding-top: 5px !important;
       }
 
+      .team .member {
+        width: 100%;
+      }
+
       .team .member .member-img {
-        margin-bottom: 0 !important;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 30px !important;
+        overflow: hidden;
+      }
+
+      .team .member .member-img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0 !important;
+        object-fit: cover;
+        object-position: center;
       }
 
       /* If the above doesn't work, this will target any spacing between img and h4 */
@@ -70,18 +85,22 @@
       .team .member {
         padding-bottom: 15px !important;
       }
+
+      .team .member.no-photo {
+        width: 100%;
+        min-height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .team .member.no-photo .member-info h4 {
+        margin-top: 0 !important;
+      }
     </style>
   </head>
 
   <body>
-  <div class="announcement-banner" role="status">
-    <p>
-      TJMUN is hosting a summer boot camp! Please check dates and express your interest here:
-      <a href="https://tinyurl.com/tjmunsummer26" target="_blank" rel="noopener noreferrer"
-        >tinyurl.com/tjmunsummer26</a
-      >
-    </p>
-  </div>
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="../../index.html" class="logo d-flex align-items-center">
@@ -150,10 +169,14 @@
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up" data-aos-delay="100">
                 <div class="member-img">
-                  <img src="../../assets/img/akshaya.png" class="img-fluid" alt="" />
+                  <img
+                    src="../../assets/img/mohan-parthasarathy-headshot.jpg"
+                    class="img-fluid"
+                    alt="Mohan Parthasarathy"
+                  />
                 </div>
                 <div class="member-info">
-                  <h4>Akshaya Lohia</h4>
+                  <h4>Mohan Parthasarathy</h4>
                   <span>Secretary-General</span>
                 </div>
               </div>
@@ -162,10 +185,14 @@
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up" data-aos-delay="200">
                 <div class="member-img">
-                  <img src="../../assets/img/aditi.png" class="img-fluid" alt="" />
+                  <img
+                    src="../../assets/img/arjun-garg-headshot.jpg"
+                    class="img-fluid"
+                    alt="Arjun Garg"
+                  />
                 </div>
                 <div class="member-info">
-                  <h4>Aditi Kodukula</h4>
+                  <h4>Arjun Garg</h4>
                   <span>Under Secretary-General</span>
                 </div>
               </div>
@@ -174,11 +201,15 @@
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up" data-aos-delay="200">
                 <div class="member-img">
-                  <img src="../../assets/img/raghav.jpeg" class="img-fluid" alt="" />
+                  <img
+                    src="../../assets/img/neha-shetwal-headshot.jpg"
+                    class="img-fluid"
+                    alt="Neha Shetwal"
+                  />
                 </div>
                 <div class="member-info">
-                  <h4>Raghav Kasi</h4>
-                  <span>Chief of Staff</span>
+                  <h4>Neha Shetwal</h4>
+                  <span>Senator</span>
                 </div>
               </div>
             </div>
@@ -186,10 +217,14 @@
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up" data-aos-delay="400">
                 <div class="member-img">
-                  <img src="../../assets/img/mohan-home-officer.png" class="img-fluid" alt="" />
+                  <img
+                    src="../../assets/img/anish-kulkarni-headshot.jpg"
+                    class="img-fluid"
+                    alt="Anish Kulkarni"
+                  />
                 </div>
                 <div class="member-info">
-                  <h4>Mohan Parthasarathy</h4>
+                  <h4>Anish Kulkarni</h4>
                   <span>Arbitrator</span>
                 </div>
               </div>
@@ -198,110 +233,72 @@
 
           <div class="row">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="fade-up" data-aos-delay="100">
-                <div class="member-img">
-                  <img src="../../assets/img/aashka.png" class="img-fluid" alt="" />
-                </div>
+              <div class="member no-photo" data-aos="fade-up" data-aos-delay="100">
                 <div class="member-info">
-                  <h4>Aashka Doshi</h4>
-                  <span>Treasurer</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="fade-up" data-aos-delay="200">
-                <div class="member-img">
-                  <img src="../../assets/img/zoeb.png" class="img-fluid" alt="" />
-                </div>
-                <div class="member-info">
-                  <h4>Zoeb Izzi</h4>
-                  <span>Webmaster</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="fade-up" data-aos-delay="300">
-                <div class="member-img">
-                  <img src="../../assets/img/coming-soon.png" class="img-fluid" alt="" />
-                </div>
-                <div class="member-info">
-                  <h4>Saisha Doma</h4>
+                  <h4>Simrin Puri</h4>
                   <span>Activities Coordinator</span>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="fade-up" data-aos-delay="400">
-                <div class="member-img">
-                  <img src="../../assets/img/nehashetwal.png" class="img-fluid" alt="" />
-                </div>
+              <div class="member no-photo" data-aos="fade-up" data-aos-delay="200">
                 <div class="member-info">
-                  <h4>Neha Shetwal</h4>
+                  <h4>Saisha Doma</h4>
+                  <span>Treasurer</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member no-photo" data-aos="fade-up" data-aos-delay="300">
+                <div class="member-info">
+                  <h4>Meerub Rana</h4>
                   <span>Fundraising Coordinator</span>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="fade-up" data-aos-delay="100">
-                <div class="member-img">
-                  <img src="../../assets/img/hrishi-officer.png" class="img-fluid" alt="" />
-                </div>
-                <div class="member-info">
-                  <h4>Hrishi Desai</h4>
-                  <span>Spec Czar</span>
-                </div>
-              </div>
-            </div>
 
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="fade-up" data-aos-delay="200">
-                <div class="member-img">
-                  <img src="../../assets/img/vikram.png" class="img-fluid" alt="" />
-                </div>
+              <div class="member no-photo" data-aos="fade-up" data-aos-delay="400">
                 <div class="member-info">
-                  <h4>Vikram Ruduraju</h4>
-                  <span>Spec Czar</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="fade-up" data-aos-delay="300">
-                <div class="member-img">
-                  <img src="../../assets/img/ruhaan-officer.png" class="img-fluid" alt="" />
-                </div>
-                <div class="member-info">
-                  <h4>Ruhaan Singh</h4>
-                  <span>Historian</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member" data-aos="fade-up" data-aos-delay="400">
-                <div class="member-img">
-                  <img src="../../assets/img/arjun-garg-officer.jpg" class="img-fluid" alt="" />
-                </div>
-                <div class="member-info">
-                  <h4>Arjun Garg</h4>
-                  <span>Logistics Coordinator</span>
+                  <h4>Dev Srivastava and Zoeb Izzi</h4>
+                  <span>Spec Czars</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 d-flex align-items-center justify-content-center">
-              <div class="member text-center" data-aos="fade-up" data-aos-delay="400">
-                <div class="member-img">
-                  <img src="../../assets/img/coming-soon.png" class="img-fluid" alt="" />
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member no-photo" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-info">
+                  <h4>Chi Do</h4>
+                  <span>Historian</span>
                 </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member no-photo" data-aos="fade-up" data-aos-delay="200">
+                <div class="member-info">
+                  <h4>Ronit Singh</h4>
+                  <span>Webmaster</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member no-photo" data-aos="fade-up" data-aos-delay="300">
+                <div class="member-info">
+                  <h4>Prajeet Mishra</h4>
+                  <span>Logistics Coordinator</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member no-photo" data-aos="fade-up" data-aos-delay="400">
                 <div class="member-info">
                   <h4>Danielle Ross</h4>
                   <span>Faculty Sponsor</span>

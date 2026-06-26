@@ -62,6 +62,8 @@
         flex: 0 0 40%; /* Image takes up 40% width */
         max-width: 40%;
         display: flex;
+        height: 320px;
+        overflow: hidden;
       }
 
       .team .member .member-img img {
@@ -81,6 +83,14 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         border-radius: 0; /* Removes rounding */
         height: auto; /* Matches the image height dynamically */
+      }
+
+      .team .member.placeholder .member-info {
+        min-height: 180px;
+      }
+
+      .team .member.placeholder .member-img {
+        display: none;
       }
 
       .team .member .member-info h4 {
@@ -121,14 +131,6 @@
   </head>
 
   <body>
-  <div class="announcement-banner" role="status">
-    <p>
-      TJMUN is hosting a summer boot camp! Please check dates and express your interest here:
-      <a href="https://tinyurl.com/tjmunsummer26" target="_blank" rel="noopener noreferrer"
-        >tinyurl.com/tjmunsummer26</a
-      >
-    </p>
-  </div>
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="../../../index.html" class="logo d-flex align-items-center">
@@ -195,28 +197,15 @@
             <div class="col-12">
               <div class="member" data-aos="fade-up" data-aos-delay="100">
                 <div class="member-img">
-                  <img src="/assets/img/akshaya-dire.jpg" class="img-fluid" alt="" />
+                  <img
+                    src="/assets/img/mohan-parthasarathy-headshot.jpg"
+                    class="img-fluid"
+                    alt="Mohan Parthasarathy"
+                  />
                 </div>
                 <div class="member-info">
-                  <h4>Akshaya Lohia</h4>
+                  <h4>Mohan Parthasarathy</h4>
                   <span>Secretary-General</span>
-                  <p>
-                    Hey Everyone! My name is Akshaya Lohia and I am exciting to be serving as your
-                    Secretary-General for the 33rd iteration of TechMUN! For the last several
-                    months, the rest of secretariat and I have worked tirelessly in order to bring
-                    this conference together. Working with every chair, director, member of staff,
-                    as well as our fantastic sponsor Dr. Ross, has undoubtedly been one of the most
-                    fun and exciting experiences of my high school career.<br />
-                    During TechMUN, I look forward to seeing intense debate and diplomatic
-                    collaboration throughout every committee. I know high school conferences can be
-                    a stressful time for a lot of you, whether it is striving to get a high award or
-                    even getting sponsorship on a working paper, but I encourage each and every one
-                    of you to use TechMUN as a platform to step out of your comfort zones and let
-                    your creativity run wild (crisis delegates - I am talking to you). Regardless of
-                    the award, I want TechMUN to be the conference you all leave most proud of
-                    because of the memories you made during debate. With all this being said, I look
-                    forward to seeing all of you on April 2-3, 2027 and I wish all of you the best of luck!
-                  </p>
                 </div>
               </div>
             </div>
@@ -227,34 +216,15 @@
             <div class="col-12">
               <div class="member" data-aos="fade-up" data-aos-delay="200">
                 <div class="member-img">
-                  <img src="/assets/img/aditi-dire.jpg" class="img-fluid" alt="" />
+                  <img
+                    src="/assets/img/arjun-garg-headshot.jpg"
+                    class="img-fluid"
+                    alt="Arjun Garg"
+                  />
                 </div>
                 <div class="member-info">
-                  <h4>Aditi Kodukula</h4>
+                  <h4>Arjun Garg</h4>
                   <span>Under Secretary-General</span>
-                  <p>
-                    Hey everyone! Welcome to TechMUN XXXIII! My name is Aditi Kodukula, and I’ll be
-                    serving as your Undersecretary-General for this year’s conference. TechMUN has
-                    been an integral part of my life for the last six years. Whether it was as a
-                    middle school delegate in an Atlantis committee, as a dancing panda while
-                    directing the 2024 JCC, or as a candygram messenger last April, TechMUN has
-                    shaped my experiences as both a competitor and leader – and I couldn’t be more
-                    grateful. As cliche as it sounds, I’ve grown up through this club and
-                    conference, and can’t wait to see the impact it has on all of you. I encourage
-                    you to take risks, write that JPD, run that merger – because if not at TechMUN,
-                    where else?<br />
-                    Outside of MUN, you can find me dancing, blasting music in my room, retrieving
-                    stolen clothes from my sister, or [attempting to] parallel park (thanks Mohan!)
-                    I’m guilty of stalking the Crumbl website every week to judge the flavor
-                    selection, but never end up buying anything. Thanks to Abhiram and Ryan, I also
-                    started watching Stranger Things this year – and was very disappointed when
-                    conformity gate did not happen. If you’re in the Stranger Things or Mahabharata
-                    committees, I’ll be especially eager to see how your arcs flow!<br />
-                    After hours of planning and preparation, we’re so excited to present our 33rd
-                    iteration of the conference to you in the coming weeks. Should you ever need
-                    anything, feel free to contact Secretariat at tjmodelun@gmail.com, or me at
-                    aditi.kodukula@gmail.com. See you on April 2-3, 2027!
-                  </p>
                 </div>
               </div>
             </div>
@@ -265,28 +235,15 @@
             <div class="col-12">
               <div class="member" data-aos="fade-up" data-aos-delay="300">
                 <div class="member-img">
-                  <img src="/assets/img/rag.jpg" class="img-fluid" alt="" />
+                  <img
+                    src="/assets/img/neha-shetwal-headshot.jpg"
+                    class="img-fluid"
+                    alt="Neha Shetwal"
+                  />
                 </div>
                 <div class="member-info">
-                  <h4>Raghav Kasi</h4>
+                  <h4>Neha Shetwal</h4>
                   <span>Chief of Staff</span>
-                  <p>
-                    Delegates! My name is Raghav Kasi, and I’m delighted to serve as the Chief of
-                    Staff for TechMUN XXXIII. My own journey with TechMUN began nearly 5 years ago,
-                    when I attended the conference online in 2021 as a middle schooler. TechMUN has
-                    quickly become one of my favorite parts of the year, and I’m super excited to
-                    share my love for the conference with you all. Working alongside Akshaya, Aditi,
-                    and Mohan has been an absolute pleasure, and I hope to provide an unbeatable
-                    experience you carry for years to come.<br />
-                    When I’m not sending emails for TechMUN XXXIII, I love trying new restaurants
-                    and cuisines (unlike Akshaya’s homogenous diet of cheese pizza). I am the
-                    occasional runner, and love exploring the outdoors and using my camera to
-                    capture the world around me. If you are trying to hunt me down at TechMUN,
-                    please look for a tall, handsome gentleman, and you will have almost certainly
-                    found me. In any case, I hope TechMUN XXXIII is filled with exciting surprises,
-                    and I cannot wait to host you all at TJ on April 2-3, 2027. Feel free to reach out with
-                    any questions at r.kasi.487@gmail.com.
-                  </p>
                 </div>
               </div>
             </div>
@@ -295,43 +252,9 @@
           <!-- Row 4 -->
           <div class="row">
             <div class="col-12">
-              <div class="member" data-aos="fade-up" data-aos-delay="400">
-                <div class="member-img">
-                  <img src="/assets/img/mohan1.jpg" class="img-fluid" alt="" />
-                </div>
+              <div class="member placeholder" data-aos="fade-up" data-aos-delay="400">
                 <div class="member-info">
-                  <h4>Mohan Parthasarathy</h4>
                   <span>Director of General Staff</span>
-                  <p>
-                    Hi everyone! My name is Mohan Parthasarathy, and I’m so excited to serve as your
-                    Director of General Staff for TechMUN this year. For the last several months,
-                    the rest of Secretariat and I have worked tirelessly in order to bring this
-                    conference together. Working with every chair, director, member of staff, and
-                    alum, as well as our incredible sponsor Dr. Ross, has undoubtedly been one of
-                    the most fun and exciting experiences of my high school career. From figuring
-                    out dias for each committee at 2AM to laughing uncontrollably during each
-                    officer meeting with Arjun, the journey leading up to TechMUN is one that I
-                    won’t forget. As a junior struggling to get through classes every week, this
-                    club and conference have given me some of the best, most fun experiences of my
-                    life.<br />
-                    Outside of MUN, you’ll probably find me eating, watching Netflix in my room - my
-                    favorite show is Brooklyn Nine-Nine, and I’ve watched it 100 times (ask me
-                    anything about it). Right now, I’m watching Modern Family, which a certain one
-                    of your other directors (who happens to have awful taste in shows, and music,
-                    too) recommended. Other than TV, I love to blast Drake in the car and sing my
-                    heart out while I drive around my friends (or teach Aditi to parallel park). You
-                    also might see me complaining about being bored of wearing a trench coat to
-                    committee, but doing it anyway.<br />
-                    Whether you walk out of the weekend with a gavel or a gloomy Instagram note, I
-                    want TechMUN to be the conference you all leave most proud of because of the
-                    memories and friends you made during debate. Step out of your comfort zones, try
-                    something new, let your creativity run wild (crisis delegates - I am talking to
-                    you), and most importantly, make fun of the rest of Sec if you see them. But
-                    don’t tell them I said that. With all that said, feel free to contact me with
-                    any questions at tjmodelun@gmail.com (or personally at
-                    mohanjairam2018@gmail.com). I look forward to seeing all of you on April 2-3, 2027 and I
-                    wish all of you the best of luck!
-                  </p>
                 </div>
               </div>
             </div>
@@ -340,34 +263,9 @@
           <!-- Row 5 -->
           <div class="row">
             <div class="col-12">
-              <div class="member" data-aos="fade-up" data-aos-delay="500">
-                <div class="member-img">
-                  <img src="/assets/img/aashka_chair.JPG" class="img-fluid" alt="" />
-                </div>
+              <div class="member placeholder" data-aos="fade-up" data-aos-delay="500">
                 <div class="member-info">
-                  <h4>Aashka Doshi</h4>
                   <span>Director of Hospitality</span>
-                  <p>
-                    Hi everyone! My name is Aashka Doshi, a junior at TJ, and I will be your
-                    Director of Hospitality this year for TechMUN XXXIII! This is my third year
-                    doing Model UN and also my third TechMUN. When I first started Model UN,
-                    conferences like this felt overwhelming, with new procedures, strong speakers,
-                    and pressure to perform well. Over time, I realized that those challenges are
-                    exactly what makes MUN such a valuable experience. Not only that, but many of
-                    the connections I've made through this club have lasted well beyond committee
-                    sessions, and that sense of community is something I hope you all experience
-                    this weekend.<br />
-                    Outside of MUN, you will probably find me rewatching Suits, on facetime, reading
-                    a book, or procrastinating my math homework. Overall, my goals for this
-                    conference is to foster a welcoming atmosphere where delegates feel valued from
-                    check-in to closing ceremony. As well as to make TechMUN a comfortable and
-                    positive experience. For delegates, I hope you all have an amazing weekend full
-                    of engaging debate, new friendships, and memorable moments. Make the most of
-                    every committee session, and don’t be afraid to step outside your comfort zone,
-                    TechMUN has a way of becoming unforgettable if you let it. If you have any
-                    questions at all, feel free to reach out to aashkahdoshi@gmail.com! I can’t wait
-                    to see all of you soon!
-                  </p>
                 </div>
               </div>
             </div>
@@ -376,37 +274,9 @@
           <!-- Row 6 -->
           <div class="row">
             <div class="col-12">
-              <div class="member" data-aos="fade-up" data-aos-delay="500">
-                <div class="member-img">
-                  <img src="/assets/img/neha_chair.JPG" class="img-fluid" alt="" />
-                </div>
+              <div class="member placeholder" data-aos="fade-up" data-aos-delay="500">
                 <div class="member-info">
-                  <h4>Neha Shetwal</h4>
                   <span>Director of Logistics</span>
-                  <p>
-                    Hi everyone, and welcome to TechMUN XXXIII! My name is Neha Shetwal, and I am
-                    thrilled to be serving as your Director of Logistics for this iteration of our
-                    conference. I am currently a junior at TJ, with this being my fifth year in
-                    Model UN as well as my fifth TechMUN. Since I fumbled through my very first
-                    committee in middle school, I can confidently say that some of my best memories
-                    have come from participating in MUN. From speaking in a 9 AM committee session
-                    while running on two hours of sleep to absolutely unnecessary late night snack
-                    runs, this club has given me so many treasured moments and lessons learned.
-                    Whether it may be standing up to speak, taking initiative within your bloc, or
-                    writing an insane crisis arc, I encourage all delegates to step out of their
-                    comfort zones and try something new. MUN is a platform through which I have made
-                    some of my best friends and grown a tremendous amount, and I hope that TechMUN
-                    can bring the same experience to you!<br />
-                    Outside of MUN, you can find me with a good book, listening to music, or binging
-                    Dance Moms. Throughout this weekend, I encourage all delegates to push
-                    innovative ideas, work diplomatically with others, and deliver confident
-                    speeches. But most importantly, I encourage all of you to make a contribution
-                    you feel proud of, and walk away from this conference feeling more confident in
-                    your skills. Whether this may be your first conference or last, feel free to
-                    reach out to ask questions or just chat! Don’t hesitate to email me at
-                    nshetwal@gmail.com for anything regarding this conference. I look forward to
-                    seeing you all!
-                  </p>
                 </div>
               </div>
             </div>
@@ -415,35 +285,9 @@
           <!-- Row 7 -->
           <div class="row">
             <div class="col-12">
-              <div class="member" data-aos="fade-up" data-aos-delay="600">
-                <div class="member-img">
-                  <img src="/assets/img/zoeb-dire.JPG" class="img-fluid" alt="" />
-                </div>
+              <div class="member placeholder" data-aos="fade-up" data-aos-delay="600">
                 <div class="member-info">
-                  <h4>Zoeb Izzi</h4>
                   <span>Director of Technology</span>
-                  <p>
-                    Goooood morning delegates! My name is Zoeb Izzi and I’m honored to serve as your
-                    Director of Technology for TechMUN XXXIII. This is my fifth year doing MUN, and
-                    ever since I joined, I’ve loved every second of it, from debating interstellar
-                    diplomacy in a Star Trek committee to channeling my Nymphadora Tonks to create a
-                    dragon army. From running around the streets of Williamsburg and Philadelphia,
-                    to planning opening speeches while I’m walking up to speak, to navigating
-                    leading a 75 delegation bloc while my partner “accidentally” slept in, MUN never
-                    fails to keep me on my toes. Outside of MUN, you’ll find me watching TwoSet
-                    Violin, filling up entire whiteboards with physics problems, or engineering new
-                    ways to make things work (and, in the process, breaking 2 things that used to
-                    work).<br />
-                    To all the delegates joining us for TechMUN this year, my biggest advice is to
-                    have fun. Sometimes mergers can be stressful or updates might not go your way,
-                    but the most important part of any conference are the memories you take with
-                    you, a gift better than any award. Whether this is your first conference or your
-                    last, be sure to make the most of it.<br />
-                    As your Director of Technology, I’ll be ensuring that TechMUN runs smoothly and
-                    that this year’s conference is our best yet. Please feel free to reach out to
-                    zoeb.m.izzi@gmail.com if you have any questions. I can’t wait to see you all on April 2-3, 2027,
-                    and good luck delegates!
-                  </p>
                 </div>
               </div>
             </div>
@@ -452,40 +296,9 @@
           <!-- Row 8 -->
           <div class="row">
             <div class="col-12">
-              <div class="member" data-aos="fade-up" data-aos-delay="700">
-                <div class="member-img">
-                  <img src="/assets/img/ryan_paul.JPG" class="img-fluid" alt="" />
-                </div>
+              <div class="member placeholder" data-aos="fade-up" data-aos-delay="700">
                 <div class="member-info">
-                  <h4>Ryan Paul</h4>
                   <span>Director of Media</span>
-                  <p>
-                    Hi guys, I’m Ryan! This year, I’m psyched to be your TechMUN XXXIII Director of
-                    Media, with this iteration being my third TechMUN overall. Over the years, you
-                    may have spotted me sprinting around the conference providing media coverage for
-                    Marvel weddings, IRL Mario Kart racing, and a new TJ-student Commanders roster
-                    (they’re destined to make it to Superbowl LXI now, trust). Whether I’m
-                    precariously standing on a desk to take photos of your unmod bloc or cursing my
-                    SD card’s “3 hours remaining…” notification to upload conference pics, TechMUN
-                    is always a highlight of my year—regardless of the occupational hazards.<br />
-                    Beyond the MUN realm, you’ll find me still taking photos, shamelessly
-                    bandwagoning on the current hit TV show (Squid Game, Stranger Things, etc.),
-                    playing tennis, licenselessly begging for a ride home, biking along the Potomac,
-                    and cracking mediocre jokes to keep myself humble (my friends should thank me).
-                    I also work in DC a couple of days a week, and after probably missing my train
-                    home, you can instead find me sidequesting, binging at Krispy Kreme, or
-                    sidequesting to Krispy Kreme. When donuts aren’t enough, I get Chipotle freebies
-                    by stalking their Insta in ways that would put CIA agents to shame, and hope I
-                    stop running into Aditi at Chipotle Franklin Farm. If you made it this far and
-                    ask me at TechMUN, I might reward you by letting you borrow my camera to take
-                    “good” pictures of your friends in their committees—if you can find me.<br />
-                    As always, feel free to come up to me or any photographer during the conference
-                    to get official TechMUN flicks. If you have any media-related questions or need
-                    help obtaining photos after the conference, don’t hesitate to forward a message
-                    to me by emailing 2026rpaul@tjhsst.edu. I’ll be rooting for each and every one
-                    of you on April 2-3, 2027 as I work with the media team to capture another
-                    unforgettable TechMUN!
-                  </p>
                 </div>
               </div>
             </div>
@@ -494,44 +307,9 @@
           <!-- Row 9 -->
           <div class="row">
             <div class="col-12">
-              <div class="member" data-aos="fade-up" data-aos-delay="800">
-                <div class="member-img">
-                  <img src="/assets/img/arjun-garg-officer.jpg" class="img-fluid" alt="" />
-                </div>
+              <div class="member placeholder" data-aos="fade-up" data-aos-delay="800">
                 <div class="member-info">
-                  <h4>Arjun Garg</h4>
                   <span>Director of Crisis Simulations</span>
-                  <p>
-                    Hi everyone! My name is Arjun Garg, and I’m a junior serving as your Director of
-                    Crisis for TechMUN XXXIII. This is my fourth year in Model UN and my third
-                    TechMUN, and over the years I’ve discovered one undeniable truth: nothing beats
-                    the chaos of a well-run crisis committee. From plotting elaborate arcs to
-                    watching delegates pull off absolute masterclasses in strategy (or complete
-                    disasters that somehow still work), crisis has easily been the most exciting
-                    part of my MUN experience.<br />
-                    Over the years, MUN has given me some of my favorite memories in high school:
-                    late-night conference prep, ridiculous arcs that somehow worked, and moments
-                    where creativity beat preparation (and vice versa). Crisis, especially, has
-                    taught me how to think on my feet, adapt under pressure, and commit fully to an
-                    idea, even when it feels a little insane. Those are the same qualities I want to
-                    see from every delegate this year. As Director of Crisis, my goal is to make
-                    every committee feel fast-paced, immersive, and unforgettable. I’m looking for
-                    delegates who are willing to take risks, think creatively, and commit fully to
-                    their roles, whether that means orchestrating a brilliant long-term plan or
-                    improvising when everything goes wrong (which it will). Being good at a crisis
-                    committee isn’t about doing the most; it’s about doing the smartest thing at the
-                    right time, and doing it with confidence and diplomacy.<br />
-                    Outside of MUN, you’ll probably find me experimenting with new recipes (although
-                    I always enjoy a nice restaurant), listening to Drake, running, binge-watching
-                    action-thrillers (I absolutely love the Mission: Impossible franchise), or being
-                    concerned by Mohan’s driving. Planning TechMUN alongside the rest of Secretariat
-                    has been one of the most rewarding parts of my high school experience, and I
-                    couldn’t be more excited to share that with all of you. I hope TechMUN 2027 is
-                    the conference where you push yourself, surprise yourself, and walk away with
-                    memories you’ll talk about long after awards are handed out. If you have any
-                    questions about crisis committees, TechMUN, or TJ in general, feel free to reach
-                    out at arjungarghd@gmail.com. Can’t wait to see you all on April 2-3, 2027!
-                  </p>
                 </div>
               </div>
             </div>
@@ -540,31 +318,9 @@
           <!-- Row 10 -->
           <div class="row">
             <div class="col-12">
-              <div class="member" data-aos="fade-up" data-aos-delay="900">
-                <div class="member-img">
-                  <img src="/assets/img/desai_chair.JPG" class="img-fluid" alt="" />
-                </div>
+              <div class="member placeholder" data-aos="fade-up" data-aos-delay="900">
                 <div class="member-info">
-                  <h4>Hrishi Desai</h4>
                   <span>Director of Specialized Agencies</span>
-                  <p>
-                    Hi everyone! I’m Hrishi, a senior at TJ and I am so excited to be your Director
-                    of Specialized Agencies! This is my fourth TechMUN and my fourth year doing MUN,
-                    and I can confidently say that MUN has been one of my favorite experiences in
-                    high school. Whether it’s intensely debating during a mod or almost getting hit
-                    by a car on the streets of Philly, I’ve made some of my best friends and many
-                    unforgettable memories. It’s crazy to think that through this club, I’ve grown
-                    my public speaking, collaboration, and leadership skills both inside committee
-                    and out.<br />
-                    Outside of MUN, you can find me playing baseball, tennis, trying new foods (send
-                    me restaurant/food recommendations), and doing chemistry. In committee, I will
-                    be looking for delegates who show creativity, cooperativity, and initiative.
-                    Even if it’s your first conference, I hope each and every one of you raises your
-                    placard and steps out of your comfort zone because it makes for such a rewarding
-                    experience. I know that you might be nervous, but don’t be afraid to speak up -
-                    say what hasn’t been said, be creative, and go against what others think -
-                    that’s the key to having fun! See you guys on April 2-3, 2027!
-                  </p>
                 </div>
               </div>
             </div>
