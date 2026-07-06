@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>TJMUN - Sponsor Us</title>
+    <meta
+      content="Support TJMUN through TechMUN sponsorship packages and conference recognition opportunities."
+      name="description"
+    />
+    <meta content="TJMUN sponsor, TechMUN sponsorship, MUN donations" name="keywords" />
+
+    <link href="/assets/img/logo5.png" rel="icon" type="image/x-icon" />
+    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
+
+    <link href="/assets/css/main.css?v=hero-refresh-2" rel="stylesheet" />
+    <link href="/assets/css/sponsor.css" rel="stylesheet" />
+    <link href="/assets/css/page-heroes.css?v=20260706d" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="/index.html" class="logo d-flex align-items-center">
+          <img src="/assets/img/logo5.png" alt="TJMUN logo" />
+          <h1>TJMUN</h1>
+        </a>
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        <div id="navbar-container"></div>
+        <script>
+          fetch("/templates/navigation.html")
+            .then((res) => res.text())
+            .then((html) => {
+              document.getElementById("navbar-container").innerHTML = html;
+            });
+        </script>
+      </div>
+    </header>
+
+    <main id="main" class="sponsor-page">
+      <section class="sponsor-hero">
+        <div class="sponsor-hero__image" aria-hidden="true"></div>
+        <div class="sponsor-hero__overlay"></div>
+        <div class="container sponsor-hero__content">
+          <p class="sponsor-eyebrow">Support student diplomacy</p>
+          <h1>Sponsor TJMUN</h1>
+          <p>
+            Help students debate, research, lead, and attend conferences with fewer financial
+            barriers.
+          </p>
+          <div class="sponsor-hero__actions">
+            <a class="sponsor-button" href="mailto:tjmodelun@gmail.com?subject=TJMUN%20Sponsorship"
+              >Contact us</a
+            >
+            <a class="sponsor-link" href="#sponsorship-tiers">View packages</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="sponsor-intro" aria-labelledby="why-sponsor">
+        <div class="container">
+          <div class="sponsor-intro__grid">
+            <div class="sponsor-copy">
+              <p class="sponsor-eyebrow">Why sponsor us</p>
+              <h2 id="why-sponsor">Your support reaches students who care about public service.</h2>
+              <p>
+                TJMUN gives students space to practice public speaking, negotiation, research, and
+                policy writing. Sponsors help us keep TechMUN strong while making Model UN more
+                accessible to delegates who need financial help.
+              </p>
+              <p>
+                Support funds visible conference sponsorships and helps us keep TechMUN strong for
+                students, advisors, and guests throughout the weekend.
+              </p>
+            </div>
+            <figure class="sponsor-feature-photo">
+              <img
+                src="/assets/img/top_bar.png"
+                alt="TJMUN delegates holding awards after a conference"
+              />
+              <figcaption>Students after a conference award ceremony.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="sponsorship-tiers" class="sponsor-tiers" aria-labelledby="tiers-heading">
+        <div class="container">
+          <div class="sponsor-section-heading sponsor-section-heading--center">
+            <p class="sponsor-eyebrow">Sponsorship tiers</p>
+            <h2 id="tiers-heading">Recognition packages</h2>
+          </div>
+
+          <div class="sponsor-tier-grid">
+            <article class="sponsor-tier">
+              <div class="sponsor-tier__header">
+                <h3>Community Supporter Package</h3>
+                <p>$250-$499</p>
+              </div>
+              <ul>
+                <li>Quarter-page advertisement in the official TechMUN Delegate Guide</li>
+                <li>Recognition on TJMUN social media platforms</li>
+                <li>Inclusion in conference sponsor displays and booths</li>
+                <li>
+                  Sponsor acknowledgment in post-conference appreciation materials sent out to our
+                  members
+                </li>
+              </ul>
+            </article>
+
+            <article class="sponsor-tier">
+              <div class="sponsor-tier__header">
+                <h3>Conference Partner Package</h3>
+                <p>$500-$799</p>
+              </div>
+              <ul>
+                <li>All Community Supporter benefits</li>
+                <li>Half-page advertisement in the official TechMUN Delegate Guide</li>
+                <li>Logo placement on conference signage</li>
+                <li>Recognition on TJMUN social media platforms</li>
+                <li>Opportunity to host a promotional booth during TechMUN</li>
+                <li>
+                  Opportunity to distribute promotional materials at designated conference locations
+                </li>
+                <li>Sponsor acknowledgment during conference announcements</li>
+              </ul>
+            </article>
+
+            <article class="sponsor-tier">
+              <div class="sponsor-tier__header">
+                <h3>Ambassador Sponsor</h3>
+                <p>$800+</p>
+              </div>
+              <ul>
+                <li>All Conference Partner benefits</li>
+                <li>
+                  Full-page advertisement in the official TechMUN Delegate Guide distributed to all
+                  delegates and advisors
+                </li>
+                <li>
+                  Prominent logo placement on sponsorship displays with the opportunity to host a
+                  promotional booth during TechMUN
+                </li>
+                <li>Recognition during Opening and Closing Ceremonies</li>
+                <li>Featured sponsor spotlight on TJMUN social media platforms</li>
+                <li>
+                  Logo placement on TJMUN merchandise worn throughout the academic year at national
+                  conferences and events (e.g., ILMUNC, NAIMUN, and WMHSMUN) that all members are
+                  expected to buy
+                </li>
+                <li>
+                  Opportunity to distribute promotional materials, merchandise, or informational
+                  resources to the 1,200+ delegates attending the conference
+                </li>
+                <li>Recognition on our website with company description and logo</li>
+              </ul>
+            </article>
+
+            <article class="sponsor-tier">
+              <div class="sponsor-tier__header">
+                <h3>Presenting Sponsor</h3>
+                <p>$1,500+</p>
+              </div>
+              <ul>
+                <li>All Ambassador benefits</li>
+                <li>"TechMUN Presented By [Company]" recognition during opening ceremony</li>
+                <li>Largest logo placement on all conference materials</li>
+                <li>Two-page spread in delegate guide</li>
+                <li>
+                  Largest logo placement on TJMUN merchandise worn throughout the academic year at
+                  national conferences and events (e.g., ILMUNC, NAIMUN, and WMHSMUN) that all
+                  members are expected to buy
+                </li>
+                <li>
+                  Featured social media campaign for one week on our official social media page
+                </li>
+                <li>Speaking opportunity before closing ceremony</li>
+                <li>Premium booth location</li>
+                <li>Exclusive sponsor recognition throughout the conference</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sponsor-cta" aria-labelledby="sponsor-cta-heading">
+        <div class="container">
+          <div class="sponsor-cta__panel">
+            <div>
+              <p class="sponsor-eyebrow">Ready to help?</p>
+              <h2 id="sponsor-cta-heading">Tell us how you would like to support TJMUN.</h2>
+              <p>
+                Email us with the sponsorship package you are interested in. We will follow up with
+                next steps.
+              </p>
+            </div>
+            <a class="sponsor-button" href="mailto:tjmodelun@gmail.com?subject=TJMUN%20Sponsorship"
+              >Email TJMUN</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+    <script>
+      fetch("/templates/footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer-container").innerHTML = html;
+        });
+    </script>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
