@@ -1,0 +1,379 @@
+.sponsor-page {
+  background: #f7f3ec;
+  color: #172033;
+  font-family: "EB Garamond", serif;
+}
+
+.sponsor-page h1,
+.sponsor-page h2,
+.sponsor-page h3,
+.sponsor-page p,
+.sponsor-page a,
+.sponsor-page li,
+.sponsor-page figcaption {
+  font-family: "EB Garamond", serif;
+}
+
+.sponsor-page section {
+  overflow: hidden;
+}
+
+.sponsor-hero {
+  position: relative;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  padding: 190px 0 110px;
+  color: #fff;
+}
+
+.sponsor-hero__image,
+.sponsor-hero__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.sponsor-hero__image {
+  background-image: url("/assets/img/top_bar.png");
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.01);
+}
+
+.sponsor-hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(10, 15, 28, 0.86), rgba(10, 15, 28, 0.42)),
+    linear-gradient(0deg, rgba(10, 15, 28, 0.34), rgba(10, 15, 28, 0.34));
+}
+
+.sponsor-hero__content {
+  position: relative;
+  max-width: 1180px;
+}
+
+.sponsor-hero h1 {
+  max-width: 680px;
+  margin: 0 0 18px;
+  font-size: 5rem;
+  line-height: 0.92;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.sponsor-hero p:not(.sponsor-eyebrow) {
+  max-width: 570px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.sponsor-eyebrow {
+  margin: 0 0 12px;
+  color: #626b78;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sponsor-hero .sponsor-eyebrow,
+.sponsor-cta .sponsor-eyebrow {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.sponsor-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.sponsor-button,
+.sponsor-link {
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sponsor-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border: 1px solid #fffdf8;
+  border-radius: 4px;
+  background: #fffdf8;
+  color: #131927;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sponsor-button:hover,
+.sponsor-button:focus {
+  background: #e6edf4;
+  border-color: #e6edf4;
+  color: #131927;
+  transform: translateY(-2px);
+}
+
+.sponsor-link {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.sponsor-link:hover,
+.sponsor-link:focus {
+  color: #dce5ee;
+}
+
+.sponsor-intro,
+.sponsor-tiers,
+.sponsor-cta {
+  padding: 86px 0;
+}
+
+.sponsor-intro__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
+  gap: 58px;
+  align-items: center;
+}
+
+.sponsor-copy h2,
+.sponsor-section-heading h2,
+.sponsor-cta h2 {
+  margin: 0 0 20px;
+  color: #10182a;
+  font-size: 3rem;
+  line-height: 1.04;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.sponsor-copy p,
+.sponsor-cta p {
+  margin: 0 0 16px;
+  color: #455066;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+.sponsor-feature-photo {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e6dccd;
+  box-shadow: 0 22px 60px rgba(25, 35, 54, 0.16);
+}
+
+.sponsor-feature-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sponsor-feature-photo {
+  aspect-ratio: 4 / 5;
+}
+
+.sponsor-feature-photo img {
+  object-position: 58% center;
+}
+
+.sponsor-feature-photo figcaption {
+  padding: 12px 16px;
+  background: #fffaf1;
+  color: #5d6473;
+  font-size: 0.95rem;
+}
+
+.sponsor-section-heading {
+  max-width: 720px;
+  margin-bottom: 34px;
+}
+
+.sponsor-section-heading--center {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.sponsor-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.sponsor-tier {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 45px rgba(25, 35, 54, 0.08);
+}
+
+.sponsor-tier h3 {
+  margin: 0 0 12px;
+  color: #10182a;
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+
+.sponsor-tiers {
+  background: #f7f3ec;
+}
+
+.sponsor-tier {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 22px;
+  border: 1px solid rgba(23, 32, 51, 0.1);
+}
+
+.sponsor-tier__header {
+  min-height: 92px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(23, 32, 51, 0.12);
+}
+
+.sponsor-tier h3 {
+  font-size: 1.34rem;
+}
+
+.sponsor-tier__header p {
+  margin: 0;
+  color: #566173;
+  font-size: 1.04rem;
+  font-weight: 700;
+}
+
+.sponsor-tier ul {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sponsor-tier li {
+  position: relative;
+  padding-left: 22px;
+  color: #4b5568;
+  font-size: 0.98rem;
+  line-height: 1.42;
+}
+
+.sponsor-tier li + li {
+  margin-top: 10px;
+}
+
+.sponsor-tier li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background: #6f7786;
+}
+
+.sponsor-cta {
+  background: #172033;
+}
+
+.sponsor-cta__panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: center;
+  padding: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.sponsor-cta h2,
+.sponsor-cta p {
+  color: #fff;
+}
+
+.sponsor-cta p {
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 991px) {
+  .sponsor-hero {
+    min-height: 72vh;
+    padding: 150px 0 88px;
+  }
+
+  .sponsor-hero h1 {
+    font-size: 4rem;
+  }
+
+  .sponsor-intro__grid,
+  .sponsor-cta__panel {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-tier-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-tier {
+    min-height: 0;
+  }
+
+  .sponsor-tier__header {
+    min-height: 0;
+  }
+
+  .sponsor-cta__panel {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sponsor-hero {
+    min-height: 68vh;
+    padding: 136px 0 74px;
+  }
+
+  .sponsor-hero h1 {
+    font-size: 3rem;
+  }
+
+  .sponsor-hero p:not(.sponsor-eyebrow),
+  .sponsor-copy p,
+  .sponsor-cta p {
+    font-size: 1.05rem;
+  }
+
+  .sponsor-copy h2,
+  .sponsor-section-heading h2,
+  .sponsor-cta h2 {
+    font-size: 2.2rem;
+  }
+
+  .sponsor-intro,
+  .sponsor-tiers,
+  .sponsor-cta {
+    padding: 62px 0;
+  }
+
+  .sponsor-tier {
+    padding: 24px;
+  }
+
+  .sponsor-cta__panel {
+    padding: 26px;
+  }
+}

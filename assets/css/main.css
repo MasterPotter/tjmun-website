@@ -108,10 +108,10 @@ section {
 }
 
 .nav-inner {
-  max-width: 625px; /* Choose 1100, 1000, etc. */
+  max-width: 760px;
   margin: 0 auto;
-  width: 85%; /* changes how much of the navbar is on screen by shifting it more left the higher the num is
-  padding: 0 20px;       /* Keeps nav links away from screen edges */
+  width: 85%;
+  padding: 0 20px;
 }
 
 @media (max-width: 640px) {
@@ -129,25 +129,84 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs .page-header {
-  padding: 140px 0 80px 0;
+  min-height: 76vh !important;
+  padding: 190px 0 110px !important;
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .breadcrumbs .page-header:before {
   content: "";
-  background-color: rgba(14, 29, 52, 0.8);
+  background:
+    linear-gradient(90deg, rgba(10, 15, 28, 0.86), rgba(10, 15, 28, 0.42)),
+    linear-gradient(0deg, rgba(10, 15, 28, 0.34), rgba(10, 15, 28, 0.34));
   position: absolute;
   inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.breadcrumbs .page-header > img,
+.breadcrumbs .page-header > video {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  object-fit: cover;
+  transform: none !important;
+  z-index: 0;
+}
+
+.breadcrumbs .page-header > .container {
+  max-width: 1180px !important;
+  padding-right: var(--bs-gutter-x, 0.75rem) !important;
+  padding-left: var(--bs-gutter-x, 0.75rem) !important;
+  z-index: 2;
+}
+
+.breadcrumbs .page-header .row {
+  display: flex !important;
+  justify-content: flex-start !important;
+  width: auto !important;
+}
+
+.breadcrumbs .page-header .col-lg-6 {
+  width: min(100%, 680px);
+  max-width: 680px;
+  flex: 0 0 auto;
+}
+
+.breadcrumbs .page-header .text-center {
+  text-align: left !important;
+}
+
+.breadcrumbs .page-header .col-lg-6::before {
+  content: "Thomas Jefferson Model United Nations";
+  display: block;
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.74);
+  font-family: "EB Garamond", Garamond, serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .breadcrumbs .page-header h2 {
-  font-size: 56px;
-  font-weight: 500;
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 5rem) !important;
+  font-weight: 700 !important;
+  line-height: 0.92 !important;
+  letter-spacing: 0;
   color: #fff;
-  font-family: var(--font-secondary);
+  font-family: "EB Garamond", Garamond, serif;
+  text-wrap: balance;
 }
 
 .breadcrumbs .page-header p {
