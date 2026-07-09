@@ -11,6 +11,17 @@
   font-family: "EB Garamond", serif !important;
 }
 
+#footer,
+#footer h4,
+#footer p,
+#footer a,
+#footer span,
+#footer li,
+#footer strong,
+#footer em {
+  font-family: "EB Garamond", serif !important;
+}
+
 .sponsor-page h1,
 .sponsor-page h2,
 .sponsor-page h3,
