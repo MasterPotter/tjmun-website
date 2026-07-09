@@ -4,6 +4,13 @@
   font-family: "EB Garamond", serif;
 }
 
+#header .logo h1,
+#header .navbar a,
+#header .navbar a:focus,
+#header .navbar a span {
+  font-family: "EB Garamond", serif !important;
+}
+
 .sponsor-page h1,
 .sponsor-page h2,
 .sponsor-page h3,

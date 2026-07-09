@@ -384,11 +384,6 @@ section {
   font-family: var(--font-primary);
 }
 
-#header .navbar a,
-#header .navbar a:focus {
-  font-family: "EB Garamond", serif !important;
-}
-
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
