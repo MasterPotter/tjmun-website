@@ -200,11 +200,11 @@
 }
 
 .sponsor-feature-photo {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 2;
 }
 
 .sponsor-feature-photo img {
-  object-position: 58% center;
+  object-position: center;
 }
 
 .sponsor-feature-photo figcaption {
