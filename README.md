@@ -20,21 +20,25 @@ tjmun-website/
 ├── _headers                           # Hosting/security headers
 ├── assets/
 │   ├── css/                           # Site stylesheets
+│   │   ├── design-system.css          # Color + type tokens, shared chrome (loaded last)
 │   │   ├── main.css
+│   │   ├── home.css                   # Homepage sections
+│   │   ├── home-intro.css             # Homepage gavel intro
 │   │   ├── landing-new.css
 │   │   └── landing-future.css
 │   ├── js/                            # Site JavaScript
 │   │   ├── main.js
+│   │   ├── home.js                    # Homepage sections (ES module)
+│   │   ├── home-intro.js              # Homepage gavel intro
 │   │   └── event-signup.js
 │   ├── img/                           # Photos, logos, videos, graphics
 │   └── vendor/                        # Vendored frontend libraries
 │       ├── aos/
 │       ├── bootstrap/
 │       ├── bootstrap-icons/
+│       ├── esm-env@1.2.2/
 │       ├── fontawesome-free/
-│       ├── glightbox/
-│       ├── php-email-form/
-│       ├── purecounter/
+│       ├── number-flow@0.6.2/
 │       └── swiper/
 ├── pages/
 │   ├── about/
@@ -145,11 +149,10 @@ Committee pages live under `pages/techmun/committees/`, split by school level an
 - Bootstrap 5
 - Bootstrap Icons
 - FontAwesome
-- AOS
-- Swiper
-- GLightbox
-- PureCounter
-- Google Fonts
+- AOS (only on pages that use `data-aos`)
+- Swiper (homepage)
+- NumberFlow (homepage counters)
+- Google Fonts: Libre Caslon Display + Libre Franklin
 - PHP form files kept in `forms/`
 
 Most dependencies are vendored directly under `assets/vendor/`, so the site can run without installing npm packages.

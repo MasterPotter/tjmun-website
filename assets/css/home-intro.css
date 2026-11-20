@@ -1,0 +1,133 @@
+/*
+ * Gavel intro layers. Builds on landing-new.css (navy var(--tj-navy), blue var(--tj-blue),
+ * EB Garamond) rather than replacing it.
+ */
+
+:root {
+  /* Recolor the two SVGs here. */
+  --gavel-color: #ffffff;
+  --gavel-pad-color: var(--tj-blue);
+}
+
+.hero-section[data-gavel-intro] {
+  isolation: isolate;
+}
+
+/* The video and overlay sit in a camera layer so the whole scene can zoom. */
+.intro-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.intro-bg {
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* landing-new.css puts these at z-index -2 / -1; keep that order inside the layer. */
+.intro-bg .hero-video {
+  z-index: 0;
+}
+.intro-bg .hero-overlay {
+  z-index: 1;
+}
+
+/* Stack: scene (0) < fill (1) < hero content (2) < gavel (3). */
+.hero-section[data-gavel-intro] .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.intro-front {
+  z-index: 3;
+}
+
+/* Both stages share one box so the pad and gavel line up exactly. */
+.intro-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(620px, 88vw);
+  aspect-ratio: 700 / 520;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.intro-box[hidden] {
+  display: none;
+}
+.intro-box svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.gavel {
+  fill: var(--gavel-color);
+  opacity: 0;
+}
+.gavel-pad {
+  fill: var(--gavel-pad-color);
+  opacity: 0;
+}
+
+/* Same color as the gavel, so the hand-off from gavel to cover is seamless. */
+.intro-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--gavel-color);
+  opacity: 0;
+  pointer-events: none;
+}
+.intro-cover[hidden] {
+  display: none;
+}
+
+/* Logo above the existing headline. */
+.hero-logo {
+  position: relative;
+  display: block;
+  width: 140px;
+  margin: 0 auto 22px;
+  transform-origin: 50% 50%;
+}
+.hero-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Brand-blue copy of the logo, shown while the gavel-colored fill is up. */
+.hero-logo-tint {
+  position: absolute;
+  inset: 0;
+  background: var(--gavel-pad-color);
+  -webkit-mask: url(/assets/img/logo5.png) center / contain no-repeat;
+  mask: url(/assets/img/logo5.png) center / contain no-repeat;
+  opacity: 0;
+}
+
+/* The intro drives these itself; switch off the CSS entrance animations. */
+.hero-section[data-gavel-intro] .hero-content h1,
+.hero-section[data-gavel-intro] .hero-content p,
+.hero-section[data-gavel-intro] .btn-premium {
+  animation: none;
+}
+
+/* Hidden until the timeline reveals them. */
+.intro-running [data-intro],
+.intro-running [data-intro-chrome] {
+  opacity: 0;
+  /* the timeline sets these every frame; CSS transitions would make them lag */
+  transition: none !important;
+}
+.intro-running .hero-section {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-box {
+    display: none;
+  }
+}

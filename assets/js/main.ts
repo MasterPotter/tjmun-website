@@ -1,5 +1,3 @@
-declare const PureCounter: new () => unknown;
-declare const GLightbox: (options: { selector: string }) => unknown;
 declare const Swiper: new (selector: string, options: Record<string, unknown>) => unknown;
 declare const AOS: {
   init: (options: Record<string, unknown>) => void;
@@ -113,41 +111,40 @@ function initMobileDropdowns() {
 }
 
 function initVendorPlugins() {
-  new PureCounter();
-
-  GLightbox({
-    selector: ".glightbox",
-  });
-
-  new Swiper(".slides-1", {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: "auto",
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-  window.addEventListener("load", () => {
-    AOS.init({
-      duration: 600,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false,
-      offset: 50,
-      delay: 0,
+  // Swiper and AOS are only loaded on the pages that use them.
+  if (typeof Swiper !== "undefined" && document.querySelector(".slides-1")) {
+    new Swiper(".slides-1", {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: "auto",
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
-  });
+  }
+
+  if (typeof AOS !== "undefined" && document.querySelector("[data-aos]")) {
+    window.addEventListener("load", () => {
+      AOS.init({
+        duration: 600,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false,
+        offset: 50,
+        delay: 0,
+      });
+    });
+  }
 }
 
 function initAnnouncementBannerOffset() {

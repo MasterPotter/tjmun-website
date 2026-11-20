@@ -1,0 +1,342 @@
+/*
+ * Homepage sections. Tokens and fonts come from design-system.css.
+ *
+ * Seams: every section after the hero overlaps the one above it by 2px and paints on
+ * top, so a wave's anti-aliased bottom edge can never show the previous background as a
+ * hairline. Wave fills use the same token as the section they lead into.
+ */
+
+/* ---------- Section stack ---------- */
+#main > section {
+  position: relative;
+  z-index: 0; /* own stacking context: a wave can't paint over the next section */
+  margin-top: -2px;
+}
+.counters-section {
+  background: var(--tj-navy);
+  padding: 72px 0 150px;
+}
+.services-section {
+  background: var(--tj-paper);
+  padding: 110px 0 170px;
+}
+.testimonials-section {
+  background: var(--tj-navy);
+  padding: 90px 0 110px;
+}
+
+/* ---------- Wave dividers ---------- */
+.wave {
+  position: absolute;
+  left: -5%;
+  bottom: 0;
+  width: 110%;
+  height: clamp(56px, 8vw, 120px);
+  pointer-events: none;
+  z-index: 2;
+  overflow: visible;
+}
+.wave path {
+  transform-box: fill-box;
+  transform-origin: 50% 100%; /* scale from the bottom edge so it never lifts off */
+}
+.wave--navy .wave-front {
+  fill: var(--tj-navy);
+}
+.wave--light .wave-front {
+  fill: var(--tj-paper);
+}
+/* The back layer peeks out as a thin brand-blue ribbon along the curve. */
+.wave .wave-back {
+  fill: var(--tj-blue);
+}
+
+/* The hero's wave waits for the intro to finish. */
+.hero-section .wave {
+  transition: opacity 0.8s ease;
+}
+.intro-running .hero-section .wave {
+  opacity: 0;
+  transition: none;
+}
+
+/* ---------- Reveal on scroll ---------- */
+.sx [data-reveal] {
+  opacity: 0;
+  translate: 0 28px;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    translate 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--d, 0ms);
+}
+.sx [data-reveal].is-in {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* Headings rise in word by word. */
+.sx [data-words] .w {
+  display: inline-block;
+  opacity: 0;
+  translate: 0 0.55em;
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    translate 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--i) * 80ms);
+}
+.sx [data-words].is-in .w {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* Hand-drawn underline (pattern from Magic UI's Highlighter, as plain SVG). */
+.scribble {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+.scribble svg {
+  position: absolute;
+  left: -3%;
+  bottom: -0.16em;
+  width: 106%;
+  height: 0.32em;
+  overflow: visible;
+}
+.scribble path {
+  fill: none;
+  stroke: var(--tj-blue);
+  stroke-width: 4;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+.sx .scribble path {
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.45s;
+}
+.sx .is-in .scribble path {
+  stroke-dashoffset: 0;
+}
+.testimonials-section .scribble path {
+  stroke: #6f8dff; /* delegate blue lifted for contrast on navy */
+}
+
+/* ---------- Hero ---------- */
+.hero-content h1 {
+  font-family: var(--tj-serif);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+.hero-content p {
+  font-family: var(--tj-sans);
+  font-weight: 400;
+}
+.btn-premium {
+  font-family: var(--tj-sans);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.btn-premium:hover {
+  color: var(--tj-navy);
+}
+
+/* ---------- Stats (NumberFlow) ---------- */
+number-flow.counter-number {
+  display: block;
+  font-family: var(--tj-serif);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  --number-flow-mask-height: 0.2em;
+}
+.counter-icon {
+  color: #6f8dff;
+}
+.counter-label {
+  font-family: var(--tj-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0.78;
+}
+
+/* ---------- About: sticky intro + pillars that light up in turn ---------- */
+.pillars {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 72px;
+  align-items: start;
+  text-align: left;
+}
+.pillars p,
+.pillar {
+  text-align: left;
+}
+.pillars-intro {
+  position: sticky;
+  top: 150px;
+}
+.section-heading {
+  font-size: clamp(2.5rem, 4.6vw, 3.7rem);
+  line-height: 1.04;
+  color: var(--tj-navy);
+  margin-bottom: 24px;
+}
+.pillars-intro p {
+  color: var(--tj-muted);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  max-width: 46ch;
+}
+.pillar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--tj-rule);
+}
+.pillar {
+  padding: 30px 0 32px;
+  margin: 0;
+  border-top: 1px solid var(--tj-rule);
+  transition:
+    opacity 0.5s ease,
+    border-color 0.5s ease;
+}
+.pillar h3 {
+  font-size: 2rem;
+  color: var(--tj-navy);
+  margin-bottom: 8px;
+}
+.pillar p {
+  color: var(--tj-muted);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 56ch;
+}
+.pillar-list.has-active .pillar:not(.is-active) {
+  opacity: 0.38;
+}
+.pillar.is-active {
+  border-top-color: var(--tj-blue);
+}
+
+/* ---------- Leadership ---------- */
+.testimonials-section .section-heading {
+  text-align: center;
+  color: var(--tj-white);
+}
+.testimonial-item h3 {
+  font-family: var(--tj-serif);
+  font-weight: 400;
+  color: #6f8dff;
+}
+.testimonial-item h4 {
+  font-family: var(--tj-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.testimonial-item p {
+  font-family: var(--tj-serif);
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+.testimonial-img {
+  border-color: var(--tj-blue);
+}
+
+/* ---------- Scroll-linked: hero recedes, waves drift ---------- */
+@supports (animation-timeline: view()) {
+  .hero-section .hero-content {
+    animation: hero-recede linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 100%;
+  }
+  .hero-section .hero-video {
+    animation: hero-video-push linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 100%;
+  }
+  .wave-back {
+    animation: wave-drift-back linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
+  }
+  .wave-front {
+    animation: wave-drift-front linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
+  }
+}
+@keyframes hero-recede {
+  to {
+    transform: translateY(-14vh) scale(0.94);
+    opacity: 0;
+  }
+}
+@keyframes hero-video-push {
+  to {
+    scale: 1.14;
+  }
+}
+/* Only horizontal drift + height breathing; the bottom edge stays pinned so no gap opens. */
+@keyframes wave-drift-back {
+  from {
+    transform: translateX(-3%) scaleY(0.75);
+  }
+  to {
+    transform: translateX(3%) scaleY(1.2);
+  }
+}
+@keyframes wave-drift-front {
+  from {
+    transform: translateX(3%) scaleY(1.15);
+  }
+  to {
+    transform: translateX(-3%) scaleY(0.85);
+  }
+}
+
+/* ---------- Responsive + reduced motion ---------- */
+@media (max-width: 991px) {
+  .pillars {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .pillars-intro {
+    position: static;
+  }
+}
+@media (max-width: 575px) {
+  .counters-section {
+    padding: 56px 0 110px;
+  }
+  .services-section {
+    padding: 72px 0 120px;
+  }
+  .testimonial-item p {
+    font-size: 1.12rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sx [data-reveal],
+  .sx [data-words] .w {
+    opacity: 1;
+    translate: none;
+    transition: none;
+  }
+  .sx .scribble path {
+    stroke-dashoffset: 0;
+    transition: none;
+  }
+  .hero-section .hero-content,
+  .hero-section .hero-video,
+  .wave path {
+    animation: none;
+  }
+}

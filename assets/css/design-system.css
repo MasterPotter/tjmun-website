@@ -1,0 +1,258 @@
+/*
+ * TJMUN design system
+ *
+ * Loaded last on every page. Owns the tokens (color + type) and the shared chrome:
+ * header, footer, subpage hero, breadcrumb, links, focus.
+ *
+ * Type: Libre Caslon Display for h1-h3 (display face, regular weight only - it has no
+ * bold, so weight synthesis is switched off), Libre Franklin for body text, UI and h4-h6.
+ */
+
+:root {
+  /* Color */
+  --tj-navy: #0e1d34; /* chamber navy: header, footer, dark bands */
+  --tj-navy-deep: #0a1526; /* photo overlays */
+  --tj-blue: #0d42ff; /* delegate blue: links, active states, the wave ribbon */
+  --tj-blue-strong: #0832c4; /* hover/pressed blue on light backgrounds */
+  --tj-paper: #f5f7fb; /* page background */
+  --tj-white: #ffffff; /* cards on paper */
+  --tj-ink: #16213a; /* body text */
+  --tj-muted: #5a6478; /* secondary text */
+  --tj-rule: #dde3ec; /* hairlines, borders */
+  --tj-placard: #f8d34b; /* announcement banner only */
+
+  /* Type */
+  --tj-serif: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+  --tj-sans: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+
+  /* Bridge the older stylesheets onto the tokens (main.css, landing-new.css, home.css) */
+  --font-default: var(--tj-sans);
+  --font-primary: var(--tj-sans);
+  --font-secondary: var(--tj-serif);
+  --font-heading: var(--tj-serif);
+  --font-body: var(--tj-sans);
+  --font-label: var(--tj-sans);
+  --heading-weight: 400;
+  --heading-tracking: 0;
+  --color-default: var(--tj-ink);
+  --color-primary: var(--tj-blue);
+  --color-secondary: var(--tj-navy);
+  --color-navy: var(--tj-navy);
+  --color-gold: var(--tj-blue);
+  --color-white: var(--tj-white);
+}
+
+/* ---------- Base ---------- */
+html {
+  font-synthesis-weight: none; /* never fake a bold Caslon */
+}
+body {
+  font-family: var(--tj-sans);
+  color: var(--tj-ink);
+  background-color: var(--tj-paper);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+p,
+li,
+td,
+th,
+label,
+input,
+select,
+textarea,
+button {
+  font-family: var(--tj-sans);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--tj-serif);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+h4,
+h5,
+h6 {
+  font-family: var(--tj-sans);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+a {
+  color: var(--tj-blue);
+  text-underline-offset: 0.18em;
+}
+a:hover {
+  color: var(--tj-blue-strong);
+}
+:focus-visible {
+  outline: 2px solid var(--tj-blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Announcement banner ---------- */
+.announcement-banner {
+  background: var(--tj-placard);
+  color: var(--tj-navy);
+}
+.announcement-banner p {
+  font-family: var(--tj-sans);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ---------- Header + navigation ---------- */
+.header .logo h1 {
+  font-family: var(--tj-serif);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.header.sticked {
+  background: rgba(14, 29, 52, 0.94);
+}
+.navbar a,
+.navbar a:focus,
+.navbar ul li a {
+  font-family: var(--tj-sans);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.navbar .dropdown ul a {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* ---------- Subpage hero (page-heroes.css) ---------- */
+.breadcrumbs .page-header {
+  background: var(--tj-navy) !important;
+}
+.breadcrumbs .page-header::before {
+  background:
+    linear-gradient(90deg, rgba(10, 21, 38, 0.88), rgba(10, 21, 38, 0.45)),
+    linear-gradient(0deg, rgba(10, 21, 38, 0.3), rgba(10, 21, 38, 0.3)) !important;
+}
+/* The brand is already in the header; the repeated caps label above every title goes. */
+.breadcrumbs .page-header .col-lg-6::before {
+  content: none !important;
+}
+.breadcrumbs .page-header h2 {
+  font-family: var(--tj-serif) !important;
+  font-weight: 400 !important;
+  font-size: clamp(2.9rem, 6.6vw, 5.2rem) !important;
+  line-height: 1 !important;
+}
+.breadcrumbs .page-header p {
+  font-family: var(--tj-sans);
+}
+/* Wave edge into the page: brand-blue ribbon behind a paper-colored curve.
+   Colors are literal because CSS variables can't reach inside a data URI. */
+.breadcrumbs .page-header::after,
+.sponsor-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  z-index: 3;
+  height: clamp(44px, 7vw, 104px);
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath fill='%230d42ff' d='M0 70 C 240 10, 480 10, 720 50 S 1200 110, 1440 40 V121 H0 Z'/%3E%3Cpath fill='%23f5f7fb' d='M0 90 C 300 40, 560 30, 820 70 S 1260 110, 1440 70 V121 H0 Z'/%3E%3C/svg%3E")
+    center bottom / 100% 100% no-repeat;
+}
+
+.sponsor-hero {
+  overflow: hidden;
+}
+
+/* Section labels on the sponsor page read as sentence case, not tracked-out caps. */
+.sponsor-eyebrow {
+  font-family: var(--tj-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--tj-blue);
+}
+.sponsor-hero .sponsor-eyebrow {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Breadcrumb sits on the page instead of its own tinted band. */
+.breadcrumbs nav {
+  position: relative;
+  z-index: 4;
+  margin-top: -1px; /* covers any sub-pixel seam under the wave */
+  background: var(--tj-paper) !important;
+  padding: 6px 0 4px;
+}
+.breadcrumbs nav ol {
+  font-family: var(--tj-sans);
+  font-size: 14px;
+  color: var(--tj-muted);
+}
+.breadcrumbs nav ol a {
+  color: var(--tj-blue);
+}
+
+/* ---------- Section titles shared by subpages ---------- */
+.section-header h2,
+.section-title h2 {
+  font-family: var(--tj-serif);
+  font-weight: 400;
+  color: var(--tj-navy);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  --bs-btn-bg: var(--tj-blue);
+  --bs-btn-border-color: var(--tj-blue);
+  --bs-btn-hover-bg: var(--tj-blue-strong);
+  --bs-btn-hover-border-color: var(--tj-blue-strong);
+  --bs-btn-active-bg: var(--tj-blue-strong);
+  font-family: var(--tj-sans);
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: var(--tj-navy);
+  font-family: var(--tj-sans);
+  font-size: 15px;
+}
+.footer .footer-info .logo span {
+  font-family: var(--tj-serif);
+  font-weight: 400;
+  font-size: 2.1rem;
+  letter-spacing: 0.01em;
+}
+.footer h4 {
+  font-family: var(--tj-sans);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.footer .footer-links ul a {
+  color: rgba(255, 255, 255, 0.72);
+}
+.footer .footer-links ul a:hover {
+  color: #fff;
+}
+.footer .copyright,
+.footer .copyright em {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

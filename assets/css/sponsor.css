@@ -1,14 +1,17 @@
 .sponsor-page {
-  background: #f7f3ec;
-  color: #172033;
-  font-family: "EB Garamond", serif;
+  background: var(--tj-paper);
+  color: var(--tj-ink);
+  font-family: var(--tj-sans);
 }
 
-#header .logo h1,
+#header .logo h1 {
+  font-family: var(--tj-serif) !important;
+}
+
 #header .navbar a,
 #header .navbar a:focus,
 #header .navbar a span {
-  font-family: "EB Garamond", serif !important;
+  font-family: var(--tj-sans) !important;
 }
 
 #footer,
@@ -19,17 +22,25 @@
 #footer li,
 #footer strong,
 #footer em {
-  font-family: "EB Garamond", serif !important;
+  font-family: var(--tj-sans) !important;
+}
+
+#footer .footer-info .logo span {
+  font-family: var(--tj-serif) !important;
 }
 
 .sponsor-page h1,
 .sponsor-page h2,
-.sponsor-page h3,
+.sponsor-page h3 {
+  font-family: var(--tj-serif);
+  font-weight: 400;
+}
+
 .sponsor-page p,
 .sponsor-page a,
 .sponsor-page li,
 .sponsor-page figcaption {
-  font-family: "EB Garamond", serif;
+  font-family: var(--tj-sans);
 }
 
 .sponsor-page section {
@@ -124,10 +135,10 @@
   justify-content: center;
   min-height: 48px;
   padding: 12px 24px;
-  border: 1px solid #fffdf8;
+  border: 1px solid var(--tj-white);
   border-radius: 4px;
-  background: #fffdf8;
-  color: #131927;
+  background: var(--tj-white);
+  color: var(--tj-ink);
   font-size: 1rem;
   font-weight: 700;
 }
@@ -136,7 +147,7 @@
 .sponsor-button:focus {
   background: #e6edf4;
   border-color: #e6edf4;
-  color: #131927;
+  color: var(--tj-ink);
   transform: translateY(-2px);
 }
 
@@ -168,7 +179,7 @@
 .sponsor-section-heading h2,
 .sponsor-cta h2 {
   margin: 0 0 20px;
-  color: #10182a;
+  color: var(--tj-navy);
   font-size: 3rem;
   line-height: 1.04;
   font-weight: 700;
@@ -209,7 +220,7 @@
 
 .sponsor-feature-photo figcaption {
   padding: 12px 16px;
-  background: #fffaf1;
+  background: var(--tj-white);
   color: #5d6473;
   font-size: 0.95rem;
 }
@@ -239,13 +250,13 @@
 
 .sponsor-tier h3 {
   margin: 0 0 12px;
-  color: #10182a;
+  color: var(--tj-navy);
   font-size: 1.6rem;
   line-height: 1.1;
 }
 
 .sponsor-tiers {
-  background: #f7f3ec;
+  background: var(--tj-paper);
 }
 
 .sponsor-tier {
@@ -303,7 +314,7 @@
 }
 
 .sponsor-cta {
-  background: #172033;
+  background: var(--tj-navy);
 }
 
 .sponsor-cta__panel {

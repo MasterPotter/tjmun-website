@@ -1,16 +1,15 @@
 /* Fonts */
 :root {
-  --font-default:
-    "Garamond", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
-  --font-primary: "Inter", sans-serif;
-  --font-secondary: "Garamond", sans-serif;
+  /* Tokens live in design-system.css */
+  --font-default: var(--tj-sans);
+  --font-primary: var(--tj-sans);
+  --font-secondary: var(--tj-serif);
+  --font-tertiary: var(--tj-sans);
 }
 
 /* Colors */
 :root {
-  --color-default: #0a0d13;
+  --color-default: var(--tj-ink);
   --color-primary: #0d42ff;
   --color-secondary: #0e1d34;
 }
@@ -34,7 +33,7 @@ a {
 }
 
 a:hover {
-  color: #406aff;
+  color: var(--tj-blue-strong);
   text-decoration: none;
 }
 
@@ -67,7 +66,7 @@ section {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
-  color: #001973;
+  color: var(--tj-navy);
   position: relative;
   z-index: 2;
   margin-bottom: 20px;
@@ -190,7 +189,7 @@ section {
   display: block;
   margin: 0 0 12px;
   color: rgba(255, 255, 255, 0.74);
-  font-family: "EB Garamond", Garamond, serif;
+  font-family: var(--tj-serif);
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -205,7 +204,7 @@ section {
   line-height: 0.92 !important;
   letter-spacing: 0;
   color: #fff;
-  font-family: "EB Garamond", Garamond, serif;
+  font-family: var(--tj-serif);
   text-wrap: balance;
 }
 
@@ -214,7 +213,7 @@ section {
 }
 
 .breadcrumbs nav {
-  background-color: #f3f6fc;
+  background-color: var(--tj-paper);
   padding: 20px 0;
 }
 
@@ -857,7 +856,7 @@ section {
 }
 
 .services .card a {
-  color: #001973;
+  color: var(--tj-navy);
   transition: 0.3;
 }
 
@@ -882,7 +881,7 @@ section {
 
 /* Announcement Banner */
 .announcement-banner {
-  background: #f8d34b;
+  background: var(--tj-placard);
   color: #0e1d34;
   text-align: center;
   padding: 9px 16px;
@@ -988,7 +987,7 @@ section {
 .features .features-item h3 {
   font-weight: 600;
   font-size: 26px;
-  color: #001973;
+  color: var(--tj-navy);
 }
 
 .features .features-item ul {
@@ -1053,7 +1052,7 @@ section {
 .pricing ul {
   padding: 20px 0;
   list-style: none;
-  color: #6c757d;
+  color: var(--tj-muted);
   text-align: left;
   line-height: 20px;
 }
@@ -1366,14 +1365,14 @@ section {
   font-style: italic;
   display: block;
   font-size: 13px;
-  color: #6c757d;
+  color: var(--tj-muted);
 }
 
 .team .member p {
   padding-top: 10px;
   font-size: 14px;
   font-style: italic;
-  color: #6c757d;
+  color: var(--tj-muted);
 }
 
 .team .member .social {
@@ -1433,7 +1432,7 @@ section {
 .horizontal-pricing ul {
   padding: 20px 0;
   list-style: none;
-  color: #6c757d;
+  color: var(--tj-muted);
   text-align: left;
   line-height: 20px;
 }
@@ -1477,8 +1476,8 @@ section {
 }
 
 .horizontal-pricing .buy-btn:hover {
-  background: #406aff;
-  border-color: #406aff;
+  background: var(--tj-blue-strong);
+  border-color: var(--tj-blue-strong);
 }
 
 .horizontal-pricing .featured {
@@ -1889,18 +1888,18 @@ li {
   transition: 0.3s;
   color: #2c4964;
   border-radius: 0;
-  border-right: 2px solid #ebf1f6;
+  border-right: 2px solid var(--tj-rule);
   font-weight: 600;
   font-size: 15px;
 }
 
 .departments .nav-link:hover {
-  color: #1977cc;
+  color: var(--tj-blue);
 }
 
 .departments .nav-link.active {
-  color: #1977cc;
-  border-color: #1977cc;
+  color: var(--tj-blue);
+  border-color: var(--tj-blue);
 }
 
 .departments .tab-pane.active {
@@ -1930,13 +1929,13 @@ li {
 
   .departments .nav-link.active {
     color: #fff;
-    background: #1977cc;
+    background: var(--tj-blue);
   }
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: var(--tj-sans);
+  background-color: var(--tj-paper);
 }
 
 .counter-container {
@@ -1969,7 +1968,7 @@ body {
 
 /* Announcement Banner */
 .announcement-banner {
-  background: #f8d34b;
+  background: var(--tj-placard);
   color: #0e1d34;
   text-align: center;
   padding: 9px 16px;

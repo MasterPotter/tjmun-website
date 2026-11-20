@@ -15,55 +15,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
     <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-    <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
-    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link href="../../assets/vendor/aos/aos.css" rel="stylesheet" />
     <link rel="icon" href="../../assets/img/logo5.png" type="image/x-icon" />
 
     <link href="../../assets/css/main.css?v=hero-refresh-2" rel="stylesheet" />
 
     <style>
-      body,
-      p,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      a,
-      span,
-      li {
-        font-family: "EB Garamond", serif !important;
+      /* Leadership: photo cards for the Secretariat, a roster for everyone else. */
+      .team {
+        padding: 48px 0 110px;
       }
 
-      .navbar ul li a {
-        font-family: "EB Garamond", serif !important;
-      }
-
-      .container {
-        font-family: "EB Garamond", serif !important;
-      }
-
-      .team .member .member-info {
-        margin-top: 0 !important;
-        padding-top: 5px !important;
+      .team-group {
+        margin: 0 0 28px;
+        font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+        color: var(--tj-navy);
       }
 
       .team .member {
         width: 100%;
+        margin-bottom: 0;
+        background: var(--tj-white);
+        border: 1px solid var(--tj-rule);
       }
 
       .team .member .member-img {
         aspect-ratio: 1 / 1;
-        margin-bottom: 30px !important;
         overflow: hidden;
       }
 
@@ -71,34 +54,81 @@
         display: block;
         width: 100%;
         height: 100%;
-        margin: 0 !important;
+        margin: 0;
         object-fit: cover;
         object-position: center;
       }
 
-      /* If the above doesn't work, this will target any spacing between img and h4 */
-      .team .member .member-info h4 {
-        margin-top: -15px !important;
+      .team .member .member-info {
+        padding: 18px 16px 22px;
       }
 
-      /* This ensures no extra padding in the container */
-      .team .member {
-        padding-bottom: 15px !important;
+      .team .member h4 {
+        margin: 0 0 4px;
+        font-family: var(--tj-serif);
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--tj-navy);
       }
 
-      .team .member.no-photo {
-        width: 100%;
-        min-height: 170px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .team .member span,
+      .roster-role {
+        font-family: var(--tj-sans);
+        font-size: 0.95rem;
+        font-style: normal;
+        color: var(--tj-muted);
       }
 
-      .team .member.no-photo .member-info h4 {
-        margin-top: 0 !important;
+      .roster-groups {
+        text-align: left;
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+        gap: 56px;
+        margin-top: 88px;
+      }
+
+      .roster {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        column-gap: 32px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .roster li {
+        margin: 0;
+        padding: 18px 0 20px;
+        border-top: 1px solid var(--tj-rule);
+        font-size: inherit;
+      }
+
+      .roster-name {
+        margin: 0 0 4px;
+        font-size: 1.45rem;
+        color: var(--tj-navy);
+      }
+
+      .roster-role {
+        margin: 0;
+      }
+
+      /* main.css centers every .container p on small screens; the roster stays left-aligned. */
+      .roster-groups .roster-name,
+      .roster-groups .roster-role {
+        text-align: left;
+      }
+
+      @media (max-width: 991px) {
+        .roster-groups {
+          grid-template-columns: 1fr;
+          gap: 40px;
+          margin-top: 64px;
+        }
       }
     </style>
     <link href="/assets/css/page-heroes.css?v=20260706d" rel="stylesheet" />
+    <link href="/assets/css/design-system.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -170,8 +200,9 @@
       </div>
       <!-- ======= Team Section ======= -->
       <section id="team" class="team">
-        <div class="container" data-aos="fade-up">
-          <div class="row">
+        <div class="container">
+          <h2 class="team-group">Secretariat</h2>
+          <div class="row gy-4">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up" data-aos-delay="100">
                 <div class="member-img">
@@ -237,79 +268,48 @@
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member no-photo" data-aos="fade-up" data-aos-delay="100">
-                <div class="member-info">
-                  <h4>Simrin Puri</h4>
-                  <span>Activities Coordinator</span>
-                </div>
-              </div>
+          <div class="roster-groups">
+            <div>
+              <h2 class="team-group">Officers</h2>
+              <ul class="roster">
+                <li>
+                  <h3 class="roster-name">Simrin Puri</h3>
+                  <p class="roster-role">Activities Coordinator</p>
+                </li>
+                <li>
+                  <h3 class="roster-name">Saisha Doma</h3>
+                  <p class="roster-role">Treasurer</p>
+                </li>
+                <li>
+                  <h3 class="roster-name">Meerub Rana</h3>
+                  <p class="roster-role">Fundraising Coordinator</p>
+                </li>
+                <li>
+                  <h3 class="roster-name">Dev Srivastava and Zoeb Izzi</h3>
+                  <p class="roster-role">Spec Czars</p>
+                </li>
+                <li>
+                  <h3 class="roster-name">Chi Do</h3>
+                  <p class="roster-role">Historian</p>
+                </li>
+                <li>
+                  <h3 class="roster-name">Ronit Singh</h3>
+                  <p class="roster-role">Webmaster</p>
+                </li>
+                <li>
+                  <h3 class="roster-name">Prajeet Mishra</h3>
+                  <p class="roster-role">Logistics Coordinator</p>
+                </li>
+              </ul>
             </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member no-photo" data-aos="fade-up" data-aos-delay="200">
-                <div class="member-info">
-                  <h4>Saisha Doma</h4>
-                  <span>Treasurer</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member no-photo" data-aos="fade-up" data-aos-delay="300">
-                <div class="member-info">
-                  <h4>Meerub Rana</h4>
-                  <span>Fundraising Coordinator</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member no-photo" data-aos="fade-up" data-aos-delay="400">
-                <div class="member-info">
-                  <h4>Dev Srivastava and Zoeb Izzi</h4>
-                  <span>Spec Czars</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member no-photo" data-aos="fade-up" data-aos-delay="100">
-                <div class="member-info">
-                  <h4>Chi Do</h4>
-                  <span>Historian</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member no-photo" data-aos="fade-up" data-aos-delay="200">
-                <div class="member-info">
-                  <h4>Ronit Singh</h4>
-                  <span>Webmaster</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member no-photo" data-aos="fade-up" data-aos-delay="300">
-                <div class="member-info">
-                  <h4>Prajeet Mishra</h4>
-                  <span>Logistics Coordinator</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-              <div class="member no-photo" data-aos="fade-up" data-aos-delay="400">
-                <div class="member-info">
-                  <h4>Danielle Ross</h4>
-                  <span>Faculty Sponsor</span>
-                </div>
-              </div>
+            <div>
+              <h2 class="team-group">Faculty sponsor</h2>
+              <ul class="roster">
+                <li>
+                  <h3 class="roster-name">Danielle Ross</h3>
+                  <p class="roster-role">Faculty Sponsor</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -332,9 +332,6 @@
     <div id="preloader"></div>
 
     <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="../../assets/vendor/aos/aos.js"></script>
 
     <script src="../../assets/js/main.js"></script>

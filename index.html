@@ -5,12 +5,26 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <title>TJMUN - Home</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <meta
+      content="Thomas Jefferson High School Model United Nations: TechMUN, conferences, awards, and leadership."
+      name="description"
+    />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';"
     />
+    <script>
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.documentElement.classList.add("intro-running");
+      }
+      // Scroll reveals are on only when home.js runs; if it never does, show everything.
+      document.documentElement.classList.add("sx");
+      setTimeout(() => {
+        if (!document.documentElement.classList.contains("sx-ready")) {
+          document.documentElement.classList.remove("sx");
+        }
+      }, 3000);
+    </script>
 
     <!-- Favicons -->
     <link href="assets/img/logo5.png" rel="icon" />
@@ -20,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -28,57 +42,30 @@
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
 
-    <!-- Main CSS File -->
+    <!-- Site CSS -->
     <link href="assets/css/main.css" rel="stylesheet" />
-    <!-- Landing Page Specific CSS -->
     <link href="assets/css/landing-new.css" rel="stylesheet" />
+    <link href="assets/css/home-intro.css" rel="stylesheet" />
+    <link href="assets/css/home.css" rel="stylesheet" />
+    <link href="/assets/css/design-system.css" rel="stylesheet" />
 
-    <!-- Styles to match Leadership Page Format -->
-    <style>
-      body,
-      p,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      a,
-      span,
-      li {
-        font-family: "EB Garamond", serif !important;
+    <!-- Resolves NumberFlow's one bare import to the vendored copy (no CDN; CSP stays 'self'). -->
+    <script type="importmap">
+      {
+        "imports": {
+          "esm-env": "/assets/vendor/esm-env@1.2.2/index.js",
+          "esm-env/browser": "/assets/vendor/esm-env@1.2.2/browser-fallback.js",
+          "esm-env/development": "/assets/vendor/esm-env@1.2.2/dev-fallback.js",
+          "esm-env/node": "/assets/vendor/esm-env@1.2.2/false.js"
+        }
       }
-
-      .navbar ul li a {
-        font-family: "EB Garamond", serif !important;
-      }
-
-      .container {
-        font-family: "EB Garamond", serif !important;
-      }
-
-      /* Override AOS pointer-events to enable hover during animation
-       (Applied generally to ensure consistency if these classes are used) */
-      .member-premium[data-aos][data-aos],
-      .member-premium[data-aos][data-aos].aos-animate {
-        pointer-events: auto !important;
-      }
-
-      .member-premium[data-aos][data-aos]:hover {
-        transform: scale(1.05) translateY(-15px) !important;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25) !important;
-        border-bottom-color: #0d42ff !important;
-      }
-    </style>
+    </script>
   </head>
 
   <body>
-    <!-- Announcement Banner -->
-    <div class="announcement-banner" role="status">
+    <div class="announcement-banner" role="status" data-intro-chrome>
       <p>
         TechMUN XXXIV will take place on April 2-3, 2027 at TJHSST. Priority Registration is open
         through December 18, 2026.
@@ -86,11 +73,15 @@
       </p>
     </div>
 
-    <!-- Header -->
-    <header id="header" class="header d-flex align-items-center fixed-top" style="top: 40px">
+    <header
+      id="header"
+      class="header d-flex align-items-center fixed-top"
+      style="top: 40px"
+      data-intro-chrome
+    >
       <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <img src="assets/img/logo5.png" alt="" />
+        <a href="/index.html" class="logo d-flex align-items-center">
+          <img src="/assets/img/logo5.png" alt="" />
           <h1>TJMUN</h1>
         </a>
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -99,116 +90,203 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-      <video autoplay loop muted playsinline class="hero-video">
-        <source src="assets/img/tjumun_website_landing.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content" data-aos="fade-up">
-        <h1>Thomas Jefferson<br />Model United Nations</h1>
-        <p>Diplomacy. Leadership. Innovation.</p>
-        <a href="#about" class="btn-premium">Discover More</a>
+    <!-- Hero: same video, overlay and copy as today, plus the gavel intro layers -->
+    <section id="hero" class="hero-section" data-gavel-intro>
+      <!-- Layer 1 (camera): background video, overlay, gavel pad -->
+      <div class="intro-layer intro-bg" data-camera>
+        <video autoplay loop muted playsinline class="hero-video">
+          <source src="/assets/img/tjumun_website_landing.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="intro-box intro-pad-stage">
+          <svg viewBox="0 0 700 520" aria-hidden="true">
+            <!-- assets/img/gavel-pad.svg, scaled 2x and centred under the strike point (350, 380) -->
+            <g class="gavel-pad" transform="translate(205 380) scale(2)">
+              <path
+                d="M16 17V9Q16 0 25 0H120Q129 0 129 9V17H142Q145 17 145 20V38Q145 41 142 41H3Q0 41 0 38V20Q0 17 3 17Z"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
+
+      <!-- Layer 2: hero content. The logo grows into place under the gavel cover. -->
+      <div class="container hero-content">
+        <span class="hero-logo" data-intro="logo">
+          <img src="/assets/img/logo5.png" alt="TJMUN logo" />
+          <span class="hero-logo-tint" aria-hidden="true"></span>
+        </span>
+        <h1 data-intro="name">Thomas Jefferson<br />Model United Nations</h1>
+        <p data-intro="after">Diplomacy. Leadership. Innovation.</p>
+        <a href="#about" class="btn-premium" data-intro="after">Discover More</a>
+      </div>
+
+      <!-- Layer 3 (camera): the gavel. On the way out it swings toward the camera and fills the screen. -->
+      <div class="intro-layer intro-front" data-camera>
+        <div class="intro-box intro-stage">
+          <svg viewBox="0 0 700 520" aria-hidden="true">
+            <!-- assets/img/gavel.svg (Material Design Icons "gavel", Apache 2.0), rotated 45deg so the head
+                 points down; striking face lands on (350, 380), grip end pivots at (2.6, 260) -->
+            <g class="gavel-zoom">
+              <g class="gavel">
+                <g transform="translate(32.6 20) scale(20) rotate(45 12 12)">
+                  <path
+                    d="M2.3,20.28L11.9,10.68L10.5,9.26L9.78,9.97C9.39,10.36 8.76,10.36 8.37,9.97L7.66,9.26C7.27,8.87 7.27,8.24 7.66,7.85L13.32,2.19C13.71,1.8 14.34,1.8 14.73,2.19L15.44,2.9C15.83,3.29 15.83,3.92 15.44,4.31L14.73,5L16.15,6.43C16.54,6.04 17.17,6.04 17.56,6.43C17.95,6.82 17.95,7.46 17.56,7.85L18.97,9.26L19.68,8.55C20.07,8.16 20.71,8.16 21.1,8.55L21.8,9.26C22.19,9.65 22.19,10.29 21.8,10.68L16.15,16.33C15.76,16.72 15.12,16.72 14.73,16.33L14.03,15.63C13.63,15.24 13.63,14.6 14.03,14.21L14.73,13.5L13.32,12.09L3.71,21.7C3.32,22.09 2.69,22.09 2.3,21.7C1.91,21.31 1.91,20.67 2.3,20.28Z"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Gavel-colored fill: takes over once the gavel is past the camera; the logo grows on it, then it fades to the hero -->
+      <div class="intro-cover" aria-hidden="true"></div>
+
+      <!-- Curved hand-off into the navy stats band -->
+      <svg
+        class="wave wave--navy"
+        viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path class="wave-back" d="M0 70 C 240 10, 480 10, 720 50 S 1200 110, 1440 40 V120 H0 Z" />
+        <path class="wave-front" d="M0 90 C 300 40, 560 30, 820 70 S 1260 110, 1440 70 V120 H0 Z" />
+      </svg>
     </section>
 
     <main id="main">
-      <!-- Counters Section -->
+      <!-- Stats: NumberFlow counters that roll up when the band scrolls into view -->
       <section id="stats" class="counters-section">
         <div class="container">
           <div class="row gy-4">
             <div class="col-lg-4 col-md-6">
-              <div class="counter-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="counter-card" data-reveal>
                 <i class="fas fa-users counter-icon"></i>
-                <span class="counter-number">1200</span>
+                <number-flow class="counter-number" data-count="1200">1,200</number-flow>
                 <span class="counter-label">Delegates at TechMUN</span>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="counter-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="counter-card" data-reveal style="--d: 120ms">
                 <i class="fas fa-gavel counter-icon"></i>
-                <span class="counter-number">100+</span>
+                <number-flow class="counter-number" data-count="100" data-suffix="+"
+                  >100+</number-flow
+                >
                 <span class="counter-label">Gavels in 3 Years</span>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="counter-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="counter-card" data-reveal style="--d: 240ms">
                 <i class="fas fa-clock counter-icon"></i>
-                <span class="counter-number">30</span>
+                <number-flow class="counter-number" data-count="30">30</number-flow>
                 <span class="counter-label">Years of Excellence</span>
               </div>
             </div>
           </div>
         </div>
+        <svg
+          class="wave wave--light"
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            class="wave-back"
+            d="M0 50 C 260 110, 520 100, 760 60 S 1220 10, 1440 60 V120 H0 Z"
+          />
+          <path
+            class="wave-front"
+            d="M0 80 C 320 120, 600 110, 860 80 S 1280 40, 1440 90 V120 H0 Z"
+          />
+        </svg>
       </section>
 
-      <!-- About Section -->
+      <!-- About: sticky intro on the left; the pillars on the right light up one at a time as you scroll -->
       <section id="about" class="services-section">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>About Model UN</h2>
-            <p>
-              Model United Nations encompasses a simulation of the UN whereby students engage in
-              political debate to tackle current global issues on the agenda. Based on their
-              committees, students are assigned a delegate and are tasked with preparing draft
-              resolutions, negotiating with others, and resolving conflicts while following proper
-              parliamentary procedure.
-            </p>
-          </div>
+        <div class="container">
+          <div class="pillars">
+            <div class="pillars-intro">
+              <h2 class="section-heading" data-words>
+                About
+                <span class="scribble"
+                  >Model UN<svg viewBox="0 0 260 16" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M3 11 C 45 4, 95 3, 140 7 S 215 14, 257 5" /></svg
+                ></span>
+              </h2>
+              <p data-reveal>
+                Model United Nations encompasses a simulation of the UN whereby students engage in
+                political debate to tackle current global issues on the agenda. Based on their
+                committees, students are assigned a delegate and are tasked with preparing draft
+                resolutions, negotiating with others, and resolving conflicts while following proper
+                parliamentary procedure.
+              </p>
+            </div>
 
-          <div class="row gy-4">
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-card">
+            <ol class="pillar-list">
+              <li class="pillar" data-reveal>
                 <h3>Leadership</h3>
                 <p>
                   Our delegates possess leadership skills that enable them to command and lead blocs
                   in committee while maintaining successful relations with others.
                 </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-card">
+              </li>
+              <li class="pillar" data-reveal>
                 <h3>Diplomacy</h3>
                 <p>
                   Delegates manage international relations through negotiations and handle affairs
                   effectively without arousing hostility.
                 </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="service-card">
+              </li>
+              <li class="pillar" data-reveal>
                 <h3>Public Policy</h3>
                 <p>
                   Delegates inquire about specific public polities and implement various others to
                   directly resolve issues in their committee's agenda.
                 </p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-              <div class="service-card">
+              </li>
+              <li class="pillar" data-reveal>
                 <h3>Research</h3>
                 <p>
                   Students research respective topics for their committee to develop a strong
                   background and foundation leading to success.
                 </p>
-              </div>
-            </div>
+              </li>
+            </ol>
           </div>
         </div>
+        <svg
+          class="wave wave--navy"
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path class="wave-back" d="M0 60 C 300 0, 620 20, 860 60 S 1260 110, 1440 50 V120 H0 Z" />
+          <path
+            class="wave-front"
+            d="M0 85 C 280 50, 600 50, 900 80 S 1300 100, 1440 75 V120 H0 Z"
+          />
+        </svg>
       </section>
 
-      <!-- Testimonials Section -->
+      <!-- Leadership: same Swiper carousel as today, with the new heading treatment -->
       <section id="testimonials" class="testimonials-section">
-        <div class="container" data-aos="fade-up">
+        <div class="container">
           <div class="section-title">
-            <h2 style="color: var(--color-white)">Leadership Team</h2>
+            <h2 class="section-heading" style="color: var(--color-white)" data-words>
+              <span class="scribble"
+                >Leadership<svg viewBox="0 0 260 16" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M3 9 C 60 14, 120 3, 170 8 S 230 12, 257 6" /></svg
+              ></span>
+              Team
+            </h2>
           </div>
-          <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="slides-1 swiper" data-reveal>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <img
-                    src="assets/img/mohan-parthasarathy-headshot.jpg"
+                    src="/assets/img/mohan-parthasarathy-headshot.jpg"
                     class="testimonial-img"
                     alt=""
                   />
@@ -226,7 +304,7 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img src="assets/img/arjun-garg-headshot.jpg" class="testimonial-img" alt="" />
+                  <img src="/assets/img/arjun-garg-headshot.jpg" class="testimonial-img" alt="" />
                   <h3>Arjun Garg</h3>
                   <h4>Under-Secretary-General</h4>
                   <p>
@@ -241,7 +319,7 @@
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img src="assets/img/neha-shetwal-headshot.jpg" class="testimonial-img" alt="" />
+                  <img src="/assets/img/neha-shetwal-headshot.jpg" class="testimonial-img" alt="" />
                   <h3>Neha Shetwal</h3>
                   <h4>Senator</h4>
                   <p>
@@ -257,7 +335,7 @@
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <img
-                    src="assets/img/anish-kulkarni-headshot.jpg"
+                    src="/assets/img/anish-kulkarni-headshot.jpg"
                     class="testimonial-img"
                     alt=""
                   />
@@ -283,7 +361,6 @@
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"
       ><i class="bi bi-arrow-up-short"></i
     ></a>
-    <div id="preloader"></div>
 
     <!-- Scripts -->
     <script>
@@ -293,7 +370,7 @@
           document.getElementById("navbar-container").innerHTML = html;
         });
 
-      fetch("templates/footer.html")
+      fetch("/templates/footer.html")
         .then((res) => res.text())
         .then((html) => {
           document.getElementById("footer-container").innerHTML = html;
@@ -301,17 +378,9 @@
     </script>
 
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <script>
-      // Re-init AOS to catch new elements
-      window.addEventListener("load", () => {
-        AOS.init();
-      });
-    </script>
+    <script src="assets/js/home-intro.js"></script>
+    <script type="module" src="assets/js/home.js"></script>
   </body>
 </html>

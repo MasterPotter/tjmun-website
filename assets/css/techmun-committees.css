@@ -2,7 +2,7 @@
 .committee-details {
   padding-top: 30px;
   padding-bottom: 50px;
-  color: #333;
+  color: var(--tj-ink);
   line-height: 1.6;
 }
 
@@ -10,7 +10,7 @@
 .committee-list h3,
 .committee-list h4,
 .committee-details h2 {
-  color: rgb(11, 11, 89);
+  color: var(--tj-navy);
 }
 
 .committee-list h2,
@@ -53,7 +53,7 @@
 .committee-details .member-img {
   flex: 0 0 35%;
   max-width: 280px;
-  background: #eef0f3;
+  background: var(--tj-rule);
 }
 
 .committee-details .member-img img {
